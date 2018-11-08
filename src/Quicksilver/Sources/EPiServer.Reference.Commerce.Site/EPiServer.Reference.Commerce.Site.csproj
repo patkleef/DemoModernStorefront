@@ -487,6 +487,7 @@
     <Compile Include="Features\Warehouse\ViewModelFactories\WarehouseViewModelFactory.cs" />
     <Compile Include="Features\Warehouse\ViewModels\WarehouseInventoryViewModel.cs" />
     <Compile Include="Features\Warehouse\ViewModels\WarehouseViewModel.cs" />
+    <Compile Include="Infrastructure\AddAuthorizationHeaderParameterOperationFilter.cs" />
     <Compile Include="Infrastructure\Attributes\AllowDBWriteAttribute.cs" />
     <Compile Include="Infrastructure\Attributes\ReadOnlyFilter.cs" />
     <Compile Include="Features\Shared\Extensions\UrlResolverExtensions.cs" />

@@ -28,6 +28,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.WebPages;
+using EPiServer.ContentApi.Cms.Controllers;
+using EPiServer.ContentApi.Core.Configuration;
+using EPiServer.ContentApi.Core.Security;
 using EPiServer.Personalization.Common;
 using EPiServer.Personalization.Commerce.Tracking;
 
@@ -97,6 +100,15 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure
                 config.Formatters.XmlFormatter.UseXmlSerializer = true;
                 config.DependencyResolver = new StructureMapResolver(context.StructureMap());
                 config.MapHttpAttributeRoutes();
+            });
+
+            context.Services.Configure<ContentApiConfiguration>(config =>
+            {
+                config.Default()
+                    .SetMinimumRoles("")
+                    .SetRequiredRole("")
+                    .SetSiteDefinitionApiEnabled(true)
+                    .SetMultiSiteFilteringEnabled(false);
             });
 
 #if IRI_CHARACTERS_IN_URL_FEATURE
