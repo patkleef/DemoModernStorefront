@@ -1,0 +1,30 @@
+<!-- Simple Textfield -->
+
+ <!--ko if: $component.wishlistitems().length > 0 -->
+<div data-bind="foreach: $component.wishlistitems">
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card card-product-image" >
+    <div class="mdl-card__title" data-bind="attr: { style: 'background-image: url(' + $data.product.image + ')' }">
+        <h2 class="mdl-card__title-text" data-bind="text: $data.product.title"></h2>
+    </div>
+    <div class="mdl-card__supporting-text">    
+        <p><span data-bind="html: $data.product.description"></span></p>
+        <p><span class="normal-price-label" data-bind="text: $data.product.price + ',-'"></span> <span class="sales-price-label" data-bind="text: $data.product.saleprice + ',-'"></span></p>
+        <p><span class="mdl-list__item-text-body">Added in store: <span  style="font-weight: bold;" data-bind="text: $data.store.name"></span></span></p>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-bind="click: $component.removeFromWishlist.bind($data)">Delete from wishlist</a>
+    </div>
+    </div>
+</div>
+<!--/ko-->
+
+<!--ko if: $component.wishlistitems().length == 0-->
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" >
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">No products in the wish list</h2>
+    </div>
+    <div class="mdl-card__supporting-text">    
+        <p>Products can be added to the wishlist by scanning them in the shop and press the 'wishlist' button.</p>
+    </div>
+    </div>
+<!--/ko-->

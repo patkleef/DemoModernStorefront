@@ -254,6 +254,7 @@ paket-files/
 # Remove more build results
 /src/WebApp.Core/app/**/*.js
 /src/WebApp.Core/app/**/*.map
+/src/WebApp.Core/tmp/**/*.*
 /src/StoreApp.Core/app/**/*.js
 /src/StoreApp.Core/app/**/*.map
 /src/Quicksilver/Sources/appdata/**/*

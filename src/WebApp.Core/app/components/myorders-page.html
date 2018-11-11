@@ -1,0 +1,69 @@
+
+
+ <!--ko if: $component.orders().length > 0 -->
+
+  <!--ko ifnot: $component.showGoogleMap()-->
+  <div data-bind="foreach: $component.orders"> 
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text" data-bind="text: 'Order ' + $data.orderNumber"></h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+          <p>Reserved for you at <strong data-bind="text: $data.store.name"></strong>, expires tomorrow at <strong>1PM</strong>.</p>      
+          <p><strong data-bind="text: $data.product.title"></strong></p>
+          <p>
+              <img data-bind="attr:{ src: $data.product.image }" style="width: auto; height: 50px;display:block;float:left"/>
+              <span data-bind="html: $data.product.description"></span></p>
+          <p data-bind="with: $data.product">
+            <!-- ko if: $data.saleprice > 0 -->
+            <span class="normal-price-label" data-bind="text: $data.price + ',-'"></span>
+            <span class="sales-price-label" data-bind="text: $data.saleprice + ',-'"></span>
+            <!-- /ko -->
+            <!-- ko ifnot: $data.saleprice > 0 -->
+            <span class="normal-price-label" data-bind="text: $data.price + ',-'"></span>   
+            <!-- /ko --></p>
+          <p>
+          <p>
+            <span>Size</span>
+            <strong data-bind="text: $data.size"></strong>
+          </p>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="tel:+4769241700">Call store</a>
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Question?</a>
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-bind="click: $component.showGoogleMapClick">Show map</a>
+      </div> 
+    </div>
+  </div>
+  <!--/ko-->
+
+  <!--ko if: $component.showGoogleMap()-->
+  <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+    <div class="mdl-card__supporting-text">
+      <div id="google-map-container"></div>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-bind="click: $component.hideGoogleMapClick">Go back</a>
+    </div> 
+
+      <style>
+        #google-map-container {
+            height: 400px;
+            width: 100%;
+        }
+      </style>
+  </div>
+  <!--/ko-->
+
+<!--/ko-->
+
+<!--ko if: $component.orders().length == 0-->
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" >
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">No orders here</h2>
+    </div>
+    <div class="mdl-card__supporting-text">    
+        <p>Products can be click and collected by scanning them in the shop and press the 'click and collect' button.</p>
+    </div>
+    </div>
+<!--/ko-->

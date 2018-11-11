@@ -1,0 +1,23 @@
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+    <div class="mdl-tabs__tab-bar">
+        <a href="#placeholder-panel1" 
+            class="mdl-tabs__tab is-active" 
+            data-bind="click: $component.clickNavigate.bind($component, 'start-page'), css: { 'is-active': $component.currentComponent() == 'start-page' }">
+            <i class="material-icons menu-tab-icon">home</i> Home
+        </a>
+        <a href="#placeholder-panel1" 
+            class="mdl-tabs__tab" 
+            data-bind="click: $component.clickNavigate.bind($component, 'myorders-page'), css: { 'is-active': $component.currentComponent() == 'myorders-page' }">
+            <i class="material-icons menu-tab-icon mdl-badge mdl-badge--overlap" 
+                data-bind="attr: { 'data-badge': $root.orders().length }">store</i> Clickandcollect orders
+        </a>
+        <a href="#placeholder-panel1" 
+            class="mdl-tabs__tab" 
+            data-bind="click: $component.clickNavigate.bind($component, 'wishlist-page'), css: { 'is-active': $component.currentComponent() == 'wishlist-page' }">
+            <i class="material-icons menu-tab-icon mdl-badge mdl-badge--overlap" 
+                data-bind="attr: { 'data-badge': $root.wishlistitems().length }">favorite</i> Wishlist
+        </a>
+    </div>
+    <div class="mdl-tabs__panel is-active" id="placeholder-panel1">
+    </div>
+</div> 

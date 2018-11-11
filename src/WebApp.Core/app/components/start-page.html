@@ -1,0 +1,80 @@
+<!-- Simple Textfield -->
+
+ <!--ko if: $component.showIntroductionTour()-->
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+        <div class="mdl-card__title">
+            <h3>Introduction tour</h3>
+        </div>
+        <div style="width: 70%;margin:0 auto;">
+            <div class="slider single-item">
+                <div style="width: 200px;">
+                    <strong>Scan a shoe</strong>
+                    <p>If you want more information about a shoe you can move your phone closely to the bottom of the shoe. After the shoe was succesfully scanned a new view is openen with detailed information about the shoe.</p>
+                    <img src="/media/product-nfc.jpg"/>
+                </div>
+                <div style="width: 200px;">
+                    <strong>Click and collect a shoe</strong>
+                    <p>On the product view you'll find usefull information about a shoe like materials, price, video's and more. Also, the current store stock of the shoe is displayed. If your shoe isn't available anymore you can use our Click and Collect feature to order the shoe in a different store.</p>
+                    <img src="/media/clickandcollect.jpg"/>
+                </div>
+                <div style="width: 200px; text-align: center">
+                    <strong>My orders</strong>
+                    <p>The my orders view contains an overview of all your open orders. Foreach order the expiration date is displayed, but you're also able to call the store directly, ask a question or show the direction to that store on a Google Map</p>
+                    <img src="/media/myorders.jpg"/>
+                </div>
+                <div style="width: 200px; text-align: center">
+                    <strong>Wishlist</strong>
+                    <p>Do you still have some doubts to buy a shoe. No problem, with our wishlist feature you can easily add that shoe to the wishlist. This view provides an overview of all shoes that have been added plus the store from where the shoe was added.</p>
+                    <img src="/media/wishlist.jpg"/>
+                </div>
+            </div>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-bind="click: $component.skipIntroductionTour">Skip introduction tour</a>
+        </div> 
+        
+    </div>
+<!--/ko-->
+
+<!--ko ifnot: $component.showIntroductionTour()-->
+<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card card-product-image">
+    <div class="mdl-card__title" style="background: url('media/welcome-in-store.jpg') center no-repeat; background-size: 150%; height:290px;">
+        <!--ko if: $root.currentStore()-->
+            <h3 style="color: white;">Welcome in our <span data-bind="text: $root.currentStore().name"></h3>
+        <!--/ko-->
+    </div> 
+    <div class="mdl-card__menu"> 
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-bind="click: $component.scanProduct">
+            <i class="material-icons">nfc</i>
+        </button>
+    </div>
+</div>
+<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+    <div class="mdl-card__title">
+        <h3>Hi Patrick!</h3>
+    </div>
+    <div class="mdl-card__supporting-text">
+      <p>Welcome back to our store in Stockholm.</p>
+
+      <p>Use your phone to scan a product. This provides access to extra product information, exclusive deals, videos and a floor plan.</p>
+
+      <p>Since this is your third visit, we've some special offers for you!</p>
+  </div>
+</div>
+
+<div data-bind="foreach: $component.products">
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card card-product-image">
+    <div class="mdl-card__title" data-bind="attr: { style: 'background-image: url(' + $data.image + ')' }">
+        <h2 class="mdl-card__title-text" data-bind="text: $data.title"></h2>
+    </div>
+    <div class="mdl-card__supporting-text">    
+        <p><span data-bind="html: $data.description"></span></p>
+        <p><span class="normal-price-label" data-bind="text: $data.price + ',-'"></span> <span class="sales-price-label" data-bind="text: $data.saleprice + ',-'"></span></p>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button-primary" data-bind="click: $root.clickAddToWishlist.bind($data)">Add to wishlist</a>    
+        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button-primary"  data-bind="click: $root.testLoadItem.bind($data)">Read more</a>
+    </div>   
+    </div>
+</div>
+<!--/ko-->

@@ -1,0 +1,34 @@
+<!--ko if: $component.product-->
+<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card"   data-bind="with: $component.product">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text" data-bind="text: $data.title" style="font-size: 30px"></h2>
+    <div class="mdl-layout-spacer"></div>
+    <button class="mdl-button mdl-js-button mdl-button--raised" data-bind="click: $root.clickAddToWishlist.bind($data)">
+        <i class="material-icons" data-bind="text: $component.inWishList() ? 'favorite':'favorite_border'"></i>
+    </button>
+  </div>
+    <div class="mdl-card__media">
+        <img class="article-image" data-bind="attr:{ src: $data.largeimage }" border="0" alt="">
+    </div>
+  <div class="mdl-card__supporting-text">
+      <h4>About this shoe</h4>
+      <p data-bind="html: description"></p>
+      <p><!-- ko if: saleprice > 0 -->
+        <span class="normal-price-label" data-bind="text: price + ',-'"></span>
+        <span class="sales-price-label" data-bind="text: saleprice + ',-'"></span>
+        <!-- /ko -->
+        <!-- ko ifnot: saleprice > 0 -->
+        <span class="normal-price-label" data-bind="text: price + ',-'"></span>   
+        <!-- /ko -->
+      </p>
+      <h4>Learn more about this shoe</h4>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/2nHcFG4cmII" frameborder="0" allowfullscreen></iframe>
+      <p>
+          <stock-sizes params="item: $data.sizes"></stock-sizes>
+      </p>      
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    
+  </div>
+</div>
+<!--/ko-->

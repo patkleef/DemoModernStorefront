@@ -1,0 +1,64 @@
+<h4>Sizes</h4>
+<div class="mdl-grid2">
+    <!--ko ifnot: $component.items() && $component.items().length -->
+    <div class="mdl-spinner mdl-js-spinner is-active"></div>
+
+    <!--/ko-->
+    <div data-bind="visible: $component.items() && $component.items().length">
+        <div data-bind="foreach: $component.items" class="mdl-grid">
+            <button class="mdl-button mdl-js-button"  data-bind="click: $component.clickSelectSize">
+                <!--ko text: $data.size--><!--/ko-->
+            </button>
+        </div>
+    </div>
+    <div class="mdl-layout-spacer"></div>
+    <div data-bind="with: $component.selectedSize">
+        <!-- ko if: !$component.showNotInStock() -->
+        <div>&nbsp;</div>
+        <button class="mdl-button mdl-js-button mdl-button--raised" 
+            data-bind="visible: !$component.showNotInStock(), click: $component.clickOrder.bind($component)">
+            <i class="material-icons">shopping_basket</i>
+                Click and collect
+        </button>
+        <p>
+            <i>Make a reservation for a pair of size <!--ko text: size--><!--/ko--> at <!--ko text: $component.currentStore().name--><!--/ko--> now!</i>
+        </p>
+        <!-- /ko -->
+        <!-- ko if: $component.showNotInStock() -->
+            <p>
+                <i style="color:red;">The selected size is not in stock</i>
+            </p>
+            <span style="font-weight:bold;">Choose one of the following stores:</span>
+            <ul class="demo-list-item mdl-list" data-bind="foreach: $data.stock">
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content" data-bind="text: $data.storename"></span>
+                    <button class="mdl-button mdl-js-button mdl-button--raised" data-bind="click: $data.clickToggleInfo">
+                        <i class="material-icons">info</i>
+                    </button>
+                </li>
+                <!-- ko if: $data.showInfo -->
+                <li class="mdl-list__item">
+                    <button class="mdl-button mdl-js-button mdl-button--raised"
+                        data-bind="click: $component.clickOrder.bind($component, $data)">
+                        <i class="material-icons">shopping_basket</i>
+                        Click and collect
+                    </button>
+                </li>
+                <li class="mdl-list__item">
+                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="window.location = 'tel:+900300400'">
+                        <i class="material-icons">perm_phone_msg</i>
+                        Call / chat
+                    </button>
+                </li>
+                <li class="mdl-list__item">
+                    <button class="mdl-button mdl-js-button mdl-button--raised">
+                        <i class="material-icons">directions</i>
+                        Directions
+                    </button>
+                </li>
+                <!-- /ko -->
+                <div style="border-bottom:1px solid #CCC">&nbsp;</div>
+            </ul>
+        <!-- /ko -->
+    </div>
+</div>
