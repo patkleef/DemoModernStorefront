@@ -12,7 +12,7 @@ export class MyOrdersViewModel {
     }
 
     showGoogleMapClick = () => {
-        (<any>GoogleMapsLoader).KEY = 'AIzaSyDnFfgI8wh97WwfaKrLARwTHEYQvOhUWXo';
+        (<any>GoogleMapsLoader).KEY = '';
         GoogleMapsLoader.load(function(google) {
             var coordinates = {lat: 59.4401772, lng: 10.7000514};
             var map = new google.maps.Map(document.getElementById('google-map-container'),  {zoom: 12, center: coordinates });
