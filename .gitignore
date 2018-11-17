@@ -260,3 +260,4 @@ paket-files/
 /src/StoreApp.Core/app/**/*.map
 /src/Quicksilver/Sources/appdata/**/*
 /src/Quicksilver/Setup/**/*
+src/Quicksilver/Sources/EPiServer.Reference.Commerce.Site/License.config
