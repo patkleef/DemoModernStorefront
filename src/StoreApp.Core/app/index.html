@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Eurosko Store Insights</title>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=description content="NFC Shopping">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-title" content="NFC Shopping" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="NFC Shopping" />
+
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#ffffff" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons" media="all">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/lib/dialog-polyfill.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,fetch,es6"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
+</head>
+<body>
+    <product-dialog></product-dialog>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header is-casting-shadow">
+            <div class="mdl-layout__header-row">
+                <img src="https://www.eurosko.com/globalassets/logo.png?w=208&quality=80" data-bind="click: $root.testLoadItem" />
+                <span class="mdl-layout-title custom-title"> Store Insights</span>
+                <div class="spacer"></div>
+            </div>
+            <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate" data-bind="visible: loading"></div>
+            <nav-menu></nav-menu>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid">
+                <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--6-col">
+                    <store-map></store-map>
+                </div>
+                <div class="demo-cards mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+
+                    <!--ko if: !$root.loading()-->
+                        <active-users class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop"></active-users>
+                    <!--/ko-->
+
+                    <div class="demo-separator mdl-cell--1-col"></div>
+                    
+                    <!--ko if: !$root.loading()-->
+                        <store-events class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+                        </store-events>
+                    <!--/ko-->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/lib/material.js"></script>
+    <script src="/lib/require.js"></script>
+    <script src="/require-config.js"></script>
+    <script>
+        require(["knockout", "knockout-postbox", "jquery", "slick", "startup"]);
+    </script>
+</body>
+</html>

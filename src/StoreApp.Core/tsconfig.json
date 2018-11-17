@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "amd",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "target": "es2017",
+    "typeRoots": [ 
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "app/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.ts"
+  ]
+}

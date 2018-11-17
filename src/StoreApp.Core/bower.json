@@ -1,0 +1,26 @@
+{
+  "name": "nfc",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Brian Weeteling <brianweeteling@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.3.2",
+    "knockout": "^3.4.0",
+    "requirejs-text": "latest",
+    "dialog-polyfill": "0.4.4",
+    "jquery": "1.11.0",
+    "slick-carousel": "1.5.9"
+  }
+}
