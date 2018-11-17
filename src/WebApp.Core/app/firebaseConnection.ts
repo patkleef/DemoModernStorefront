@@ -16,12 +16,12 @@ export module firebaseConnection {
     }
 
     var config = {
-        apiKey: "AIzaSyBENk2tVodLYCwLYWIIY1Jwvf3_EvqHiFI",
-        authDomain: "test-39116.firebaseapp.com",
-        databaseURL: "https://test-39116.firebaseio.com",
-        projectId: "test-39116",
-        storageBucket: "test-39116.appspot.com",
-        messagingSenderId: "602222568881"
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: ""
     };
 
     app = firebase.initializeApp(config);
