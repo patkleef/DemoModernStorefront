@@ -25,6 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.WebPages;
@@ -33,6 +34,7 @@ using EPiServer.ContentApi.Core.Configuration;
 using EPiServer.ContentApi.Core.Security;
 using EPiServer.Personalization.Common;
 using EPiServer.Personalization.Commerce.Tracking;
+using Newtonsoft.Json.Serialization;
 
 namespace EPiServer.Reference.Commerce.Site.Infrastructure
 {
@@ -97,10 +99,12 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure
             {
                 config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.LocalOnly;
                 config.Formatters.JsonFormatter.SerializerSettings = new JsonSerializerSettings();
+                config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
                 config.Formatters.XmlFormatter.UseXmlSerializer = true;
                 config.DependencyResolver = new StructureMapResolver(context.StructureMap());
                 config.MapHttpAttributeRoutes();
-                config.EnableCors();
+                var cors = new EnableCorsAttribute("*", "*", "*");
+                // config.EnableCors(cors);
             });
 
             context.Services.Configure<ContentApiConfiguration>(config =>

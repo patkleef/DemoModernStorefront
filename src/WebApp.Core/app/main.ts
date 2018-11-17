@@ -30,12 +30,14 @@ export class MainViewModel extends ViewModelBase {
   serviceApiAccessToken = ko
     .observable<string>("")
     .syncWith("serviceApiAccessToken", true, false);
+  currentCustomer = ko
+    .observable<Models.Contact>(null)
+    .syncWith("currentCustomer", false);
 
   testLoadItem = async (code: string) => {
     if (code != "") {
       code = "SKU-44466536";
     }
-    debugger;
     var product = await this.repository.product(code);
     if (product) {
       this.currentProduct(product);
@@ -74,15 +76,17 @@ export class MainViewModel extends ViewModelBase {
   }
 
   initialize = async () => {
-    const serviceTokenPromise = this.repository.getServiceApiToken();
-    const pagePromise = this.repository.getPageContent(7);
+    const serviceTokenPromise = this.repository
+      .getServiceApiToken()
+      .then(data => {
+        this.serviceApiAccessToken(data.access_token);
 
-    Promise.all([serviceTokenPromise, pagePromise]).then(function(values) {
-      debugger;
-      console.log(values);
+        const pagePromise = this.repository.getPageContent(7);
 
-      this.serviceApiAccessToken(values[0]);
-    });
+        Promise.all([pagePromise]).then(values => {
+          console.log(values);
+        });
+      });
   };
 
   setDefaultCurrentStore = async () => {

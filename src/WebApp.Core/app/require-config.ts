@@ -7,8 +7,7 @@ require.config({
     jquery: "lib/jquery",
     slick: "lib/slick",
     "google-maps": "lib/google.min",
-    firebase: "lib/firebase",
-    axios: "lib/axios"
+    firebase: "lib/firebase"
   },
   shim: {
     firebase: {

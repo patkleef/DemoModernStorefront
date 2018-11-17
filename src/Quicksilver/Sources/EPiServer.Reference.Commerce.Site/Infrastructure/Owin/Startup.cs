@@ -44,6 +44,7 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure.Owin
 
         public void Configuration(IAppBuilder app)
         {
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.AddCmsAspNetIdentity<SiteUser>(new ApplicationOptions
             {
                 ConnectionStringName = _connectionStringHandler.Commerce.Name
@@ -79,6 +80,7 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure.Owin
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
             app.UseServiceApiIdentityTokenAuthorization<ApplicationUserManager<SiteUser>, SiteUser>();
+            
         }
     }
 }

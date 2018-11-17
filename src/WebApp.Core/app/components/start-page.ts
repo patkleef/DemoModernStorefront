@@ -1,37 +1,45 @@
 /// <amd-dependency path="text!./start-page.html" />
 import * as $ from "jquery";
 import * as ko from "knockout";
-import { RepositoryStub } from "../repositoryStub";
+import { Repository } from "../repository";
 
 export class StartPageViewModel {
-    repo = new RepositoryStub();
-    
-    showIntroductionTour = ko.observable<boolean>(true).syncWith("showIntroductionTour", true, false);
-    products = ko.observableArray<any>([]);
-    wishlistitems = ko.observableArray<Models.WishlistItem>([]).syncWith("wishlistitems", true, false);
-    orders = ko.observableArray<Models.Order>([]).syncWith("orders", true, false);
-    currentStore = ko.observable<Models.Store>().subscribeTo("currentStore", true);
+  repository = new Repository();
 
-    constructor() { 
-        $('.single-item').slick({
-            dots: true 
-        });
+  showIntroductionTour = ko
+    .observable<boolean>(true)
+    .syncWith("showIntroductionTour", true, false);
+  products = ko.observableArray<any>([]);
+  wishlistitems = ko
+    .observableArray<Models.WishlistItem>([])
+    .syncWith("wishlistitems", true, false);
+  orders = ko.observableArray<Models.Order>([]).syncWith("orders", true, false);
+  currentStore = ko
+    .observable<Models.Store>()
+    .subscribeTo("currentStore", true);
+  currentCustomer = ko
+    .observable<Models.Contact>()
+    .subscribeTo("currentCustomer", true);
 
-        this.repo.products()
-            .then((products) => {
-                products.forEach((product) => {
-                    if(product.saleprice != "0") {
-                        this.products.push(product);
-                    }  
-                });                
-            });    
-    }
+  constructor() {
+    $(".single-item").slick({
+      dots: true
+    });
 
-    skipIntroductionTour = () => {
-        this.showIntroductionTour(false)        
-    }
+    const response = this.repository.products();
 
-    scanProduct = () => {
-        alert("Product scanned");        
-    }
+    response.then(products => {
+      products.forEach((product: Models.Product) => {
+        this.products.push(product);
+      });
+    });
+  }
+
+  skipIntroductionTour = () => {
+    this.showIntroductionTour(false);
+  };
+
+  scanProduct = () => {
+    alert("Product scanned");
+  };
 }

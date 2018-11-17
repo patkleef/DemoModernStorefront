@@ -96,8 +96,7 @@ gulp.task("copy:lib", function() {
       "node_modules/jquery/dist/jquery.js",
       "node_modules/slick-carousel/slick/slick.js",
       "node_modules/google-maps/lib/Google.min.js",
-      "node_modules/firebase/firebase.js",
-      "node_modules/axios/dist/axios.js"
+      "node_modules/firebase/firebase.js"
     ])
     .pipe(_if("**/knockout-latest.js", rename({ basename: "knockout" })))
     .pipe(gulp.dest("wwwroot/lib"));

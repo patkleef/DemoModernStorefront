@@ -1,6 +1,5 @@
 import * as ko from "knockout";
 import { MainViewModel } from "./main";
-import { Repository } from "./repository";
 import { ProductCouponDialogViewModel } from "./components/product-coupon-dialog";
 import { StockSizesViewModel } from "./components/stock-sizes";
 import { MenuCartViewModel } from "./components/menu-cart";
@@ -15,58 +14,62 @@ import * as $ from "jquery";
 
 // register knockout components
 ko.components.register("product-coupon-dialog", {
-    viewModel: ProductCouponDialogViewModel,
-    template: { require: "text!components/product-coupon-dialog.html" }
+  viewModel: ProductCouponDialogViewModel,
+  template: { require: "text!components/product-coupon-dialog.html" }
 });
 ko.components.register("stock-sizes", {
-    viewModel: StockSizesViewModel,
-    template: { require: "text!components/stock-sizes.html" } 
+  viewModel: StockSizesViewModel,
+  template: { require: "text!components/stock-sizes.html" }
 });
 ko.components.register("menu-cart", {
-    viewModel: MenuCartViewModel,
-    template: { require: "text!components/menu-cart.html" }
+  viewModel: MenuCartViewModel,
+  template: { require: "text!components/menu-cart.html" }
 });
 ko.components.register("login-page", {
-    viewModel: LoginPageViewModel,
-    template: { require: "text!components/login-page.html" }
+  viewModel: LoginPageViewModel,
+  template: { require: "text!components/login-page.html" }
 });
 ko.components.register("signup-page", {
-    viewModel: SignupPageViewModel,
-    template: { require: "text!components/signup-page.html" }
+  viewModel: SignupPageViewModel,
+  template: { require: "text!components/signup-page.html" }
 });
 ko.components.register("start-page", {
-    viewModel: StartPageViewModel,
-    template: { require: "text!components/start-page.html" }
+  viewModel: StartPageViewModel,
+  template: { require: "text!components/start-page.html" }
 });
 ko.components.register("product-detail-page", {
-    viewModel: ProductDetailPageViewModel,
-    template: { require: "text!components/product-detail-page.html" }
+  viewModel: ProductDetailPageViewModel,
+  template: { require: "text!components/product-detail-page.html" }
 });
 ko.components.register("nav-menu", {
-    viewModel: NavMenuViewModel,
-    template: { require: "text!components/nav-menu.html" }
+  viewModel: NavMenuViewModel,
+  template: { require: "text!components/nav-menu.html" }
 });
 ko.components.register("wishlist-page", {
-    viewModel: WishlistViewModel,
-    template: { require: "text!components/wishlist-page.html" }
+  viewModel: WishlistViewModel,
+  template: { require: "text!components/wishlist-page.html" }
 });
 ko.components.register("myorders-page", {
-    viewModel: MyOrdersViewModel,
-    template: { require: "text!components/myorders-page.html" }
+  viewModel: MyOrdersViewModel,
+  template: { require: "text!components/myorders-page.html" }
 });
 
 // Start our app
 var mainViewModel = new MainViewModel();
 ko.applyBindings(mainViewModel);
 
-setTimeout(() => { mainViewModel.loading(false); }, 2000);
+setTimeout(() => {
+  mainViewModel.loading(false);
+}, 2000);
 
 // Just to test if it works
 (<any>window).newProduct = (productId: string) => {
-    const currentProductId = mainViewModel.lastScannedId();
-    if (currentProductId !== productId) {
-        mainViewModel.lastScannedId(productId);
-        mainViewModel.loading(true);
-        setTimeout(() => { mainViewModel.loading(false) }, 500);    
-    }
-}
+  const currentProductId = mainViewModel.lastScannedId();
+  if (currentProductId !== productId) {
+    mainViewModel.lastScannedId(productId);
+    mainViewModel.loading(true);
+    setTimeout(() => {
+      mainViewModel.loading(false);
+    }, 500);
+  }
+};

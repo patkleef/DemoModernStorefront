@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -62,14 +62,14 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.CMS.Core.11.9.4\lib\net461\EPiServer.dll</HintPath>
+    <Reference Include="EPiServer, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.CMS.Core.11.10.5\lib\net461\EPiServer.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.ApplicationModules, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.Framework.11.9.4\lib\net461\EPiServer.ApplicationModules.dll</HintPath>
+    <Reference Include="EPiServer.ApplicationModules, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.Framework.11.10.5\lib\net461\EPiServer.ApplicationModules.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Cms.AspNet, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.CMS.AspNet.11.9.4\lib\net461\EPiServer.Cms.AspNet.dll</HintPath>
+    <Reference Include="EPiServer.Cms.AspNet, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.CMS.AspNet.11.10.5\lib\net461\EPiServer.Cms.AspNet.dll</HintPath>
     </Reference>
     <Reference Include="EPiServer.Cms.Shell.UI, Version=11.7.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EPiServer.CMS.UI.Core.11.7.0\lib\net461\EPiServer.Cms.Shell.UI.dll</HintPath>
@@ -77,35 +77,35 @@
     <Reference Include="EPiServer.Cms.UI.AspNetIdentity, Version=11.7.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EPiServer.CMS.UI.AspNetIdentity.11.7.0\lib\net461\EPiServer.Cms.UI.AspNetIdentity.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Configuration, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.CMS.AspNet.11.9.4\lib\net461\EPiServer.Configuration.dll</HintPath>
+    <Reference Include="EPiServer.Configuration, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.CMS.AspNet.11.10.5\lib\net461\EPiServer.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Data, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.Framework.11.9.4\lib\net461\EPiServer.Data.dll</HintPath>
+    <Reference Include="EPiServer.Data, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.Framework.11.10.5\lib\net461\EPiServer.Data.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Data.Cache, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.Framework.11.9.4\lib\net461\EPiServer.Data.Cache.dll</HintPath>
+    <Reference Include="EPiServer.Data.Cache, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.Framework.11.10.5\lib\net461\EPiServer.Data.Cache.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Enterprise, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.CMS.Core.11.9.4\lib\net461\EPiServer.Enterprise.dll</HintPath>
+    <Reference Include="EPiServer.Enterprise, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.CMS.Core.11.10.5\lib\net461\EPiServer.Enterprise.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Events, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.Framework.11.9.4\lib\net461\EPiServer.Events.dll</HintPath>
+    <Reference Include="EPiServer.Events, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.Framework.11.10.5\lib\net461\EPiServer.Events.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Framework, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.Framework.11.9.4\lib\net461\EPiServer.Framework.dll</HintPath>
+    <Reference Include="EPiServer.Framework, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.Framework.11.10.5\lib\net461\EPiServer.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Framework.AspNet, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.Framework.AspNet.11.9.4\lib\net461\EPiServer.Framework.AspNet.dll</HintPath>
+    <Reference Include="EPiServer.Framework.AspNet, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.Framework.AspNet.11.10.5\lib\net461\EPiServer.Framework.AspNet.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.ImageLibrary, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.CMS.AspNet.11.9.4\lib\net461\EPiServer.ImageLibrary.dll</HintPath>
+    <Reference Include="EPiServer.ImageLibrary, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.CMS.AspNet.11.10.5\lib\net461\EPiServer.ImageLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Licensing, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.Framework.11.9.4\lib\net461\EPiServer.Licensing.dll</HintPath>
+    <Reference Include="EPiServer.Licensing, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.Framework.11.10.5\lib\net461\EPiServer.Licensing.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.LinkAnalyzer, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.CMS.Core.11.9.4\lib\net461\EPiServer.LinkAnalyzer.dll</HintPath>
+    <Reference Include="EPiServer.LinkAnalyzer, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.CMS.Core.11.10.5\lib\net461\EPiServer.LinkAnalyzer.dll</HintPath>
     </Reference>
     <Reference Include="EPiServer.Logging.Log4Net, Version=2.2.2.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EPiServer.Logging.Log4Net.2.2.2\lib\net461\EPiServer.Logging.Log4Net.dll</HintPath>
@@ -122,8 +122,8 @@
     <Reference Include="EPiServer.UI, Version=11.7.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EPiServer.CMS.UI.Core.11.7.0\lib\net461\EPiServer.UI.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Web.WebControls, Version=11.9.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EPiServer.CMS.AspNet.11.9.4\lib\net461\EPiServer.Web.WebControls.dll</HintPath>
+    <Reference Include="EPiServer.Web.WebControls, Version=11.10.5.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.CMS.AspNet.11.10.5\lib\net461\EPiServer.Web.WebControls.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
@@ -496,13 +496,11 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
-  <Import Project="..\..\packages\EPiServer.CommerceManager.12.11.0\build\EPiServer.CommerceManager.targets"
-    Condition="Exists('..\..\packages\EPiServer.CommerceManager.12.11.0\build\EPiServer.CommerceManager.targets')"/>
+  <Import Project="..\..\packages\EPiServer.CommerceManager.12.11.0\build\EPiServer.CommerceManager.targets" Condition="Exists('..\..\packages\EPiServer.CommerceManager.12.11.0\build\EPiServer.CommerceManager.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\EPiServer.CommerceManager.12.11.0\build\EPiServer.CommerceManager.targets')"
-      Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\EPiServer.CommerceManager.12.11.0\build\EPiServer.CommerceManager.targets'))"/>
+    <Error Condition="!Exists('..\..\packages\EPiServer.CommerceManager.12.11.0\build\EPiServer.CommerceManager.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\EPiServer.CommerceManager.12.11.0\build\EPiServer.CommerceManager.targets'))" />
   </Target>
 </Project>
