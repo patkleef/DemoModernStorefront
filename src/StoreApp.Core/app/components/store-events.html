@@ -1,0 +1,23 @@
+<div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
+<h2 class="mdl-card__title-text">Store events</h2>
+</div>
+<div class="mdl-card__supporting-text mdl-color-text--grey-600">
+    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" style="width: 100%">
+        <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">Timestamp</th>
+                <th>User</th>
+                <th>Message</th>
+                <th>Product</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: $component.eventsArray">
+            <tr>
+                <td class="mdl-data-table__cell--non-numeric" data-bind="moment: $data.timestamp"></td>
+                <td data-bind="text: $data.userInfo.displayName || $data.userInfo.email"></td>
+                <td data-bind="text: $data.message"></td>
+                <td data-bind="if: $data.product"><!--ko text: $data.product.title--><!--/ko--></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
