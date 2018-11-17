@@ -1,10 +1,11 @@
 import * as ko from "knockout";
-import { RepositoryStub } from "./repositoryStub";
+import { Repository } from "./repository";
+
 import { firebaseConnection } from "./firebaseConnection";
 import ViewModelBase from "./components/ViewModelBase";
 
 export class MainViewModel extends ViewModelBase {
-  repository = new RepositoryStub();
+  repository = new Repository();
   lastScannedId = ko.observable().extend({ throttle: 100 });
   loading = ko.observable(true);
   items = ko.observableArray<any>([]);
@@ -25,6 +26,10 @@ export class MainViewModel extends ViewModelBase {
   couponRetrieved = ko
     .observable<boolean>(false)
     .syncWith("couponRetrieved", true, false);
+
+  serviceApiAccessToken = ko
+    .observable<string>("")
+    .syncWith("serviceApiAccessToken", true, false);
 
   testLoadItem = async (code: string) => {
     if (code != "") {
@@ -58,6 +63,8 @@ export class MainViewModel extends ViewModelBase {
   constructor() {
     super();
 
+    this.initialize();
+
     this.setDefaultCurrentStore();
 
     this.currentComponent("login-page");
@@ -65,6 +72,18 @@ export class MainViewModel extends ViewModelBase {
       //this.load(newScannedId);
     });
   }
+
+  initialize = async () => {
+    const serviceTokenPromise = this.repository.getServiceApiToken();
+    const pagePromise = this.repository.getPageContent(7);
+
+    Promise.all([serviceTokenPromise, pagePromise]).then(function(values) {
+      debugger;
+      console.log(values);
+
+      this.serviceApiAccessToken(values[0]);
+    });
+  };
 
   setDefaultCurrentStore = async () => {
     var store = await this.repository.store(1);

@@ -100,6 +100,7 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure
                 config.Formatters.XmlFormatter.UseXmlSerializer = true;
                 config.DependencyResolver = new StructureMapResolver(context.StructureMap());
                 config.MapHttpAttributeRoutes();
+                config.EnableCors();
             });
 
             context.Services.Configure<ContentApiConfiguration>(config =>
