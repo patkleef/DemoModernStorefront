@@ -17,6 +17,9 @@ export class StartPageViewModel {
   currentStore = ko
     .observable<Models.Store>()
     .subscribeTo("currentStore", true);
+  currentStorePage = ko
+    .observable<Models.StorePage>()
+    .syncWith("currentStorePage", true);
   currentCustomer = ko
     .observable<Models.Contact>()
     .subscribeTo("currentCustomer", true);
@@ -26,7 +29,7 @@ export class StartPageViewModel {
       dots: true
     });
 
-    const response = this.repository.products();
+    const response = this.repository.getProducts();
 
     response.then(products => {
       products.forEach((product: Models.Product) => {

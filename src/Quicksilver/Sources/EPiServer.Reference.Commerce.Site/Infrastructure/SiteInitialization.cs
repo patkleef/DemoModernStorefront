@@ -53,6 +53,11 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure
                 ContextCondition = r => r.GetOverriddenBrowser().IsMobileDevice
             });
 
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings = new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            };
+
             AreaRegistration.RegisterAllAreas();
 
 #if DISABLE_PROMOTION_TYPES_FEATURE

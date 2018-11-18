@@ -38,9 +38,9 @@
 
 <!--ko ifnot: $component.showIntroductionTour()-->
 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card card-product-image">
-    <div class="mdl-card__title" style="background: url('media/welcome-in-store.jpg') center no-repeat; background-size: 150%; height:290px;">
-        <!--ko if: $root.currentStore()-->
-            <h3 style="color: white;">Welcome in our <span data-bind="text: $root.currentStore().name"></h3>
+    <div class="mdl-card__title" data-bind="style: { backgroundImage: 'url(http://modernstorefront-quicksilver.localtest.me/' + $root.currentStorePage().mainImage.value + ')', backgroundSize: '150%', height: '290px' }">
+        <!--ko if: $root.currentStorePage()-->
+            <h3 style="color: white;">Welcome in our <span data-bind="text: $root.currentStorePage().storeName.value"></span> store</h3>
         <!--/ko-->
     </div> 
     <div class="mdl-card__menu"> 
@@ -51,14 +51,12 @@
 </div>
 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
     <div class="mdl-card__title">
-        <h3 data-bind="text: 'Hi ' + $root.currentCustomer().FirstName + ' ' + $root.currentCustomer().LastName "></h3>
+        <h3 data-bind="text: 'Hi ' + $root.currentCustomer().firstName + ' ' + $root.currentCustomer().lastName "></h3>
     </div>
     <div class="mdl-card__supporting-text">
-      <p>Welcome back to our store in Stockholm.</p>
+      <p data-bind="text: $root.currentStorePage().header.value"></p>
 
-      <p>Use your phone to scan a product. This provides access to extra product information, exclusive deals, videos and a floor plan.</p>
-
-      <p>Since this is your third visit, we've some special offers for you!</p>
+      <div data-bind="html: $root.currentStorePage().mainBody.value"></div>
   </div>
 </div>
 
@@ -69,7 +67,7 @@
     </div>
     <div class="mdl-card__supporting-text">    
         <p><span data-bind="html: $data.description"></span></p>
-        <p><span class="normal-price-label" data-bind="text: $data.price + ',-'"></span> <span class="sales-price-label" data-bind="text: $data.saleprice + ',-'"></span></p>
+        <p><span class="normal-price-label" data-bind="text: $data.price + ',-'"></span> <span class="sales-price-label" data-bind="text: $data.salePrice + ',-'"></span></p>
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <a class="mdl-button mdl-js-button mdl-button--raised mdl-button-primary" data-bind="click: $root.clickAddToWishlist.bind($data)">Add to wishlist</a>    

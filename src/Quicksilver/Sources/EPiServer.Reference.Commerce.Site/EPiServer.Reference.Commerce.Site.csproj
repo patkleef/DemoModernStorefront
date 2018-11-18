@@ -498,6 +498,7 @@
     <Compile Include="Features\Shared\Pages\StandardPage.cs" />
     <Compile Include="Features\Start\ViewModels\PromotionViewModel.cs" />
     <Compile Include="Features\Start\ViewModels\StartPageViewModel.cs" />
+    <Compile Include="Features\Stores\StorePage.cs" />
     <Compile Include="Features\Warehouse\Controllers\WarehouseController.cs" />
     <Compile Include="Features\Warehouse\Models\WarehouseAvailability.cs" />
     <Compile Include="Features\Warehouse\Services\IWarehouseService.cs" />

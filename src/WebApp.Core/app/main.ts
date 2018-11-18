@@ -1,7 +1,6 @@
 import * as ko from "knockout";
 import { Repository } from "./repository";
 
-import { firebaseConnection } from "./firebaseConnection";
 import ViewModelBase from "./components/ViewModelBase";
 
 export class MainViewModel extends ViewModelBase {
@@ -17,6 +16,9 @@ export class MainViewModel extends ViewModelBase {
     .observable<Models.Product>()
     .syncWith("currentProduct", false);
   currentStore = ko.observable<Models.Store>().syncWith("currentStore", false);
+  currentStorePage = ko
+    .observable<Models.StorePage>()
+    .syncWith("currentStorePage", false);
   wishlistitems = ko
     .observableArray<Models.WishlistItem>([])
     .syncWith("wishlistitems", true, false);
@@ -81,10 +83,10 @@ export class MainViewModel extends ViewModelBase {
       .then(data => {
         this.serviceApiAccessToken(data.access_token);
 
-        const pagePromise = this.repository.getPageContent(7);
+        const pagePromise = this.repository.getPageContent(295);
 
         Promise.all([pagePromise]).then(values => {
-          console.log(values);
+          this.currentStorePage(values[0]);
         });
       });
   };
@@ -97,18 +99,18 @@ export class MainViewModel extends ViewModelBase {
   };
 
   productScanned = async (code: string) => {
-    const userInfo = firebaseConnection.getLoggedInUserInfo();
+    /*const userInfo = firebaseConnection.getLoggedInUserInfo();
     firebaseConnection.app
       .database()
       .ref("active-users/" + userInfo.displayName)
       .set({
         userInfo: userInfo,
         lastActive: new Date().getTime()
-      });
+      });*/
 
     var product = await this.repository.product(code);
     if (product) {
-      firebaseConnection.app
+      /* firebaseConnection.app
         .database()
         .ref("events/")
         .push({
@@ -116,7 +118,7 @@ export class MainViewModel extends ViewModelBase {
           product: product,
           message: "Product scanned. Code: " + code,
           timestamp: new Date().getTime()
-        });
+        });*/
 
       this.currentProduct(product);
       this.currentComponent("product-detail-page");
@@ -124,7 +126,7 @@ export class MainViewModel extends ViewModelBase {
         ko.postbox.publish("ShowDialogTopic");
         this.couponRetrieved(true);
 
-        firebaseConnection.app
+        /*firebaseConnection.app
           .database()
           .ref("events/")
           .push(<Models.UserEvent>{
@@ -132,7 +134,7 @@ export class MainViewModel extends ViewModelBase {
             product: product,
             message: "Coupon code retrieved",
             timestamp: new Date().getTime()
-          });
+          });*/
       }
     }
   };

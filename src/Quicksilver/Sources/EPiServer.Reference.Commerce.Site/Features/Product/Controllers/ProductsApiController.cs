@@ -1,8 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Description;
 using EPiServer.Reference.Commerce.Site.Features.Product.Models;
+using EPiServer.Reference.Commerce.Site.Features.Product.ViewModelFactories;
+using EPiServer.Reference.Commerce.Site.Features.Shared.Services;
 using EPiServer.ServiceApi.Configuration;
+using EPiServer.Web;
+using EPiServer.Web.Routing;
 using Mediachase.Commerce.Catalog;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Product.Controllers
@@ -13,11 +18,28 @@ namespace EPiServer.Reference.Commerce.Site.Features.Product.Controllers
     {
         private readonly IContentRepository _contentRepository;
         private readonly ReferenceConverter _referenceConverter;
+        private readonly IPricingService _pricingService;
+        private readonly UrlResolver _urlResolver;
+        private readonly CatalogContentService _catalogContentService;
+        private readonly CatalogEntryViewModelFactory _catalogEntryViewModelFactory;
+        private readonly ISiteDefinitionRepository _siteDefinitionRepository;
 
-        public ProductsController(IContentRepository contentRepository, ReferenceConverter referenceConverter)
+        public ProductsController(
+            IContentRepository contentRepository, 
+            ReferenceConverter referenceConverter,
+            IPricingService pricingService,
+            UrlResolver urlResolver,
+            CatalogContentService catalogContentService,
+            CatalogEntryViewModelFactory catalogEntryViewModelFactory,
+            ISiteDefinitionRepository siteDefinitionRepository)
         {
             _contentRepository = contentRepository;
             _referenceConverter = referenceConverter;
+            _pricingService = pricingService;
+            _urlResolver = urlResolver;
+            _catalogContentService = catalogContentService;
+            _catalogEntryViewModelFactory = catalogEntryViewModelFactory;
+            _siteDefinitionRepository = siteDefinitionRepository;
         }
 
         [ResponseType(typeof(Product[]))]
@@ -25,6 +47,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Product.Controllers
         [Route("", Name = "Products")]
         public virtual IHttpActionResult GetProducts()
         {
+            var siteUrl = _siteDefinitionRepository.List().FirstOrDefault()?.SiteUrl;
             var contentLink = _referenceConverter.GetContentLink("shoes");
             var category = _contentRepository.Get<FashionNode>(contentLink);
 
@@ -32,11 +55,20 @@ namespace EPiServer.Reference.Commerce.Site.Features.Product.Controllers
 
             foreach (var item in _contentRepository.GetChildren<FashionProduct>(category.ContentLink))
             {
+                var variants = _catalogContentService.GetVariants<FashionVariant>(item).ToList();
+                var defaultVariant = variants.FirstOrDefault();
+
+                var viewModel = _catalogEntryViewModelFactory.Create(item, defaultVariant?.Code);
                 var product = new Product
                 {
                     Code = item.Code,
                     Title = item.DisplayName,
-                    Description = item.Description.ToHtmlString()
+                    Description = item.Description.ToHtmlString(),
+                    Price = viewModel.ListingPrice.Amount,
+                    SalePrice = viewModel.DiscountedPrice?.Amount ?? 0,
+                    Brand = viewModel.Product.Brand,
+                    Image = siteUrl + viewModel.Images?.FirstOrDefault(),
+                    LargeImage = siteUrl + viewModel.Images?.FirstOrDefault()
                 };
                 list.Add(product);
             }
@@ -53,8 +85,8 @@ namespace EPiServer.Reference.Commerce.Site.Features.Product.Controllers
         public string Description { get; set; }
         public string Image { get; set; }
         public string LargeImage { get; set; }
-        public double Price { get; set; }
-        public double SalePrice { get; set; }
+        public decimal Price { get; set; }
+        public decimal SalePrice { get; set; }
         public ProductSize[] Sizes { get; set; }
     }
 

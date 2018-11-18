@@ -52,33 +52,102 @@
   }
 
   export interface Contact {
-    PrimaryKeyId: string;
-    Addresses: Address[];
-    FirstName: string;
-    LastName: string;
-    Email: string;
-    RegistrationSource: string;
+    primaryKeyId: string;
+    addresses: Address[];
+    firstName: string;
+    lastName: string;
+    email: string;
+    registrationSource: string;
   }
 
   export interface Address {
-    AddressId: string;
-    Modified: string;
-    Name: string;
-    FirstName: string;
-    LastName: string;
-    CountryName: string;
-    CountryCode: string;
-    City: string;
-    PostalCode: string;
-    Line1: string;
-    Line2: string;
-    RegionName: string;
-    RegionCode: string;
-    Email: string;
-    ShippingDefault: true;
-    BillingDefault: true;
-    DaytimePhoneNumber: string;
-    EveningPhoneNumber: string;
-    Organization: string;
+    addressId: string;
+    modified: string;
+    name: string;
+    firstName: string;
+    lastName: string;
+    countryName: string;
+    countryCode: string;
+    city: string;
+    postalCode: string;
+    line1: string;
+    line2: string;
+    regionName: string;
+    regionCode: string;
+    email: string;
+    shippingDefault: true;
+    billingDefault: true;
+    daytimePhoneNumber: string;
+    eveningPhoneNumber: string;
+    organization: string;
+  }
+
+  export interface StorePage extends Content {
+    id: number;
+    storeName: Property;
+    header: Property;
+    mainBody: Property;
+    mainImage: Property;
+  }
+
+  export interface ContentLink {
+    id: number;
+    workId: number;
+    guidValue: string;
+    providerName?: any;
+  }
+
+  export interface Language {
+    displayName: string;
+    name: string;
+  }
+
+  export interface ExistingLanguage {
+    displayName: string;
+    name: string;
+  }
+
+  export interface MasterLanguage {
+    displayName: string;
+    name: string;
+  }
+
+  export interface ParentLink {
+    id: number;
+    workId: number;
+    guidValue: string;
+    providerName?: any;
+  }
+
+  export interface Category {
+    value: any[];
+    propertyDataType: string;
+  }
+
+  export interface Property {
+    value: string;
+    propertyDataType: string;
+  }
+
+  export interface Content {
+    contentLink: ContentLink;
+    name: string;
+    language: Language;
+    existingLanguages: ExistingLanguage[];
+    masterLanguage: MasterLanguage;
+    contentType: string[];
+    parentLink: ParentLink;
+    routeSegment: string;
+    url?: any;
+    changed: Date;
+    created: Date;
+    startPublish: Date;
+    stopPublish?: any;
+    saved: Date;
+    status: string;
+    category: Category;
+    storeName: Property;
+    header: Property;
+    mainBody: Property;
   }
 }

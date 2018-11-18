@@ -1,12 +1,10 @@
 /// <amd-dependency path="text!./login-page.html" />
 import * as ko from "knockout";
-import { firebaseConnection } from "../firebaseConnection";
 import { Repository } from "../repository";
 
 export class LoginPageViewModel {
   currentComponent = ko.observable().syncWith("currentComponent", true, true);
   currentCustomer = ko.observable().syncWith("currentCustomer", true, true);
-  loggedInUser = firebaseConnection.loggedInUser;
   repository = new Repository();
 
   constructor() {}
@@ -19,16 +17,18 @@ export class LoginPageViewModel {
     response.then(data => {
       this.currentCustomer(data);
 
+      this.repository.trackEvent(data, "login", "login");
+
       this.currentComponent("start-page");
     });
   };
 
   loginWithGoogleClicked = () => {
-    if (this.loggedInUser()) {
+    /*if (this.loggedInUser()) {
       this.currentComponent("start-page");
     } else {
-      firebaseConnection.loginWithGoogle();
-    }
+      // firebaseConnection.loginWithGoogle();
+    }*/
   };
 
   signupClicked = () => {

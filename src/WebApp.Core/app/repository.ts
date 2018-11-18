@@ -5,6 +5,8 @@ export class Repository {
   private baseContentDeliveryApiUrl: string =
     this.baseUrl + "api/episerver/v2.0/content/";
   private baseServiceApiUrl: string = this.baseUrl + "episerverapi/";
+  private baseTrackingApiUrl: string =
+    "https://track-emea01.profilestore.episerver.net//api/v1.0/";
 
   private serviceApiAccessToken = ko
     .observable<string>()
@@ -103,7 +105,7 @@ export class Repository {
   /* CONTENT DELIVERY API */
   public async getPageContent(page: number): Promise<any> {
     const response = await fetch(this.baseContentDeliveryApiUrl + page, {
-      method: "GET", // *GET, POST, PUT, DELETE, etc.
+      method: "GET",
 
       headers: {
         "Content-Type": "application/json",
@@ -111,5 +113,39 @@ export class Repository {
       }
     });
     return response.json();
+  }
+
+  /* TRACKING API */
+  public async trackEvent(
+    contact: Models.Contact,
+    eventType: string,
+    value: string
+  ): Promise<any> {
+    const request = {
+      user: {
+        name: contact.firstName + " " + contact.lastName,
+        email: contact.email
+      },
+      payload: {},
+      remoteAddress: "127.0.0.1",
+      clientId: contact.primaryKeyId,
+      deviceId: "123",
+      eventType: eventType,
+      value: value,
+      scope: "c909a277-5aad-449a-8a9f-6fe7c265680b",
+      eventTime: new Date().toISOString()
+    };
+
+    const response = await fetch(this.baseTrackingApiUrl + "Track", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+        "Accept-Language": "en",
+        Authorization: "epi-single KEY"
+      },
+      body: JSON.stringify(request)
+    });
+    return response;
   }
 }

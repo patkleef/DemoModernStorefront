@@ -7,7 +7,7 @@
     "image": "media/products/SKU-36127195.jpg?width=400",
     "largeimage": "media/products/SKU-36127195.jpg?width=800&crop=0,400,0,-150",
     "price": "14.50",
-    "saleprice": "11.60",
+    "salePrice": "11.60",
     "sizes": [
       {
         "size": 38,
@@ -79,7 +79,7 @@
     "description": "PUMA creates high-performance, high-style athletic shoes for men and women, with an incredible variety of classic and contemporary designs tailored to all-around athletics and casual lifestyle. All PUMA shoes are made to the highest standards of technology and quality, promising superb comfort, performance, and style.",
     "image": "media/products/SKU-44477844.jpg?width=400",
     "price": "52.50",
-    "saleprice": "42",
+    "salePrice": "42",
     "sizes": [
       {
         "size": 36,
@@ -176,7 +176,7 @@
     "description": "PUMA creates high-performance, high-style athletic shoes for men and women, with an incredible variety of classic and contemporary designs tailored to all-around athletics and casual lifestyle. All PUMA shoes are made to the highest standards of technology and quality, promising superb comfort, performance, and style.",
     "image": "media/products/SKU-39850363.jpg?width=400",
     "price": "33.50",
-    "saleprice": "26.80",
+    "salePrice": "26.80",
     "sizes": [
       {
         "size": 36,
@@ -290,7 +290,7 @@
     "description": "PUMA creates high-performance, high-style athletic shoes for men and women, with an incredible variety of classic and contemporary designs tailored to all-around athletics and casual lifestyle. All PUMA shoes are made to the highest standards of technology and quality, promising superb comfort, performance, and style.",
     "image": "media/products/SKU-44466536.jpg?width=400",
     "price": "41.50",
-    "saleprice": "33.20",
+    "salePrice": "33.20",
     "sizes": [
       {
         "size": 36,
