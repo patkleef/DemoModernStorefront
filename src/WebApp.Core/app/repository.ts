@@ -119,7 +119,7 @@ export class Repository {
   public async trackEvent(
     contact: Models.Contact,
     eventType: string,
-    value: string
+    value?: string
   ): Promise<any> {
     const request = {
       user: {
@@ -131,11 +131,11 @@ export class Repository {
       clientId: contact.primaryKeyId,
       deviceId: "123",
       eventType: eventType,
-      value: value,
+      value: value !== undefined ? value : eventType,
+      trackId: this.guid(),
       scope: "c909a277-5aad-449a-8a9f-6fe7c265680b",
       eventTime: new Date().toISOString()
     };
-
     const response = await fetch(this.baseTrackingApiUrl + "Track", {
       method: "POST",
 
@@ -147,5 +147,27 @@ export class Repository {
       body: JSON.stringify(request)
     });
     return response;
+  }
+
+  public guid() {
+    function s4() {
+      return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+    }
+    return (
+      s4() +
+      s4() +
+      "-" +
+      s4() +
+      "-" +
+      s4() +
+      "-" +
+      s4() +
+      "-" +
+      s4() +
+      s4() +
+      s4()
+    );
   }
 }

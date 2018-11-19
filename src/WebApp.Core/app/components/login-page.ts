@@ -1,6 +1,7 @@
 /// <amd-dependency path="text!./login-page.html" />
 import * as ko from "knockout";
 import { Repository } from "../repository";
+import { EventTypes } from "../models/EventTypes";
 
 export class LoginPageViewModel {
   currentComponent = ko.observable().syncWith("currentComponent", true, true);
@@ -17,7 +18,7 @@ export class LoginPageViewModel {
     response.then(data => {
       this.currentCustomer(data);
 
-      this.repository.trackEvent(data, "login", "login");
+      this.repository.trackEvent(data, EventTypes.userLogin);
 
       this.currentComponent("start-page");
     });

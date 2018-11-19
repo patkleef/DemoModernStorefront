@@ -2,6 +2,7 @@ import * as ko from "knockout";
 import { Repository } from "./repository";
 
 import ViewModelBase from "./components/ViewModelBase";
+import { EventTypes } from "./models/EventTypes";
 
 export class MainViewModel extends ViewModelBase {
   repository = new Repository();
@@ -62,19 +63,17 @@ export class MainViewModel extends ViewModelBase {
     }
     var store = this.currentStore();
     this.wishlistitems.push({ product: product, store: store });
+    this.repository.trackEvent(
+      this.currentCustomer(),
+      EventTypes.addToWishlist,
+      product.code
+    );
   };
 
   constructor() {
     super();
 
     this.initialize();
-
-    this.setDefaultCurrentStore();
-
-    this.currentComponent("login-page");
-    this.lastScannedId.subscribe((newScannedId: string) => {
-      //this.load(newScannedId);
-    });
   }
 
   initialize = async () => {
@@ -87,8 +86,25 @@ export class MainViewModel extends ViewModelBase {
 
         Promise.all([pagePromise]).then(values => {
           this.currentStorePage(values[0]);
+
+          this.completedInitialization();
         });
       });
+  };
+
+  completedInitialization = () => {
+    this.setDefaultCurrentStore();
+
+    this.currentComponent.subscribe((value: string) => {
+      if (this.currentCustomer() !== null) {
+        this.repository.trackEvent(this.currentCustomer(), "page-view", value);
+      }
+    });
+
+    this.currentComponent("login-page");
+    this.lastScannedId.subscribe((newScannedId: string) => {
+      //this.load(newScannedId);
+    });
   };
 
   setDefaultCurrentStore = async () => {

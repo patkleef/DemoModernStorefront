@@ -13,11 +13,11 @@
   <div class="mdl-card__supporting-text">
       <h4>About this shoe</h4>
       <p data-bind="html: description"></p>
-      <p><!-- ko if: saleprice > 0 -->
+      <p><!-- ko if: salePrice > 0 -->
         <span class="normal-price-label" data-bind="text: price + ',-'"></span>
-        <span class="sales-price-label" data-bind="text: saleprice + ',-'"></span>
+        <span class="sales-price-label" data-bind="text: salePrice + ',-'"></span>
         <!-- /ko -->
-        <!-- ko ifnot: saleprice > 0 -->
+        <!-- ko ifnot: salePrice > 0 -->
         <span class="normal-price-label" data-bind="text: price + ',-'"></span>   
         <!-- /ko -->
       </p>
