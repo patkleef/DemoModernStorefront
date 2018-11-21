@@ -10,6 +10,7 @@ import { ProductDetailPageViewModel } from "./components/product-detail-page";
 import { NavMenuViewModel } from "./components/nav-menu";
 import { WishlistViewModel } from "./components/wishlist-page";
 import { MyOrdersViewModel } from "./components/myorders-page";
+import { NfcViewModel } from "./components/nfc-page";
 import * as $ from "jquery";
 
 // register knockout components
@@ -52,6 +53,10 @@ ko.components.register("wishlist-page", {
 ko.components.register("myorders-page", {
   viewModel: MyOrdersViewModel,
   template: { require: "text!components/myorders-page.html" }
+});
+ko.components.register("nfc-page", {
+  viewModel: NfcViewModel,
+  template: { require: "text!components/nfc-page.html" }
 });
 
 // Start our app

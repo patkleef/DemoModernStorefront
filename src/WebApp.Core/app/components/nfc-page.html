@@ -1,0 +1,51 @@
+<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" >
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Scan NFC</h2>
+    </div>
+    <div class="mdl-card__supporting-text">    
+        <p>
+            Nfc status:
+            <!-- ko text: $component.nfcAccessStatus--><!--/ko-->
+        </p>
+        <ul
+            id="message-list"
+            class="mdl-list"
+            data-bind="foreach: $component.messages"
+            style="max-height: 240px; overflow: scroll;border: 1px solid rgba(0,0,0,0.1);"
+        >
+            <li class="mdl-list__item mdl-list__item--two-line">
+                <span class="mdl-list__item-primary-content">
+                    <!-- ko if: $data.isWrite -->
+                    <i class="material-icons mdl-list__item-avatar"
+                        data-bind="text: $data.isSuccess ? 'save' : 'cancel'">
+                    </i>
+                    <!-- /ko -->
+                    <!-- ko ifnot: $data.isWrite -->
+                    <i class="material-icons mdl-list__item-avatar">
+                        nfc
+                    </i>
+                    <!-- /ko -->
+                <span data-bind="text: $data.message"></span>
+                <span class="mdl-list__item-sub-title" data-bind="text: $data.time.toLocaleString()"></span>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="mdl-card__supporting-text">
+        <form action="#" data-bind="submit: $component.write">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input
+                class="mdl-textfield__input"
+                type="text"
+                id="write-message"
+                data-bind="value: $component.newMessage"
+                required
+                autocomplete="off"
+            />
+            <label class="mdl-textfield__label" for="write-message">
+                Enter text to write to tag...
+            </label>
+            </div>
+        </form>
+    </div>
+</div>

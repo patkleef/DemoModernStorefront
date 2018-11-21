@@ -17,6 +17,11 @@
             <i class="material-icons menu-tab-icon mdl-badge mdl-badge--overlap" 
                 data-bind="attr: { 'data-badge': $root.wishlistitems().length }">favorite</i> Wishlist
         </a>
+        <a href="#placeholder-panel2" 
+            class="mdl-tabs__tab is" 
+            data-bind="click: $component.clickNavigate.bind($component, 'nfc-page'), css: { 'is-active': $component.currentComponent() == 'nfc-page' }">
+            <i class="material-icons menu-tab-icon">nfc</i> NFC
+        </a>
     </div>
     <div class="mdl-tabs__panel is-active" id="placeholder-panel1">
     </div>
