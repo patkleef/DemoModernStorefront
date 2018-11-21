@@ -23,6 +23,13 @@
         <p>
             <i>Make a reservation for a pair of size <!--ko text: size--><!--/ko--> at <!--ko text: $component.currentStore().name--><!--/ko--> now!</i>
         </p>
+        <!-- ko if: $component.paymentRequestApiEnabled() -->
+            <button class="mdl-button mdl-js-button mdl-button--raised" data-bind="click: $component.clickPayNow.bind($component)">
+                <i class="material-icons">payment</i>
+                    Pay now!
+            </button>
+        <!-- /ko -->
+
         <!-- /ko -->
         <!-- ko if: $component.showNotInStock() -->
             <p>

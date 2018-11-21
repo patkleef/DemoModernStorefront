@@ -48,14 +48,15 @@ export class Repository {
   public createOrder(
     store: Models.Store,
     product: Models.Product,
-    size: number
+    size: number,
+    type: Models.OrderType
   ): Models.Order {
     return {
       orderNumber: Math.ceil(Math.random() * 1000),
       size: size,
-
       store: store,
-      product: product
+      product: product,
+      type: type
     };
   }
 

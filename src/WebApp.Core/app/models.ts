@@ -21,7 +21,7 @@
     description: string;
     image: string;
     price: string;
-    saleprice: string;
+    salePrice: string;
     sizes: Size[];
     relatedproducts: string[];
   }
@@ -34,9 +34,9 @@
   export interface Order {
     orderNumber: number;
     size: number;
-
     store: Models.Store;
     product: Models.Product;
+    type: OrderType;
   }
 
   export interface ActiveUser {
@@ -149,5 +149,10 @@
     storeName: Property;
     header: Property;
     mainBody: Property;
+  }
+
+  export const enum OrderType {
+    ClickAndCollect,
+    Standard
   }
 }
