@@ -7,16 +7,16 @@
             <tr>
                 <th class="mdl-data-table__cell--non-numeric">Timestamp</th>
                 <th>User</th>
-                <th>Message</th>
-                <th>Product</th>
+                <th>Event</th>
+                <th>Value</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: $component.eventsArray">
             <tr>
-                <td class="mdl-data-table__cell--non-numeric" data-bind="moment: $data.timestamp"></td>
-                <td data-bind="text: $data.userInfo.displayName || $data.userInfo.email"></td>
-                <td data-bind="text: $data.message"></td>
-                <td data-bind="if: $data.product"><!--ko text: $data.product.title--><!--/ko--></td>
+                <td class="mdl-data-table__cell--non-numeric" data-bind="moment: $data.EventTime"></td>
+                <td data-bind="text: $data.User.Name || $data.User.Email"></td>
+                <td data-bind="text: $data.EventType"></td>
+                <td data-bind="text: $data.Value"></td>
             </tr>
         </tbody>
     </table>

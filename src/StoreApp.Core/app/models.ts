@@ -81,4 +81,24 @@
     eveningPhoneNumber: string;
     organization: string;
   }
+
+  export interface User {
+    Name: string;
+    Email: string;
+  }
+
+  export interface TrackEvent {
+    TrackId: string;
+    DeviceId: string;
+    EventType: string;
+    EventTime: Date;
+    Value: string;
+    Scope: string;
+    CountryCode: string;
+    PageUri?: any;
+    PageTitle?: any;
+    RemoteAddress: string;
+    Payload: any;
+    User: User;
+  }
 }

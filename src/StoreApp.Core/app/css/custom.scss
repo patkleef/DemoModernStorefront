@@ -308,7 +308,7 @@ img.article-image {
   padding-left:5px;
 }
 .mdl-tabs {
-  background-color: #000;
+  background-color: #333333;
 }
 .mdl-tabs a {
   color: #fff;
@@ -347,3 +347,12 @@ img.article-image {
   color: #000;
 }
 
+.mdl-color--teal-300 {
+  background-color: #fff !important;
+  color: #333333;
+}
+
+.demo-separator {
+  margin-top:30px;
+  margin-bottom: 30px;
+}
