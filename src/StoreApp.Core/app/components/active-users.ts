@@ -1,24 +1,18 @@
 /// <amd-dependency path="text!./active-users.html" />
 import * as firebase from "firebase";
-import {firebaseConnection} from "../firebaseConnection";
-import {firebaseActiveUsers} from "../firebaseActiveUsers";
 import * as $ from "jquery";
 import * as ko from "knockout";
 
 export class ActiveUsersViewModel {
-    activeUsersArray:KnockoutObservableArray<Models.ActiveUser>;
-    user: KnockoutObservable<firebase.User>;
-    
-    clickLogin = () => {
-        firebaseConnection.loginWithGoogle();
-    }
+  activeUsersArray: KnockoutObservableArray<Models.ActiveUser>;
+  user: KnockoutObservable<firebase.User>;
 
-    clickTest = () => {
-        firebaseActiveUsers.clickTest();
-    }
+  clickLogin = () => {};
 
-    constructor() {
-        this.activeUsersArray = firebaseActiveUsers.activeUsersArray;
-        this.user = firebaseConnection.loggedInUser;
-    }    
+  clickTest = () => {};
+
+  constructor() {
+    this.activeUsersArray = null;
+    this.user = null;
+  }
 }

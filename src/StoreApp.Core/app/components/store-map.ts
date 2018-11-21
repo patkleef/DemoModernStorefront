@@ -1,27 +1,19 @@
 /// <amd-dependency path="text!./store-map.html" />
-import * as firebase from "firebase";
-import {firebaseConnection} from "../firebaseConnection";
-import {firebaseActiveUsers} from "../firebaseActiveUsers";
 import * as $ from "jquery";
 import * as ko from "knockout";
 
 export class StoreMapViewModel {
-    showFirstProduct = ko.observable(false);
-    showSecondProduct = ko.observable(false);
-    showThirdProduct = ko.observable(false);
-    
-    clickLogin = () => {
-        firebaseConnection.loginWithGoogle();
-    }
+  showFirstProduct = ko.observable(false);
+  showSecondProduct = ko.observable(false);
+  showThirdProduct = ko.observable(false);
 
-    clickTest = () => {
-        firebaseActiveUsers.clickTest();
-    }
+  clickLogin = () => {};
 
-    constructor() {
-        setTimeout(()=>{
+  clickTest = () => {};
 
-            firebaseActiveUsers.eventsArray.subscribe((newEvent) => {
+  constructor() {
+    setTimeout(() => {
+      /*firebaseActiveUsers.eventsArray.subscribe((newEvent) => {
                 if(newEvent&& newEvent[0] && newEvent[0].product){
                     var event = newEvent[0];
                     
@@ -54,9 +46,7 @@ export class StoreMapViewModel {
                 }
             const oldValue = this.showFirstProduct();
                 
-            });
-
-        }, 2000);
-        
-    }
+            });*/
+    }, 2000);
+  }
 }

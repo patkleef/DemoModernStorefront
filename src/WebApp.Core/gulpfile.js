@@ -105,7 +105,7 @@ gulp.task("copy:lib", function() {
 gulp.task("copy:others", function() {
   return gulp
     .src(["app/favicon.ico", "app/manifest.json"])
-    .pipe(gulp.dest("wwwroot/lib"));
+    .pipe(gulp.dest("wwwroot"));
 });
 
 gulp.task("copy:data", function() {
