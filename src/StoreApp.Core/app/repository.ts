@@ -26,4 +26,27 @@ export class Repository {
     );
     return response.json();
   }
+
+  public async getActiveUsers(): Promise<any> {
+    const inStoreEvent = "page-view";
+    const query =
+      "$filter=EventTime ge " +
+      config.currentDateTime +
+      " and EventType eq " +
+      inStoreEvent +
+      "&$orderBy=EventTime DESC";
+    const response = await fetch(
+      this.baseTrackingApiUrl + "TrackEvents?" + encodeURI(query),
+      {
+        method: "GET",
+
+        headers: {
+          "Content-Type": "application/json",
+          "Accept-Language": "en",
+          Authorization: "epi-single " + config.profileStoreKey
+        }
+      }
+    );
+    return response.json();
+  }
 }
