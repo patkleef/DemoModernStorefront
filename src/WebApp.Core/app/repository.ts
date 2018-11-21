@@ -1,4 +1,5 @@
 import * as ko from "knockout";
+import { config } from "./config";
 
 export class Repository {
   private baseUrl: string = "http://modernstorefront-quicksilver.localtest.me/";
@@ -6,7 +7,7 @@ export class Repository {
     this.baseUrl + "api/episerver/v2.0/content/";
   private baseServiceApiUrl: string = this.baseUrl + "episerverapi/";
   private baseTrackingApiUrl: string =
-    "https://track-emea01.profilestore.episerver.net//api/v1.0/";
+    "https://track-emea01.profilestore.episerver.net/api/v1.0/";
 
   private serviceApiAccessToken = ko
     .observable<string>()
@@ -66,7 +67,11 @@ export class Repository {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      body: "grant_type=password&username=apiUser&password=Episerver#15" // body data type must match "Content-Type" header
+      body:
+        "grant_type=password&username=" +
+        config.serviceApiUser +
+        "&password=" +
+        config.serviceApiPassword
     });
 
     return response.json();
@@ -142,7 +147,7 @@ export class Repository {
       headers: {
         "Content-Type": "application/json",
         "Accept-Language": "en",
-        Authorization: "epi-single KEY"
+        Authorization: "epi-single " + config.trackApiKey
       },
       body: JSON.stringify(request)
     });
