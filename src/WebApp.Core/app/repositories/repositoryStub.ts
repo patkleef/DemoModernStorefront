@@ -25,16 +25,6 @@ export class RepositoryStub implements IRepository {
     });
   }
 
-  public async customers(): Promise<Models.Contact[]> {
-    var response = await window.fetch(`/data/customers.json`);
-    return response.json();
-  }
-
-  public async pages(): Promise<Models.StorePage[]> {
-    var response = await window.fetch(`/data/pages.json`);
-    return response.json();
-  }
-
   public createOrder(
     store: Models.Store,
     product: Models.Product,
@@ -75,6 +65,23 @@ export class RepositoryStub implements IRepository {
     eventType: string,
     value?: string
   ): Promise<any> {
-    console.log("Track event");
+    console.log(
+      "Track event " +
+        eventType +
+        " - " +
+        value +
+        " for customer " +
+        contact.email
+    );
+  }
+
+  private async customers(): Promise<Models.Contact[]> {
+    var response = await window.fetch(`/data/customers.json`);
+    return response.json();
+  }
+
+  private async pages(): Promise<Models.StorePage[]> {
+    var response = await window.fetch(`/data/pages.json`);
+    return response.json();
   }
 }
