@@ -1,9 +1,65 @@
 [
     {
-        "id": 1,
-        "storeName": "Quicksilver Stockholm",
-        "header": "Welcome",
-        "mainBody": "Test boduy",
-        "mainImage": "image.png"
-    }
+        "contentLink": {
+          "id": 295,
+          "workId": 0,
+          "guidValue": "a875aa40-f182-4276-8eeb-a8aaa7fe8875",
+          "providerName": null
+        },
+        "name": "Stockholm",
+        "language": {
+          "displayName": "English",
+          "name": "en"
+        },
+        "existingLanguages": [
+          {
+            "displayName": "English",
+            "name": "en"
+          }
+        ],
+        "masterLanguage": {
+          "displayName": "English",
+          "name": "en"
+        },
+        "contentType": [
+          "Page",
+          "StorePage"
+        ],
+        "parentLink": {
+          "id": 294,
+          "workId": 0,
+          "guidValue": "61621e57-8e7e-4aeb-a25a-ac353828c49c",
+          "providerName": null
+        },
+        "routeSegment": "stockholm",
+        "url": null,
+        "changed": "2018-11-18T16:36:44Z",
+        "created": "2018-11-18T16:36:39Z",
+        "startPublish": "2018-11-18T16:36:44Z",
+        "stopPublish": null,
+        "saved": "2018-11-18T18:40:47Z",
+        "status": "Published",
+        "category": {
+          "value": [
+            
+          ],
+          "propertyDataType": "PropertyCategory"
+        },
+        "storeName": {
+          "value": "Stockholm",
+          "propertyDataType": "PropertyLongString"
+        },
+        "header": {
+          "value": "Welcome back to our store in Stockholm.",
+          "propertyDataType": "PropertyLongString"
+        },
+        "mainBody": {
+          "value": "<div>\n<div>Use your phone to scan a product. This provides access to extra product information, exclusive deals, videos and a floor plan.<\/div>\n<br \/>\n<div>Since this is your third visit, we've some special offers for you!<\/div>\n<\/div>",
+          "propertyDataType": "PropertyXhtmlString"
+        },
+        "mainImage": {
+          "value": "\/globalassets\/stores\/welcome-in-store.jpg",
+          "propertyDataType": "PropertyUrl"
+        }
+      }
   ]
