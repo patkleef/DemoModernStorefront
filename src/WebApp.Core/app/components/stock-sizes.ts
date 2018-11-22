@@ -46,7 +46,7 @@ export class StockSizesViewModel extends ViewModelBase {
   };
 
   clickOrder = (store: StoreStockViewModel) => {
-    this.createOrder(store, Models.OrderType.Standard);
+    this.createOrder(store, Models.OrderType.ClickAndCollect);
   };
 
   clickPayNow = (store: StoreStockViewModel) => {
@@ -92,7 +92,7 @@ export class StockSizesViewModel extends ViewModelBase {
           ]
         }
       }
-      // googlePayPaymentMethod
+      //googlePayPaymentMethod
     ];
 
     const paymentDetails = {

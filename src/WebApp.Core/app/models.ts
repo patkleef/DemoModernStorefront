@@ -152,7 +152,7 @@
   }
 
   export const enum OrderType {
-    ClickAndCollect,
-    Standard
+    ClickAndCollect = 1,
+    Standard = 2
   }
 }

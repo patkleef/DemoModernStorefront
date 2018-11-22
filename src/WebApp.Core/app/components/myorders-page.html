@@ -1,7 +1,7 @@
 
 
  <!--ko if: $component.orders().length > 0 -->
-
+   
   <!--ko ifnot: $component.showGoogleMap()-->
   <div data-bind="foreach: $component.orders"> 
     <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
@@ -9,7 +9,10 @@
         <h2 class="mdl-card__title-text" data-bind="text: 'Order ' + $data.orderNumber"></h2>
       </div>
       <div class="mdl-card__supporting-text">
-          <p>Reserved for you at <strong data-bind="text: $data.store.name"></strong>, expires tomorrow at <strong>1PM</strong>.</p>      
+          <!--ko if: $data.type == 1 -->
+            <p>Reserved for you at <strong data-bind="text: $data.store.name"></strong>, expires tomorrow at <strong>1PM</strong>.</p>  
+          <!--/ko-->
+             
           <p><strong data-bind="text: $data.product.title"></strong></p>
           <p>
               <img data-bind="attr:{ src: $data.product.image }" style="width: auto; height: 50px;display:block;float:left"/>
@@ -29,9 +32,11 @@
           </p>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="tel:+4769241700">Call store</a>
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Question?</a>
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-bind="click: $component.showGoogleMapClick">Show map</a>
+        <!--ko if: $data.type == 1 -->
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="tel:+4769241700">Call store</a>
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Question?</a>
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-bind="click: $component.showGoogleMapClick">Show map</a>
+        <!--/ko-->
       </div> 
     </div>
   </div>
