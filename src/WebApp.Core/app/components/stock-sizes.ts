@@ -1,13 +1,13 @@
 /// <amd-dependency path="text!./stock-sizes.html" />
 import * as ko from "knockout";
-import { Repository } from "../repository";
 import ViewModelBase from "./ViewModelBase";
 import { EventTypes } from "../models/EventTypes";
+import { repositoryFactory } from "../repositories/repositoryFactory";
 
 declare var window: any;
 
 export class StockSizesViewModel extends ViewModelBase {
-  repo = new Repository();
+  repo = repositoryFactory.get();
 
   currentComponent = ko
     .observable<string>()
@@ -55,6 +55,28 @@ export class StockSizesViewModel extends ViewModelBase {
     const productPrice =
       product.salePrice !== undefined ? product.salePrice : product.price;
 
+    const googlePayPaymentMethod = {
+      supportedMethods: ["https://google.com/pay"],
+      data: {
+        environment: "TEST",
+        apiVersion: 1,
+        allowedPaymentMethods: ["CARD", "TOKENIZED_CARD"],
+        paymentMethodTokenizationParameters: {
+          tokenizationType: "PAYMENT_GATEWAY",
+          // Check with your payment gateway on the parameters to pass.
+          parameters: {}
+        },
+        cardRequirements: {
+          allowedCardNetworks: ["AMEX", "DISCOVER", "MASTERCARD", "VISA"],
+          billingAddressRequired: true,
+          billingAddressFormat: "MIN"
+        },
+        phoneNumberRequired: true,
+        emailRequired: true,
+        shippingAddressRequired: true
+      }
+    };
+
     const paymentMethods: PaymentMethodData[] = [
       {
         supportedMethods: ["basic-card"],
@@ -70,6 +92,7 @@ export class StockSizesViewModel extends ViewModelBase {
           ]
         }
       }
+      // googlePayPaymentMethod
     ];
 
     const paymentDetails = {

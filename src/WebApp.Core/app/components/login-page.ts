@@ -1,12 +1,12 @@
 /// <amd-dependency path="text!./login-page.html" />
 import * as ko from "knockout";
-import { Repository } from "../repository";
 import { EventTypes } from "../models/EventTypes";
+import { repositoryFactory } from "../repositories/repositoryFactory";
 
 export class LoginPageViewModel {
   currentComponent = ko.observable().syncWith("currentComponent", true, true);
   currentCustomer = ko.observable().syncWith("currentCustomer", true, true);
-  repository = new Repository();
+  repository = repositoryFactory.get();
 
   constructor() {}
 

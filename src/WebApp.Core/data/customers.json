@@ -1,0 +1,12 @@
+[
+  {
+    "primaryKeyId": "12345",
+    "addresses": [{
+
+    }],
+    "firstName": "Hans",
+    "lastName": "Worst",
+    "email": "hans.worst@google.com",
+    "registrationSource": ""
+  }
+]

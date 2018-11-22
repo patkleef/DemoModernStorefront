@@ -1,11 +1,11 @@
 import * as ko from "knockout";
-import { Repository } from "./repository";
 
 import ViewModelBase from "./components/ViewModelBase";
 import { EventTypes } from "./models/EventTypes";
+import { repositoryFactory } from "./repositories/repositoryFactory";
 
 export class MainViewModel extends ViewModelBase {
-  repository = new Repository();
+  repository = repositoryFactory.get();
   lastScannedId = ko.observable().extend({ throttle: 100 });
   loading = ko.observable(true);
   items = ko.observableArray<any>([]);

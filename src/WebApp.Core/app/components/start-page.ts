@@ -1,10 +1,10 @@
 /// <amd-dependency path="text!./start-page.html" />
 import * as $ from "jquery";
 import * as ko from "knockout";
-import { Repository } from "../repository";
+import { repositoryFactory } from "../repositories/repositoryFactory";
 
 export class StartPageViewModel {
-  repository = new Repository();
+  repository = repositoryFactory.get();
 
   showIntroductionTour = ko
     .observable<boolean>(true)

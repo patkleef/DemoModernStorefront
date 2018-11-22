@@ -1,7 +1,7 @@
 /// <amd-dependency path="text!./wishlist-page.html" />
 import * as ko from "knockout";
-import { Repository } from "../repository";
 import { EventTypes } from "../models/EventTypes";
+import { repositoryFactory } from "../repositories/repositoryFactory";
 
 export class WishlistViewModel {
   items = ko.observableArray<any>([]);
@@ -11,7 +11,7 @@ export class WishlistViewModel {
   currentCustomer = ko
     .observable<Models.Contact>()
     .syncWith("currentCustomer", true, false);
-  repository = new Repository();
+  repository = repositoryFactory.get();
 
   constructor() {}
 

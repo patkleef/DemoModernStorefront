@@ -1,7 +1,8 @@
 import * as ko from "knockout";
-import { config } from "./config";
+import { config } from "./../config";
+import { IRepository } from "./IRepository";
 
-export class Repository {
+export class Repository implements IRepository {
   private baseUrl: string = "http://modernstorefront-quicksilver.localtest.me/";
   private baseContentDeliveryApiUrl: string =
     this.baseUrl + "api/episerver/v2.0/content/";
