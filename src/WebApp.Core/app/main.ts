@@ -73,6 +73,8 @@ export class MainViewModel extends ViewModelBase {
   constructor() {
     super();
 
+    this.currentComponent("nfc-page");
+
     this.initialize();
   }
 
