@@ -29,14 +29,15 @@ export class StockSizesViewModel extends ViewModelBase {
     const selectedSize = this.selectedSize();
     const currentStore = this.currentStore();
 
-    return (
-      selectedSize != null &&
-      selectedSize.stock.find(item => {
-        return item.storeid === currentStore.id;
-      }) == null
-    );
+    if (selectedSize != null) {
+      const stock = selectedSize.stock.find(item => {
+        return item.storeCode === currentStore.code;
+      });
+      return stock && stock.available > 0;
+    }
+    return false;
   }
-  showNotInStock = ko.computed(this.calculateInStock, this);
+  isInStock = ko.computed(this.calculateInStock, this);
   paymentRequestApiEnabled = ko.observable<boolean>(
     window.PaymentRequest !== undefined && window.PaymentRequest !== null
   );
@@ -137,7 +138,7 @@ export class StockSizesViewModel extends ViewModelBase {
   createOrder = (store: StoreStockViewModel, orderType: Models.OrderType) => {
     if (store instanceof StoreStockViewModel) {
       const order = this.repo.createOrder(
-        { id: store.storeid, name: store.storename },
+        { code: store.storeCode, name: store.storeName },
         this.product(),
         this.selectedSize().size,
         orderType
@@ -164,8 +165,10 @@ export class StockSizesViewModel extends ViewModelBase {
 }
 
 class StoreStockViewModel implements Models.StoreStock {
-  storeid: number;
-  storename: string;
+  storePageId: number;
+  available: number;
+  storeCode: string;
+  storeName: string;
   showInfo = ko.observable(false);
 
   clickToggleInfo = () => {
@@ -178,7 +181,7 @@ class StoreStockViewModel implements Models.StoreStock {
 }
 
 class SelectedSizeViewModel {
-  size: number;
+  size: string;
   stock: StoreStockViewModel[];
 
   constructor(public sizeModel: Models.Size) {

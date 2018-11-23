@@ -13,10 +13,10 @@
     </div>
     <div class="mdl-layout-spacer"></div>
     <div data-bind="with: $component.selectedSize">
-        <!-- ko if: !$component.showNotInStock() -->
+        <!-- ko if: $component.isInStock() -->
         <div>&nbsp;</div>
         <button class="mdl-button mdl-js-button mdl-button--raised" 
-            data-bind="visible: !$component.showNotInStock(), click: $component.clickOrder.bind($component)">
+            data-bind="visible: $component.isInStock(), click: $component.clickOrder.bind($component)">
             <i class="material-icons">shopping_basket</i>
                 Click and collect
         </button>
@@ -31,14 +31,14 @@
         <!-- /ko -->
 
         <!-- /ko -->
-        <!-- ko if: $component.showNotInStock() -->
+        <!-- ko if: !$component.isInStock() -->
             <p>
                 <i style="color:red;">The selected size is not in stock</i>
             </p>
             <span style="font-weight:bold;">Choose one of the following stores:</span>
             <ul class="demo-list-item mdl-list" data-bind="foreach: $data.stock">
                 <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content" data-bind="text: $data.storename"></span>
+                    <span class="mdl-list__item-primary-content" data-bind="text: $data.storeName"></span>
                     <button class="mdl-button mdl-js-button mdl-button--raised" data-bind="click: $data.clickToggleInfo">
                         <i class="material-icons">info</i>
                     </button>

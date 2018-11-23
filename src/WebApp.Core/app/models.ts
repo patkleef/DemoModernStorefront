@@ -1,16 +1,18 @@
 ﻿declare module Models {
   export interface Store {
-    id: number;
+    code: string;
     name: string;
   }
 
   export interface StoreStock {
-    storeid: number;
-    storename: string;
+    storePageId: number;
+    storeCode: string;
+    storeName: string;
+    available: number;
   }
 
   export interface Size {
-    size: number;
+    size: string;
     stock: StoreStock[];
   }
 
@@ -33,7 +35,7 @@
 
   export interface Order {
     orderNumber: number;
-    size: number;
+    size: string;
     store: Models.Store;
     product: Models.Product;
     type: OrderType;

@@ -37,11 +37,13 @@ export class MainViewModel extends ViewModelBase {
     .observable<Models.Contact>(null)
     .syncWith("currentCustomer", false);
 
-  testLoadItem = async (code: string) => {
-    if (code != "") {
-      code = "SKU-44466536";
-    }
-    var product = await this.repository.product(code);
+  loadProductByCode = async (code: string) => {
+    var product = await this.repository.getProduct(code);
+
+    this.loadProduct(product);
+  };
+
+  loadProduct = (product: Models.Product) => {
     if (product) {
       this.currentProduct(product);
       this.currentComponent("product-detail-page");
@@ -110,7 +112,7 @@ export class MainViewModel extends ViewModelBase {
   };
 
   setDefaultCurrentStore = async () => {
-    var store = await this.repository.store(1);
+    var store = await this.repository.getStore("stockholmstore");
     if (store) {
       this.currentStore(store);
     }
@@ -126,7 +128,7 @@ export class MainViewModel extends ViewModelBase {
         lastActive: new Date().getTime()
       });*/
 
-    var product = await this.repository.product(code);
+    var product = await this.repository.getProduct(code);
     if (product) {
       /* firebaseConnection.app
         .database()

@@ -9,7 +9,7 @@ export class StartPageViewModel {
   showIntroductionTour = ko
     .observable<boolean>(true)
     .syncWith("showIntroductionTour", true, false);
-  products = ko.observableArray<any>([]);
+  products = ko.observableArray<Models.Product>([]);
   wishlistitems = ko
     .observableArray<Models.WishlistItem>([])
     .syncWith("wishlistitems", true, false);

@@ -34,22 +34,10 @@ export class Repository implements IRepository {
     });
   }
 
-  public async stores(): Promise<Models.Store[]> {
-    var response = await window.fetch(`/data/stores.json`);
-    return response.json();
-  }
-
-  public async store(id: number): Promise<Models.Store> {
-    var stores = await this.stores();
-    return stores.find(store => {
-      return store.id === id;
-    });
-  }
-
   public createOrder(
     store: Models.Store,
     product: Models.Product,
-    size: number,
+    size: string,
     type: Models.OrderType
   ): Models.Order {
     return {
@@ -107,6 +95,67 @@ export class Repository implements IRepository {
       }
     );
     return response.json();
+  }
+
+  public async getProduct(code: string): Promise<Models.Product> {
+    const response = await fetch(
+      this.baseServiceApiUrl + "commerce/catalog/products/" + code,
+      {
+        mode: "cors",
+        method: "GET", // *GET, POST, PUT, DELETE, etc.
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "bearer " + this.serviceApiAccessToken()
+        }
+      }
+    );
+    return response.json();
+  }
+
+  public async getStores(): Promise<Models.Store[]> {
+    const response = await fetch(
+      this.baseServiceApiUrl + "commerce/warehouses/",
+      {
+        mode: "cors",
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "bearer " + this.serviceApiAccessToken()
+        }
+      }
+    );
+
+    const warehouses = await response.json();
+    const stores = [];
+    warehouses.forEach(item => {
+      stores.push(this.createStoreObject(item));
+    });
+    return stores;
+  }
+
+  public async getStore(code: string): Promise<Models.Store> {
+    const response = await fetch(
+      this.baseServiceApiUrl + "commerce/warehouses/" + code,
+      {
+        mode: "cors",
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "bearer " + this.serviceApiAccessToken()
+        }
+      }
+    );
+
+    const warehouse = await response.json();
+
+    return this.createStoreObject(warehouse);
+  }
+
+  private createStoreObject(warehouse: any): Models.Store {
+    return {
+      code: warehouse.code,
+      name: warehouse.name
+    };
   }
 
   /* CONTENT DELIVERY API */

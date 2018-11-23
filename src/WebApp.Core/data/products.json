@@ -1,349 +1,778 @@
 [
   {
-    "code": "SKU-36127195",
+    "code": "P-36127195",
     "brand": "Faded Glory",
     "title": "Faded Glory Mens Canvas Twin Gore Slip-On Shoe",
-    "description": "Use a soft bristle brush to remove any surface dirt or dust from the shoe    ",
-    "image": "media/products/SKU-36127195.jpg?width=400",
-    "largeimage": "media/products/SKU-36127195.jpg?width=800&crop=0,400,0,-150",
-    "price": "14.50",
-    "salePrice": "11.60",
+    "description": "<p>CANVAS\/RB+POLYESTER<\/p>\n<p>Use a soft bristle brush to remove any surface dirt or dust from the shoe<\/p>",
+    "image": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/0060538813454_color_grey_sw_500x500",
+    "largeImage": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/0060538813454_color_grey_sw_500x500",
+    "price": 14.5,
+    "salePrice": 11.6,
     "sizes": [
       {
-        "size": 38,
+        "size": "9",
         "stock": [
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 403
           },
           {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 338
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 215
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 0
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 249
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 475
           }
         ]
       },
       {
-        "size": 39,
+        "size": "7",
         "stock": [
           {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 210
           },
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 139
           },
           {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 450
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 224
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 247
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 86
           }
         ]
       },
       {
-        "size": 40,
+        "size": "8",
         "stock": [
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 380
           },
           {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 465
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 125
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 280
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 290
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 374
           }
         ]
       },
       {
-        "size": 41,
+        "size": "10",
         "stock": [
           {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 392
           },
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 478
           },
           {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 438
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 460
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 144
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 233
+          }
+        ]
+      },
+      {
+        "size": "11",
+        "stock": [
+          {
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 388
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 490
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 132
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 463
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 473
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 427
+          }
+        ]
+      },
+      {
+        "size": "12",
+        "stock": [
+          {
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 361
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 201
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 240
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 474
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 299
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 268
+          }
+        ]
+      },
+      {
+        "size": "13",
+        "stock": [
+          {
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 493
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 492
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 146
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 73
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 494
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 208
           }
         ]
       }
-    ],
-    "relatedproducts": []
+    ]
   },
   {
-    "code": "SKU-44477844",
+    "code": "P-44477844",
     "brand": "Puma",
-    "title": "Puma Red Leather Loafers Shoes",
-    "description": "PUMA creates high-performance, high-style athletic shoes for men and women, with an incredible variety of classic and contemporary designs tailored to all-around athletics and casual lifestyle. All PUMA shoes are made to the highest standards of technology and quality, promising superb comfort, performance, and style.",
-    "image": "media/products/SKU-44477844.jpg?width=400",
-    "price": "52.50",
-    "salePrice": "42",
+    "title": "Puma  Red Leather Loafers Shoes",
+    "description": "<p><b><span>Puma Red Leather Shoes:<\/span><\/b><\/p>\n<p><b>Size<\/b> - US 14 UK\/EU 48.5<br \/> <b>Brand &amp; Style<\/b> - Puma Guida Moc SF Chase<br \/> <b>Width<\/b> - Medium (D, M)<br \/><b>True Color<\/b> - Chili Pepper<br \/><b>Upper Material<\/b> - Leather <br \/><b>Outsole Material<\/b> - Man-Made<br \/> <b>Heel Height<\/b> - 0.25 Inches&nbsp;<\/p>",
+    "image": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i55peckyx0457_p698442_500x500",
+    "largeImage": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i55peckyx0457_p698442_500x500",
+    "price": 52.5,
+    "salePrice": 42,
     "sizes": [
       {
-        "size": 36,
+        "size": "14 US \/ 48.5 UK\/EU",
         "stock": [
           {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 302
           },
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 340
           },
           {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 219
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 454
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 206
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 131
           }
         ]
-      },
-      {
-        "size": 37,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
-          },
-          {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
-          },
-          {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      },
-      {
-        "size": 38,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
-          },
-          {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
-          },
-          {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      },
-      {
-        "size": 39,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
-          },
-          {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
-          },
-          {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      },
-      {
-        "size": 40,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
-          },
-          {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
-          },
-          {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      }      
-    ],
-    "relatedproducts": [ "31672432" ]
+      }
+    ]
   },
   {
-    "code": "SKU-39850363",
+    "code": "P-39850363",
     "brand": "Puma",
     "title": "Puma Black Sneakers Shoes",
-    "description": "PUMA creates high-performance, high-style athletic shoes for men and women, with an incredible variety of classic and contemporary designs tailored to all-around athletics and casual lifestyle. All PUMA shoes are made to the highest standards of technology and quality, promising superb comfort, performance, and style.",
-    "image": "media/products/SKU-39850363.jpg?width=400",
-    "price": "33.50",
-    "salePrice": "26.80",
+    "description": "<p><b><span>Puma Black Sneakers Shoes:<\/span><\/b><\/p>\n<p><b>Size<\/b> - 11 US<br \/> <b>Brand &amp; Style<\/b> - Puma Roma Turbo<br \/> <b>Width<\/b> - Medium (D, M)<br \/><b>True Color<\/b> - Black Limestone Gray <br \/><b>Outsole Material<\/b> - Rubber<br \/> <b>Heel Height<\/b> - 0.75 Inches<\/p>",
+    "image": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i51ojym5f6675_p698442_500x500",
+    "largeImage": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i51ojym5f6675_p698442_500x500",
+    "price": 33.5,
+    "salePrice": 26.8,
     "sizes": [
       {
-        "size": 36,
+        "size": "11",
         "stock": [
           {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 326
           },
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 188
           },
           {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      },
-      {
-        "size": 37,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 368
           },
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 158
           },
           {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      },
-      {
-        "size": 38,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 259
           },
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
-          },
-          {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      },
-      {
-        "size": 39,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
-          },
-          {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
-          },
-          {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      },
-      {
-        "size": 40,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
-          },
-          {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
-          },
-          {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      },
-      {
-        "size": 41,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
-          },
-          {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
-          },
-          {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 158
           }
         ]
       }
-    ],
-    "relatedproducts": [ "31672432", "31772004" ]
+    ]
   },
   {
-    "code": "SKU-44466536",
+    "code": "P-39813617",
     "brand": "Puma",
-    "title": "Puma Gray Textile Boat Shoes",
-    "description": "PUMA creates high-performance, high-style athletic shoes for men and women, with an incredible variety of classic and contemporary designs tailored to all-around athletics and casual lifestyle. All PUMA shoes are made to the highest standards of technology and quality, promising superb comfort, performance, and style.",
-    "image": "media/products/SKU-44466536.jpg?width=400",
-    "price": "41.50",
-    "salePrice": "33.20",
+    "title": "Puma Black Suede Athletic Sneakers",
+    "description": "<p><b><span>Puma Black Athletic Shoes:<\/span><\/b><\/p>\n<p><b>Size<\/b> - 11 US 10 UK<br \/> <b>Brand &amp; Style<\/b> - Puma Roma LL NBK 2<br \/> <b>Width<\/b> - Medium (D, M)<br \/><b>True Color<\/b> - Black\/White\/Ash<br \/><b>Upper Material<\/b> - Suede <br \/><b>Outsole Material<\/b> - Rubber<br \/> <b>Heel Height<\/b> - 1 Inches&nbsp;<\/p>",
+    "image": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/0000000083669_p698442_500x500",
+    "largeImage": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/0000000083669_p698442_500x500",
+    "price": 30.5,
+    "salePrice": 24.4,
     "sizes": [
       {
-        "size": 36,
+        "size": "11 US 10 UK",
         "stock": [
           {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 423
           },
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 426
           },
           {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      },
-      {
-        "size": 37,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 109
           },
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 54
           },
           {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
-          }
-        ]
-      },
-      {
-        "size": 38,
-        "stock": [
-          {
-            "storeid": 1,
-            "storename": "Quicksilver Stockholm Store"
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 151
           },
           {
-            "storeid": 2,
-            "storename": "Quicksilver Oslo Store"
-          },
-          {
-            "storeid": 3,
-            "storename": "Quicksilver Amsterdam Store"
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 416
           }
         ]
       }
-    ],
-    "relatedproducts": [ "35872466" ]
+    ]
+  },
+  {
+    "code": "P-42517751",
+    "brand": "Puma",
+    "title": "Puma Brown Suede Athletic Sneakers Shoes",
+    "description": "<p><b><span>Puma Brown Shoes:<\/span><\/b><\/p>\n<p><b>Size<\/b> - 13 US<br \/> <b>Brand &amp; Style<\/b> - Puma Hawthorne XE Suede<br \/> <b>Width<\/b> - Medium (D, M)<br \/><b>True Color<\/b> - Carafe-Chocolate Brown<br \/><b>Upper Material<\/b> - Suede <br \/><b>Outsole Material<\/b> - Rubber<br \/> <b>Heel Height<\/b> - 1.25 Inches<\/p>",
+    "image": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i59olnujj0331_p698442_500x500",
+    "largeImage": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i59olnujj0331_p698442_500x500",
+    "price": 27.5,
+    "salePrice": 22,
+    "sizes": [
+      {
+        "size": "13",
+        "stock": [
+          {
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 182
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 471
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 404
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 54
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 351
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 151
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "P-44466536",
+    "brand": "Puma",
+    "title": "Puma Gray Textile Boat Shoes",
+    "description": "<p><b><span>Puma Gray Textile Boat Shoes:<\/span><\/b><\/p>\n<p><b>Size<\/b> - 10.5 US<br \/> <b>Brand &amp; Style<\/b> - Puma El Harbor<br \/> <b>Width<\/b> - Medium (D, M)<br \/><b>True Color<\/b> - Gray-Quiet Shade-Red<br \/><b>Upper Material<\/b> - Textile <br \/><b>Outsole Material<\/b> - Man-Made<br \/> <b>Heel Height<\/b> - 1 Inches&nbsp;<\/p>",
+    "image": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i68pebucr0107_p698442_500x500",
+    "largeImage": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i68pebucr0107_p698442_500x500",
+    "price": 41.5,
+    "salePrice": 33.2,
+    "sizes": [
+      {
+        "size": "10.5",
+        "stock": [
+          {
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 161
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 285
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 53
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 223
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 142
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 202
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "P-44648724",
+    "brand": "Puma",
+    "title": "Puma Green Leather Athletic Sneakers Shoes",
+    "description": "<p><b><span>Puma Green Leather Shoes:<\/span><\/b><\/p>\n<p><b>Size<\/b> - 13 US<br \/> <b>Brand &amp; Style<\/b> - Puma RS X Undftd Snakeskin<br \/> <b>Width<\/b> - Medium (D, M)<br \/><b>True Color<\/b> - Forest Night\/Black<br \/><b>Upper Material<\/b> - Leather <br \/><b>Outsole Material<\/b> - Rubber<br \/> <b>Heel Height<\/b> - 1 Inches<\/p>",
+    "image": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i58pehvts1150_p698442_500x500",
+    "largeImage": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i58pehvts1150_p698442_500x500",
+    "price": 45.5,
+    "salePrice": 36.4,
+    "sizes": [
+      {
+        "size": "13",
+        "stock": [
+          {
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 62
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 63
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 254
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 472
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 358
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 480
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "P-42517993",
+    "brand": "Puma",
+    "title": "Puma Green Suede Athletic Sneakers Shoes",
+    "description": "<p><b><span>Puma Green Sneakers Shoes:<\/span><\/b><\/p>\n<p><b>Size<\/b> - 9 US<br \/> <b>Brand &amp; Style<\/b> - Puma Clyde X Undftd Coverblock<br \/> <b>Width<\/b> - Medium (D, M)<br \/><b>True Color<\/b> - Amazon-Whisper White<br \/><b>Upper Material<\/b> - Suede <br \/><b>Outsole Material<\/b> - Rubber<br \/> <b>Heel Height<\/b> - 1 Inches&nbsp;<\/p>",
+    "image": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i62olnunl0418_p698442_500x500",
+    "largeImage": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i62olnunl0418_p698442_500x500",
+    "price": 31.5,
+    "salePrice": 25.2,
+    "sizes": [
+      {
+        "size": "9",
+        "stock": [
+          {
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 280
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 189
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 253
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 147
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 331
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 472
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "P-39855373",
+    "brand": "Puma",
+    "title": "Puma Nubuck Leather Hiking Boots",
+    "description": "<p><b><span>Puma Nubuck Leather Hiking Shoes:<\/span><\/b><\/p>\n<p><b>Size<\/b> - 9 US<br \/> <b>Brand &amp; Style<\/b> - Puma Hiker Mid<br \/> <b>Width<\/b> - Medium (D, M)<br \/><b>True Color<\/b> - Sudan Brown<br \/><b>Upper Material<\/b> - Nubuck Leather <br \/><b>Outsole Material<\/b> - Vibram<br \/> <b>Heel Height<\/b> - 1.25 Inches<br \/>&nbsp;<\/p>",
+    "image": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i65ojym3c6556_p698442_500x500",
+    "largeImage": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i65ojym3c6556_p698442_500x500",
+    "price": 48.5,
+    "salePrice": 38.8,
+    "sizes": [
+      {
+        "size": "9",
+        "stock": [
+          {
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 73
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 253
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 422
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 75
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 117
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 358
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "P-42518256",
+    "brand": "Puma",
+    "title": "Puma Yellow Sneakers Soccer Athletic Sneakers Shoes",
+    "description": "<p><b><span>Puma Yellow Sneakers Shoes:<\/span><\/b><\/p>\n<p><b>Size<\/b> - 11.5 US<br \/> <b>Brand &amp; Style<\/b> - Puma v5.10 IT<br \/> <b>Width<\/b> - Medium (D, M)<br \/><b>True Color<\/b> - Black-Dandelion-Puma Silver <br \/><b>Outsole Material<\/b> - Man-Made<br \/> <b>Heel Height<\/b> - 1 Inches&nbsp;<\/p>",
+    "image": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i64olnunl0414_p698442_500x500",
+    "largeImage": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/catalog\/i64olnunl0414_p698442_500x500",
+    "price": 18.5,
+    "salePrice": 14.8,
+    "sizes": [
+      {
+        "size": "11.5",
+        "stock": [
+          {
+            "storePageId": 295,
+            "storeCode": "hanoistore",
+            "storeName": "Hanoi store",
+            "available": 50
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "londonstore",
+            "storeName": "London store",
+            "available": 189
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "newyorkstore",
+            "storeName": "New York store",
+            "available": 322
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "stockholmstore",
+            "storeName": "Stockholm store",
+            "available": 353
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "sydneystore",
+            "storeName": "Sydney store",
+            "available": 78
+          },
+          {
+            "storePageId": 295,
+            "storeCode": "tokyostore",
+            "storeName": "Tokyo store",
+            "available": 336
+          }
+        ]
+      }
+    ]
   }
 ]

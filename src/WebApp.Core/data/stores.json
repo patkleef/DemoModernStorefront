@@ -1,14 +1,26 @@
 [
   {
-    "id": 1,
-    "name": "Quicksilver Stockholm Store"
+    "code": "hanoistore",
+    "name": "Hanoi store"
   },
   {
-    "id": 2,
-    "name": "Quicksilver Oslo Store"
+    "code": "londonstore",
+    "name": "London store"
   },
   {
-    "id": 3,
-    "name": "Quicksilver Amsterdam Store"
+    "code": "newyorkstore",
+    "name": "New York store"
+  },
+  {
+    "code": "stockholmstore",
+    "name": "Stockholm store"
+  },
+  {
+    "code": "sydneystore",
+    "name": "Sydney store"
+  },
+  {
+    "code": "tokyostore",
+    "name": "Tokyo store"
   }
 ]

@@ -1,34 +1,34 @@
 import { IRepository } from "./IRepository";
 
 export class RepositoryStub implements IRepository {
-  public async products(): Promise<Models.Product[]> {
+  public async getProducts(): Promise<Models.Product[]> {
     var response = await window.fetch(`/data/products.json`);
     return response.json();
   }
 
-  public async product(code: string): Promise<Models.Product> {
-    var products = await this.products();
+  public async getProduct(code: string): Promise<Models.Product> {
+    var products = await this.getProducts();
     return products.find(product => {
       return product.code === code;
     });
   }
 
-  public async stores(): Promise<Models.Store[]> {
+  public async getStores(): Promise<Models.Store[]> {
     var response = await window.fetch(`/data/stores.json`);
     return response.json();
   }
 
-  public async store(id: number): Promise<Models.Store> {
-    var stores = await this.stores();
+  public async getStore(code: string): Promise<Models.Store> {
+    var stores = await this.getStores();
     return stores.find(store => {
-      return store.id === id;
+      return store.code === code;
     });
   }
 
   public createOrder(
     store: Models.Store,
     product: Models.Product,
-    size: number,
+    size: string,
     type: Models.OrderType
   ): Models.Order {
     return {
@@ -49,10 +49,6 @@ export class RepositoryStub implements IRepository {
 
   public async getCurrentCustomer(contactId: string): Promise<Models.Contact> {
     return (await this.customers())[0];
-  }
-
-  public async getProducts(): Promise<Models.Product[]> {
-    return await this.products();
   }
 
   /* CONTENT DELIVERY API */
