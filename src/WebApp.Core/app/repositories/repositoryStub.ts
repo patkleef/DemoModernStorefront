@@ -51,6 +51,22 @@ export class RepositoryStub implements IRepository {
     return (await this.customers())[0];
   }
 
+  public async getShippingOptions(): Promise<PaymentShippingOption[]> {
+    var response = await this.shippingOptions();
+    const options: PaymentShippingOption[] = [];
+    response.forEach((item: any) => {
+      options.push({
+        id: item.id,
+        label: item.displayName,
+        amount: {
+          currency: item.price.currency,
+          value: item.price.amount.toString()
+        }
+      });
+    });
+    return options;
+  }
+
   /* CONTENT DELIVERY API */
   public async getPageContent(page: number): Promise<any> {
     return (await this.pages())[0];
@@ -78,6 +94,11 @@ export class RepositoryStub implements IRepository {
 
   private async pages(): Promise<Models.StorePage[]> {
     var response = await window.fetch(`/data/pages.json`);
+    return response.json();
+  }
+
+  private async shippingOptions(): Promise<any[]> {
+    var response = await window.fetch(`/data/shipping-options.json`);
     return response.json();
   }
 }

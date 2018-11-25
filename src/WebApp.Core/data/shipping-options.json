@@ -1,0 +1,26 @@
+[
+  {
+    "id": "d6b808be-81e1-4abe-a02d-b5965433810a",
+    "displayName": "Express USD (1 day)(en)",
+    "price": {
+      "amount": 20,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "96b22cc9-9052-4222-90fd-3f3f19f52740",
+    "displayName": "Fast USD (2-3 days)(en)",
+    "price": {
+      "amount": 15,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "38acb851-b100-4194-8785-18c39253fde9",
+    "displayName": "Regular USD (4-7 days)(en)",
+    "price": {
+      "amount": 5,
+      "currency": "USD"
+    }
+  }
+]

@@ -17,6 +17,7 @@ var source = require("vinyl-source-stream");
 var sourcemaps = require("gulp-sourcemaps");
 var uglify = require("gulp-uglify");
 var watch = require("gulp-watch");
+var wait = require("gulp-wait");
 var rename = require("gulp-rename");
 var _if = require("gulp-if");
 var ts = require("gulp-typescript");
@@ -80,6 +81,7 @@ gulp.task("compile:ts", function() {
 gulp.task("copy:js", function() {
   return gulp
     .src(["app/**/*.js"])
+    .pipe(wait(2000))
     .pipe(sourcemaps.write({ sourceRoot: "/app" }))
     .pipe(gulp.dest("wwwroot"));
 });

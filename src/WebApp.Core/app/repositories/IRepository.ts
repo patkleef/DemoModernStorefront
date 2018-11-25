@@ -8,6 +8,7 @@ export interface IRepository {
     type: Models.OrderType
   ): Models.Order;
   getServiceApiToken(): Promise<any>;
+  getShippingOptions(): Promise<PaymentShippingOption[]>;
   getCurrentCustomer(contactId: string): Promise<Models.Contact>;
   getProducts(): Promise<Models.Product[]>;
   getProduct(code: string): Promise<Models.Product>;

@@ -75,7 +75,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Cart.ViewModelFactories
             }
         }
 
-        private IEnumerable<ShippingMethodViewModel> CreateShippingMethodViewModels(MarketId marketId, Currency currency, IShipment shipment)
+        public IEnumerable<ShippingMethodViewModel> CreateShippingMethodViewModels(MarketId marketId, Currency currency, IShipment shipment)
         {
             var market = _marketService.GetMarket(marketId);
             var shippingRates = GetShippingRates(market, currency, shipment);

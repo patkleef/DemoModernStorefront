@@ -151,6 +151,33 @@ export class Repository implements IRepository {
     return this.createStoreObject(warehouse);
   }
 
+  public async getShippingOptions(): Promise<PaymentShippingOption[]> {
+    const response = await fetch(
+      this.baseServiceApiUrl + "commerce/shipment/shipping-options",
+      {
+        mode: "cors",
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "bearer " + this.serviceApiAccessToken()
+        }
+      }
+    );
+    const data = await response.json();
+    const options: PaymentShippingOption[] = [];
+    data.forEach((item: any) => {
+      options.push({
+        id: item.id,
+        label: item.displayName,
+        amount: {
+          currency: item.price.currency,
+          value: item.price.amount.toString()
+        }
+      });
+    });
+    return options;
+  }
+
   private createStoreObject(warehouse: any): Models.Store {
     return {
       code: warehouse.code,

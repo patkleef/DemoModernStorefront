@@ -6,7 +6,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "gulp-if": "^2.0.2",
-    "gulp-rename": "^1.4.0"
+    "gulp-rename": "^1.4.0",
+    "gulp-wait": "0.0.2"
   },
   "engines": {
     "node": "4.1.1"

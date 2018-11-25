@@ -1,71 +1,25 @@
-/// <amd-dependency path="text!./stock-sizes.html" />
-import * as ko from "knockout";
+/// <amd-dependency path="text!./payment-request-page.html" />
 import ViewModelBase from "./ViewModelBase";
-import { EventTypes } from "../models/EventTypes";
 import { repositoryFactory } from "../repositories/repositoryFactory";
 
-declare var window: any;
-
-export class StockSizesViewModel extends ViewModelBase {
+export class PaymentRequestPageViewModel extends ViewModelBase {
   repository = repositoryFactory.get();
   paymentRequest: PaymentRequest;
   shippingOptions: PaymentShippingOption[];
   totalPrice: number;
 
-  currentComponent = ko
-    .observable<string>()
-    .publishOn("currentComponent", true);
-  product = ko
-    .observable<Models.Product>()
-    .syncWith("currentProduct", true, true);
-  currentStore = ko
-    .observable<Models.Store>()
-    .subscribeTo("currentStore", true);
-  orders = ko.observableArray<Models.Order>().syncWith("orders", true, true);
-  currentCustomer = ko
-    .observable<Models.Contact>()
-    .syncWith("currentCustomer", true, false);
-
-  items = ko.observable<Models.StoreStock[]>();
-  selectedSize = ko.observable<SelectedSizeViewModel>();
-
-  constructor(params: { item: Models.StoreStock[] }) {
+  constructor() {
     super();
-    this.items(params.item);
+    this.initPayment();
   }
 
-  calculateInStock() {
-    const selectedSize = this.selectedSize();
-    const currentStore = this.currentStore();
-
-    if (selectedSize != null) {
-      const stock = selectedSize.stock.find(item => {
-        return item.storeCode === currentStore.code;
-      });
-      return stock && stock.available > 0;
-    }
-    return false;
-  }
-  isInStock = ko.computed(this.calculateInStock, this);
-  paymentRequestApiEnabled = ko.observable<boolean>(
-    window.PaymentRequest !== undefined && window.PaymentRequest !== null
-  );
-
-  clickSelectSize = (size: Models.Size) => {
-    this.selectedSize(new SelectedSizeViewModel(size));
+  payClicked = async () => {
+    this.initPayment();
   };
 
-  clickOrder = (store: StoreStockViewModel) => {
-    this.createOrder(store, Models.OrderType.ClickAndCollect);
-  };
-
-  clickPayNow = async (store: StoreStockViewModel) => {
+  initPayment = async () => {
     const googlePayPaymentMethod = this.getGooglePayMethod();
-    this.totalPrice =
-      this.product().salePrice !== undefined
-        ? this.product().salePrice
-        : this.product().price;
-
+    this.totalPrice = await this.getTotal();
     const paymentMethods: PaymentMethodData[] = [
       {
         supportedMethods: ["basic-card"],
@@ -84,16 +38,15 @@ export class StockSizesViewModel extends ViewModelBase {
       //googlePayPaymentMethod
     ];
 
-    const paymentMethodDetails = await this.getPaymentMethodDetails();
-
     var paymentOptions = {
       requestShipping: true,
       requestPayerEmail: true,
       requestPayerPhone: true,
       requestPayerName: true,
-      shippingType: "delivery"
+      shippingType: "shipping"
     };
-    debugger;
+
+    const paymentMethodDetails = await this.getPaymentMethodDetails();
     this.paymentRequest = new PaymentRequest(
       paymentMethods,
       paymentMethodDetails,
@@ -114,13 +67,25 @@ export class StockSizesViewModel extends ViewModelBase {
       this.shippingOptionChange
     );
 
-    this.paymentRequest.show().then((response: any) => {
-      // [process payment]
-      // send to a PSP etc.
-      this.createOrder(store, Models.OrderType.Standard);
+    this.paymentRequest
+      .show()
+      .then((response: any) => {
+        console.log("Payment succesfull");
+        console.log(response);
+        response.complete("success");
+      })
+      .catch(err => {
+        console.error("Payment Request API error: ", err);
+      });
 
-      response.complete("success");
-    });
+    setTimeout(() => {
+      this.paymentRequest
+        .abort()
+        .then(() => {})
+        .catch(err => {
+          console.log("abort() Error: ", err);
+        });
+    }, 100000);
   };
 
   shippingAddressChange = (event: any) => {
@@ -156,6 +121,25 @@ export class StockSizesViewModel extends ViewModelBase {
       ...this.getPaymentMethodDetails(),
       shippingOptions: this.shippingOptions
     });
+  };
+
+  getTotal = async (): Promise<number> => {
+    const products = await this.repository.getProducts();
+    let totalPrice = 0;
+    const displayItems = [];
+    products.forEach((product: Models.Product) => {
+      const productPrice =
+        product.salePrice !== undefined ? product.salePrice : product.price;
+      displayItems.push({
+        label: product.title,
+        amount: {
+          currency: "USD",
+          value: productPrice
+        }
+      });
+      totalPrice += productPrice;
+    });
+    return totalPrice;
   };
 
   getPaymentMethodDetails = (): any => {
@@ -225,55 +209,4 @@ export class StockSizesViewModel extends ViewModelBase {
     };
     return googlePayPaymentMethod;
   };
-
-  createOrder = (store: StoreStockViewModel, orderType: Models.OrderType) => {
-    if (store instanceof StoreStockViewModel) {
-      const order = this.repository.createOrder(
-        { code: store.storeCode, name: store.storeName },
-        this.product(),
-        this.selectedSize().size,
-        orderType
-      );
-      this.orders.unshift(order);
-    } else {
-      const order = this.repository.createOrder(
-        this.currentStore(),
-        this.product(),
-        this.selectedSize().size,
-        orderType
-      );
-      this.orders.unshift(order);
-    }
-    this.repository.trackEvent(this.currentCustomer(), EventTypes.orderPlaced);
-
-    this.currentComponent("myorders-page");
-  };
-}
-
-class StoreStockViewModel implements Models.StoreStock {
-  storePageId: number;
-  available: number;
-  storeCode: string;
-  storeName: string;
-  showInfo = ko.observable(false);
-
-  clickToggleInfo = () => {
-    this.showInfo(!this.showInfo());
-  };
-
-  constructor(storeStock: Models.StoreStock) {
-    Object.assign(this, storeStock);
-  }
-}
-
-class SelectedSizeViewModel {
-  size: string;
-  stock: StoreStockViewModel[];
-
-  constructor(public sizeModel: Models.Size) {
-    this.size = sizeModel.size;
-    this.stock = sizeModel.stock.map((storeStock: any) => {
-      return new StoreStockViewModel(storeStock);
-    });
-  }
 }

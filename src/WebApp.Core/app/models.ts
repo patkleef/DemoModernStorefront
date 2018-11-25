@@ -22,8 +22,8 @@
     title: string;
     description: string;
     image: string;
-    price: string;
-    salePrice: string;
+    price: number;
+    salePrice: number;
     sizes: Size[];
     relatedproducts: string[];
   }
