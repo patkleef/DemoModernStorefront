@@ -29,10 +29,6 @@ using System.Web.Http.Cors;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.WebPages;
-using EPiServer.ContentApi.Cms.Controllers;
-using EPiServer.ContentApi.Core.Configuration;
-using EPiServer.ContentApi.Core.Security;
-using EPiServer.Personalization.Common;
 using EPiServer.Personalization.Commerce.Tracking;
 using Newtonsoft.Json.Serialization;
 
@@ -110,15 +106,6 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure
                 config.MapHttpAttributeRoutes();
                 var cors = new EnableCorsAttribute("*", "*", "*");
                 // config.EnableCors(cors);
-            });
-
-            context.Services.Configure<ContentApiConfiguration>(config =>
-            {
-                config.Default()
-                    .SetMinimumRoles("")
-                    .SetRequiredRole("")
-                    .SetSiteDefinitionApiEnabled(true)
-                    .SetMultiSiteFilteringEnabled(false);
             });
 
 #if IRI_CHARACTERS_IN_URL_FEATURE

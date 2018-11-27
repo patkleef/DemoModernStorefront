@@ -6,26 +6,11 @@
             <h3>Introduction tour</h3>
         </div>
         <div style="width: 70%;margin:0 auto;">
-            <div class="slider single-item">
+            <div class="slider single-item" data-bind="foreach: $component.currentStorePage().introductionTour.expandedValue">                
                 <div style="width: 200px;">
-                    <strong>Scan a shoe</strong>
-                    <p>If you want more information about a shoe you can move your phone closely to the bottom of the shoe. After the shoe was succesfully scanned a new view is openen with detailed information about the shoe.</p>
-                    <img src="/media/product-nfc.jpg"/>
-                </div>
-                <div style="width: 200px;">
-                    <strong>Click and collect a shoe</strong>
-                    <p>On the product view you'll find usefull information about a shoe like materials, price, video's and more. Also, the current store stock of the shoe is displayed. If your shoe isn't available anymore you can use our Click and Collect feature to order the shoe in a different store.</p>
-                    <img src="/media/clickandcollect.jpg"/>
-                </div>
-                <div style="width: 200px; text-align: center">
-                    <strong>My orders</strong>
-                    <p>The my orders view contains an overview of all your open orders. Foreach order the expiration date is displayed, but you're also able to call the store directly, ask a question or show the direction to that store on a Google Map</p>
-                    <img src="/media/myorders.jpg"/>
-                </div>
-                <div style="width: 200px; text-align: center">
-                    <strong>Wishlist</strong>
-                    <p>Do you still have some doubts to buy a shoe. No problem, with our wishlist feature you can easily add that shoe to the wishlist. This view provides an overview of all shoes that have been added plus the store from where the shoe was added.</p>
-                    <img src="/media/wishlist.jpg"/>
+                    <strong data-bind="text: $data.title.value"></strong>
+                    <p data-bind="html: $data.mainBody.value"></p>
+                    <img data-bind="attr: { src:  $data.mainImage.value }"/>
                 </div>
             </div>
         </div>

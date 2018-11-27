@@ -1,65 +1,348 @@
 [
-    {
-        "contentLink": {
-          "id": 295,
-          "workId": 0,
-          "guidValue": "a875aa40-f182-4276-8eeb-a8aaa7fe8875",
-          "providerName": null
-        },
-        "name": "Stockholm",
-        "language": {
-          "displayName": "English",
-          "name": "en"
-        },
-        "existingLanguages": [
-          {
+  {
+    "contentLink": {
+      "id": 295,
+      "workId": 0,
+      "guidValue": "a875aa40-f182-4276-8eeb-a8aaa7fe8875",
+      "providerName": null
+    },
+    "name": "Stockholm",
+    "language": {
+      "displayName": "English",
+      "name": "en"
+    },
+    "existingLanguages": [
+      {
+        "displayName": "English",
+        "name": "en"
+      }
+    ],
+    "masterLanguage": {
+      "displayName": "English",
+      "name": "en"
+    },
+    "contentType": [
+      "Page",
+      "StorePage"
+    ],
+    "parentLink": {
+      "id": 294,
+      "workId": 0,
+      "guidValue": "61621e57-8e7e-4aeb-a25a-ac353828c49c",
+      "providerName": null
+    },
+    "routeSegment": "stockholm",
+    "url": null,
+    "changed": "2018-11-18T16:36:44Z",
+    "created": "2018-11-18T16:36:39Z",
+    "startPublish": "2018-11-18T16:36:44Z",
+    "stopPublish": null,
+    "saved": "2018-11-27T21:26:03Z",
+    "status": "Published",
+    "category": {
+      "value": [
+        
+      ],
+      "propertyDataType": "PropertyCategory"
+    },
+    "storeName": {
+      "value": "Stockholm",
+      "propertyDataType": "PropertyLongString"
+    },
+    "header": {
+      "value": "Welcome back to our store in Stockholm.",
+      "propertyDataType": "PropertyLongString"
+    },
+    "mainBody": {
+      "value": "<div>\n<div>\n\n\n<\/div>\n<div>\n\n<div>Good Evening,&nbsp;<\/div>\n\n<\/div>\n<div>&nbsp;<\/div>\n<div>\n\n<div>Good day,&nbsp;<\/div>\n\n<\/div>\n<div>&nbsp;<\/div>\n<div>Use your phone to scan a product. This provides access to extra product information, exclusive deals, videos and a floor plan.<\/div>\n<br \/>\n<div>Since this is your third visit, we've some special offers for you!<\/div>\n<\/div>",
+      "propertyDataType": "PropertyXhtmlString"
+    },
+    "mainImage": {
+      "value": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/stores\/welcome-in-store.jpg",
+      "propertyDataType": "PropertyUrl"
+    },
+    "introductionTour": {
+      "expandedValue": [
+        {
+          "contentLink": {
+            "id": 304,
+            "workId": 0,
+            "guidValue": "3a4bed21-3711-4a7a-a776-4ced4e7a38fe",
+            "providerName": null
+          },
+          "name": "Slide 1",
+          "language": {
             "displayName": "English",
             "name": "en"
-          }
-        ],
-        "masterLanguage": {
-          "displayName": "English",
-          "name": "en"
-        },
-        "contentType": [
-          "Page",
-          "StorePage"
-        ],
-        "parentLink": {
-          "id": 294,
-          "workId": 0,
-          "guidValue": "61621e57-8e7e-4aeb-a25a-ac353828c49c",
-          "providerName": null
-        },
-        "routeSegment": "stockholm",
-        "url": null,
-        "changed": "2018-11-18T16:36:44Z",
-        "created": "2018-11-18T16:36:39Z",
-        "startPublish": "2018-11-18T16:36:44Z",
-        "stopPublish": null,
-        "saved": "2018-11-18T18:40:47Z",
-        "status": "Published",
-        "category": {
-          "value": [
-            
+          },
+          "existingLanguages": [
+            {
+              "displayName": "English",
+              "name": "en"
+            }
           ],
-          "propertyDataType": "PropertyCategory"
+          "masterLanguage": {
+            "displayName": "English",
+            "name": "en"
+          },
+          "contentType": [
+            "Block",
+            "IntroductionTourItemBlock"
+          ],
+          "parentLink": {
+            "id": 305,
+            "workId": 0,
+            "guidValue": "909b1105-30e0-4220-b748-c7a906495691",
+            "providerName": null
+          },
+          "routeSegment": null,
+          "url": null,
+          "changed": "2018-11-27T21:22:03Z",
+          "created": "2018-11-27T21:21:04Z",
+          "startPublish": "2018-11-27T21:22:03Z",
+          "stopPublish": null,
+          "saved": "2018-11-27T21:22:03Z",
+          "status": "Published",
+          "category": {
+            "value": [
+              
+            ],
+            "propertyDataType": "PropertyCategory"
+          },
+          "title": {
+            "value": "Scan a shoe",
+            "propertyDataType": "PropertyLongString"
+          },
+          "mainBody": {
+            "value": "<div>\n<div>If you want more information about a shoe you can move your phone closely to the bottom of the shoe. After the shoe was succesfully scanned a new view is openen with detailed information about the shoe.<\/div>\n<\/div>",
+            "propertyDataType": "PropertyXhtmlString"
+          },
+          "mainImage": {
+            "value": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/stores\/product-nfc.jpg",
+            "propertyDataType": "PropertyUrl"
+          }
         },
-        "storeName": {
-          "value": "Stockholm",
-          "propertyDataType": "PropertyLongString"
+        {
+          "contentLink": {
+            "id": 306,
+            "workId": 0,
+            "guidValue": "ef7dc734-7956-48cb-bc9c-231ae6cbd049",
+            "providerName": null
+          },
+          "name": "Slide 2",
+          "language": {
+            "displayName": "English",
+            "name": "en"
+          },
+          "existingLanguages": [
+            {
+              "displayName": "English",
+              "name": "en"
+            }
+          ],
+          "masterLanguage": {
+            "displayName": "English",
+            "name": "en"
+          },
+          "contentType": [
+            "Block",
+            "IntroductionTourItemBlock"
+          ],
+          "parentLink": {
+            "id": 305,
+            "workId": 0,
+            "guidValue": "909b1105-30e0-4220-b748-c7a906495691",
+            "providerName": null
+          },
+          "routeSegment": null,
+          "url": null,
+          "changed": "2018-11-27T21:23:59Z",
+          "created": "2018-11-27T21:23:27Z",
+          "startPublish": "2018-11-27T21:23:59Z",
+          "stopPublish": null,
+          "saved": "2018-11-27T21:23:59Z",
+          "status": "Published",
+          "category": {
+            "value": [
+              
+            ],
+            "propertyDataType": "PropertyCategory"
+          },
+          "title": {
+            "value": "Click and collect a shoe",
+            "propertyDataType": "PropertyLongString"
+          },
+          "mainBody": {
+            "value": "<div>\n<div>On the product view you'll find usefull information about a shoe like materials, price, video's and more. Also, the current store stock of the shoe is displayed. If your shoe isn't available anymore you can use our Click and Collect feature to order the shoe in a different store.<\/div>\n<\/div>",
+            "propertyDataType": "PropertyXhtmlString"
+          },
+          "mainImage": {
+            "value": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/stores\/clickandcollect.jpg",
+            "propertyDataType": "PropertyUrl"
+          }
         },
-        "header": {
-          "value": "Welcome back to our store in Stockholm.",
-          "propertyDataType": "PropertyLongString"
+        {
+          "contentLink": {
+            "id": 307,
+            "workId": 0,
+            "guidValue": "da4135be-9708-4e46-a646-e9e8d73df884",
+            "providerName": null
+          },
+          "name": "Slide 3",
+          "language": {
+            "displayName": "English",
+            "name": "en"
+          },
+          "existingLanguages": [
+            {
+              "displayName": "English",
+              "name": "en"
+            }
+          ],
+          "masterLanguage": {
+            "displayName": "English",
+            "name": "en"
+          },
+          "contentType": [
+            "Block",
+            "IntroductionTourItemBlock"
+          ],
+          "parentLink": {
+            "id": 305,
+            "workId": 0,
+            "guidValue": "909b1105-30e0-4220-b748-c7a906495691",
+            "providerName": null
+          },
+          "routeSegment": null,
+          "url": null,
+          "changed": "2018-11-27T21:24:36Z",
+          "created": "2018-11-27T21:24:10Z",
+          "startPublish": "2018-11-27T21:24:36Z",
+          "stopPublish": null,
+          "saved": "2018-11-27T21:24:36Z",
+          "status": "Published",
+          "category": {
+            "value": [
+              
+            ],
+            "propertyDataType": "PropertyCategory"
+          },
+          "title": {
+            "value": "My orders",
+            "propertyDataType": "PropertyLongString"
+          },
+          "mainBody": {
+            "value": "<div>\n<div>The my orders view contains an overview of all your open orders. Foreach order the expiration date is displayed, but you're also able to call the store directly, ask a question or show the direction to that store on a Google Map<\/div>\n<\/div>",
+            "propertyDataType": "PropertyXhtmlString"
+          },
+          "mainImage": {
+            "value": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/stores\/myorders.jpg",
+            "propertyDataType": "PropertyUrl"
+          }
         },
-        "mainBody": {
-          "value": "<div>\n<div>Use your phone to scan a product. This provides access to extra product information, exclusive deals, videos and a floor plan.<\/div>\n<br \/>\n<div>Since this is your third visit, we've some special offers for you!<\/div>\n<\/div>",
-          "propertyDataType": "PropertyXhtmlString"
-        },
-        "mainImage": {
-          "value": "\/globalassets\/stores\/welcome-in-store.jpg",
-          "propertyDataType": "PropertyUrl"
+        {
+          "contentLink": {
+            "id": 308,
+            "workId": 0,
+            "guidValue": "5cdc3776-9941-4657-9a20-3a12adbd87de",
+            "providerName": null
+          },
+          "name": "Slide 4",
+          "language": {
+            "displayName": "English",
+            "name": "en"
+          },
+          "existingLanguages": [
+            {
+              "displayName": "English",
+              "name": "en"
+            }
+          ],
+          "masterLanguage": {
+            "displayName": "English",
+            "name": "en"
+          },
+          "contentType": [
+            "Block",
+            "IntroductionTourItemBlock"
+          ],
+          "parentLink": {
+            "id": 305,
+            "workId": 0,
+            "guidValue": "909b1105-30e0-4220-b748-c7a906495691",
+            "providerName": null
+          },
+          "routeSegment": null,
+          "url": null,
+          "changed": "2018-11-27T21:25:21Z",
+          "created": "2018-11-27T21:24:49Z",
+          "startPublish": "2018-11-27T21:25:21Z",
+          "stopPublish": null,
+          "saved": "2018-11-27T21:25:52Z",
+          "status": "Published",
+          "category": {
+            "value": [
+              
+            ],
+            "propertyDataType": "PropertyCategory"
+          },
+          "title": {
+            "value": "Wishlist",
+            "propertyDataType": "PropertyLongString"
+          },
+          "mainBody": {
+            "value": "<div>\n<div>Do you still have some doubts to buy a shoe. No problem, with our wishlist feature you can easily add that shoe to the wishlist. This view provides an overview of all shoes that have been added plus the store from where the shoe was added.<\/div>\n<\/div>",
+            "propertyDataType": "PropertyXhtmlString"
+          },
+          "mainImage": {
+            "value": "http:\/\/modernstorefront-quicksilver.localtest.me\/\/globalassets\/stores\/wishlist.jpg",
+            "propertyDataType": "PropertyUrl"
+          }
         }
-      }
-  ]
+      ],
+      "value": [
+        {
+          "displayOption": "",
+          "tag": null,
+          "contentLink": {
+            "id": 304,
+            "workId": 0,
+            "guidValue": "3a4bed21-3711-4a7a-a776-4ced4e7a38fe",
+            "providerName": null
+          }
+        },
+        {
+          "displayOption": "",
+          "tag": null,
+          "contentLink": {
+            "id": 306,
+            "workId": 0,
+            "guidValue": "ef7dc734-7956-48cb-bc9c-231ae6cbd049",
+            "providerName": null
+          }
+        },
+        {
+          "displayOption": "",
+          "tag": null,
+          "contentLink": {
+            "id": 307,
+            "workId": 0,
+            "guidValue": "da4135be-9708-4e46-a646-e9e8d73df884",
+            "providerName": null
+          }
+        },
+        {
+          "displayOption": "",
+          "tag": null,
+          "contentLink": {
+            "id": 308,
+            "workId": 0,
+            "guidValue": "5cdc3776-9941-4657-9a20-3a12adbd87de",
+            "providerName": null
+          }
+        }
+      ],
+      "propertyDataType": "PropertyContentArea"
+    }
+  }
+]

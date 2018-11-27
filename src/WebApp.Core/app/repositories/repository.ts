@@ -187,7 +187,8 @@ export class Repository implements IRepository {
 
   /* CONTENT DELIVERY API */
   public async getPageContent(page: number): Promise<any> {
-    const response = await fetch(this.baseContentDeliveryApiUrl + page, {
+    let url = this.baseContentDeliveryApiUrl + page + "?expand=*";
+    const response = await fetch(url, {
       method: "GET",
 
       headers: {

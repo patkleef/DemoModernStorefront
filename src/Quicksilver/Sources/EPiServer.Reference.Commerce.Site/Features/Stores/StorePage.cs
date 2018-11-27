@@ -2,6 +2,8 @@ using System.ComponentModel.DataAnnotations;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
+using EPiServer.Reference.Commerce.Site.Features.Folder.Editorial.Blocks;
+using EPiServer.SpecializedProperties;
 using EPiServer.Web;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Stores
@@ -38,5 +40,13 @@ namespace EPiServer.Reference.Commerce.Site.Features.Stores
             GroupName = SystemTabNames.Content,
             Order = 8)]
         public virtual Url MainImage { get; set; }
+
+        [AllowedTypes(typeof(IntroductionTourItemBlock))]
+        [Display(
+            Name = "Introduction Tour",
+            Description = "",
+            GroupName = SystemTabNames.Content,
+            Order = 9)]
+        public virtual ContentArea IntroductionTour { get; set; }
     }
 }
