@@ -11,6 +11,7 @@ import { NavMenuViewModel } from "./components/nav-menu";
 import { WishlistViewModel } from "./components/wishlist-page";
 import { MyOrdersViewModel } from "./components/myorders-page";
 import { NfcViewModel } from "./components/nfc-page";
+import { BlueToothViewModel } from "./components/bluetooth-page";
 import * as $ from "jquery";
 import { PaymentRequestPageViewModel } from "./components/payment-request-page";
 
@@ -62,6 +63,10 @@ ko.components.register("nfc-page", {
 ko.components.register("payment-request-page", {
   viewModel: PaymentRequestPageViewModel,
   template: { require: "text!components/payment-request-page.html" }
+});
+ko.components.register("bluetooth-page", {
+  viewModel: BlueToothViewModel,
+  template: { require: "text!components/bluetooth-page.html" }
 });
 
 // Start our app
