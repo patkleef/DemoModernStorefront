@@ -7,6 +7,7 @@ using System;
 using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
+using EPiServer.Tracking.PageView;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Market.Controllers
 {

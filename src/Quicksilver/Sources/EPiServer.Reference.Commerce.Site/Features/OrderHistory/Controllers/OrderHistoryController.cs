@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web.Mvc;
 using EPiServer.Commerce.Order;
 using EPiServer.Reference.Commerce.Site.Features.OrderHistory.ViewModels;
+using EPiServer.Tracking.PageView;
 
 namespace EPiServer.Reference.Commerce.Site.Features.OrderHistory.Controllers
 {
@@ -25,6 +26,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.OrderHistory.Controllers
             _orderRepository = orderRepository;
         }
 
+        [PageViewTracking]
         [HttpGet]
         public ActionResult Index(OrderHistoryPage currentPage)
         {

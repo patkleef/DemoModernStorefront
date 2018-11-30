@@ -8,6 +8,7 @@ using Mediachase.Commerce;
 using Mediachase.Commerce.Markets;
 using EPiServer.Reference.Commerce.Site.Features.Market.Services;
 using EPiServer.Reference.Commerce.Site.Features.Market.ViewModels;
+using EPiServer.Tracking.PageView;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Market.Controllers
 {

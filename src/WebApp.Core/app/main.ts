@@ -3,6 +3,7 @@ import * as ko from "knockout";
 import ViewModelBase from "./components/ViewModelBase";
 import { EventTypes } from "./models/EventTypes";
 import { repositoryFactory } from "./repositories/repositoryFactory";
+import { config } from "./config";
 
 export class MainViewModel extends ViewModelBase {
   repository = repositoryFactory.get();
@@ -112,7 +113,7 @@ export class MainViewModel extends ViewModelBase {
   };
 
   setDefaultCurrentStore = async () => {
-    var store = await this.repository.getStore("stockholmstore");
+    var store = await this.repository.getStore(config.store);
     if (store) {
       this.currentStore(store);
     }

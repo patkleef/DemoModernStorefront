@@ -24,6 +24,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using EPiServer.Tracking.PageView;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Login.Controllers
 {
@@ -66,6 +67,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Login.Controllers
         /// <param name="returnUrl">The user's previous URL location. When logging in the user will be redirected back to this URL.</param>
         /// <returns>The default login and user account registration view.</returns>
         [HttpGet]
+        [PageViewTracking]
         public ActionResult Index(string returnUrl)
         {
             var registrationPage = ContentReference.IsNullOrEmpty(StartPage.LoginRegistrationPage)

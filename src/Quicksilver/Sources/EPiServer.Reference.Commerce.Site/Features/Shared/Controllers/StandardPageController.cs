@@ -6,6 +6,7 @@ using EPiServer.Web.Mvc;
 using EPiServer.Web.Routing;
 using System;
 using System.Web.Mvc;
+using EPiServer.Tracking.PageView;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Shared.Controllers
 {
@@ -16,12 +17,12 @@ namespace EPiServer.Reference.Commerce.Site.Features.Shared.Controllers
 
         public StandardPageController(IContentLoader contentLoader, UrlResolver urlResolver)
         {
-
             _contentLoader = contentLoader;
             _urlResolver = urlResolver;
         }
-
+        
         [HttpGet]
+        [PageViewTracking]
         public ActionResult Index(StandardPage currentPage)
         {
             var model = new StandardPageViewModel

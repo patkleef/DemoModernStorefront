@@ -30,6 +30,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.WebPages;
 using EPiServer.Personalization.Commerce.Tracking;
+using EPiServer.Personalization.Commerce.Tracking.Internal;
 using Newtonsoft.Json.Serialization;
 
 namespace EPiServer.Reference.Commerce.Site.Infrastructure
@@ -207,7 +208,6 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure
             {
                 var widgetService = context.Locate.Advanced.GetInstance<WidgetService>();
                 var response = widgetService.CreateWidgets(scope);
-
                 if (response.Status != "OK")
                 {
                     var error = response.Errors.First();

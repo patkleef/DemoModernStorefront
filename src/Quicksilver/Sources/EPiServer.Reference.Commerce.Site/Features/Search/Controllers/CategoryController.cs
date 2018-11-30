@@ -3,6 +3,7 @@ using EPiServer.Reference.Commerce.Site.Features.Search.ViewModelFactories;
 using EPiServer.Reference.Commerce.Site.Features.Search.ViewModels;
 using EPiServer.Web.Mvc;
 using System.Web.Mvc;
+using EPiServer.Tracking.Commerce;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Search.Controllers
 {
@@ -16,6 +17,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Search.Controllers
             _viewModelFactory = viewModelFactory;
         }
 
+        [CommerceTracking(TrackingType.Category)]
         [AcceptVerbs(HttpVerbs.Get | HttpVerbs.Post)]
         public ViewResult Index(FashionNode currentContent, FilterOptionViewModel viewModel)
         {

@@ -2,6 +2,7 @@
 import * as ko from "knockout";
 import { EventTypes } from "../models/EventTypes";
 import { repositoryFactory } from "../repositories/repositoryFactory";
+import { config } from "../config";
 
 export class LoginPageViewModel {
   currentComponent = ko.observable().syncWith("currentComponent", true, true);
@@ -11,9 +12,7 @@ export class LoginPageViewModel {
   constructor() {}
 
   loginClicked = () => {
-    const response = this.repository.getCurrentCustomer(
-      "79199f0b-8cab-4c5f-9b26-007825d5c32d"
-    );
+    const response = this.repository.getCurrentCustomer(config.customerId);
 
     response.then(data => {
       this.currentCustomer(data);

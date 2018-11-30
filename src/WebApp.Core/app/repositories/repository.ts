@@ -213,11 +213,11 @@ export class Repository implements IRepository {
       payload: {},
       remoteAddress: "127.0.0.1",
       clientId: contact.primaryKeyId,
-      deviceId: "123",
+      deviceId: config.trackingDeviceId,
       eventType: eventType,
       value: value !== undefined ? value : eventType,
       trackId: this.guid(),
-      scope: "c909a277-5aad-449a-8a9f-6fe7c265680b",
+      scope: config.trackingScope,
       eventTime: new Date().toISOString()
     };
     const response = await fetch(this.baseTrackingApiUrl + "Track", {

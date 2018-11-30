@@ -4,6 +4,7 @@ using EPiServer.Reference.Commerce.Site.Features.Profile.ViewModels;
 using EPiServer.Reference.Commerce.Site.Infrastructure.Attributes;
 using EPiServer.Web.Mvc;
 using System.Web.Mvc;
+using EPiServer.Tracking.PageView;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Profile.Controllers
 {
@@ -17,6 +18,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Profile.Controllers
             _optinService = optinService;
         }
 
+        [PageViewTracking]
         public ActionResult Index(ProfilePage currentPage)
         {
             var viewModel = CreateViewModel(currentPage);

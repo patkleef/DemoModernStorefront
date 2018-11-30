@@ -10,6 +10,7 @@ using EPiServer.Web.Mvc.Html;
 using Mediachase.Commerce.Markets;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using EPiServer.Tracking.Commerce;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Checkout.Controllers
 {
@@ -29,6 +30,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Checkout.Controllers
             _recommendationService = recommendationService;
         }
 
+        [CommerceTracking(TrackingType.Order)]
         [HttpGet]
         public async Task<ActionResult> Index(OrderConfirmationPage currentPage, string notificationMessage, int? orderNumber)
         {

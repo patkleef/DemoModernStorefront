@@ -3,6 +3,7 @@ using EPiServer.Reference.Commerce.Site.Features.Product.ViewModelFactories;
 using EPiServer.Reference.Commerce.Site.Infrastructure.Facades;
 using EPiServer.Web.Mvc;
 using System.Web.Mvc;
+using EPiServer.Tracking.Commerce;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Product.Controllers
 {
@@ -17,6 +18,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Product.Controllers
             _viewModelFactory = viewModelFactory;
         }
 
+        [CommerceTracking(TrackingType.Product)]
         [HttpGet]
         public ActionResult Index(FashionProduct currentContent, string entryCode = "", bool useQuickview = false, bool skipTracking = false)
         {

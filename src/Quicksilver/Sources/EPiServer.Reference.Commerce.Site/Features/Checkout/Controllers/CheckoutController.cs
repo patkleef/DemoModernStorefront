@@ -15,6 +15,7 @@ using EPiServer.Web.Routing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using EPiServer.Tracking.Commerce;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Checkout.Controllers
 {
@@ -50,6 +51,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Checkout.Controllers
             _checkoutService = checkoutService;
         }
 
+        [CommerceTracking(TrackingType.Checkout)]
         [HttpGet]
         [OutputCache(Duration = 0, NoStore = true)]
         public async Task<ActionResult> Index(CheckoutPage currentPage)

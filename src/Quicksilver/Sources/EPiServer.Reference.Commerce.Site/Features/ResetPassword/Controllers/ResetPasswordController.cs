@@ -15,6 +15,7 @@ using System.Collections.Specialized;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using EPiServer.Tracking.PageView;
 
 namespace EPiServer.Reference.Commerce.Site.Features.ResetPassword.Controllers
 {
@@ -39,6 +40,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.ResetPassword.Controllers
             UserManager.EmailService = mailService;
         }
 
+        [PageViewTracking]
         [AllowAnonymous]
         public ActionResult Index(ResetPasswordPage currentPage)
         {

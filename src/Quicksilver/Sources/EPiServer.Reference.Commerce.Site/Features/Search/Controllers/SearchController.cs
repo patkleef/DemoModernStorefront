@@ -4,6 +4,7 @@ using EPiServer.Reference.Commerce.Site.Features.Search.ViewModelFactories;
 using EPiServer.Reference.Commerce.Site.Features.Search.ViewModels;
 using EPiServer.Web.Mvc;
 using System.Web.Mvc;
+using EPiServer.Tracking.PageView;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Search.Controllers
 {
@@ -19,7 +20,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Search.Controllers
             _viewModelFactory = viewModelFactory;
             _searchService = searchService;
         }
-
+        [PageViewTracking]
         [ValidateInput(false)]
         [AcceptVerbs(HttpVerbs.Get | HttpVerbs.Post)]
         public ActionResult Index(SearchPage currentPage, FilterOptionViewModel filterOptions)

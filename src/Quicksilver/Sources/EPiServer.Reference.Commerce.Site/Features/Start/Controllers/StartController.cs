@@ -8,6 +8,7 @@ using Mediachase.Commerce;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using EPiServer.Tracking.Commerce;
 
 namespace EPiServer.Reference.Commerce.Site.Features.Start.Controllers
 {
@@ -27,6 +28,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.Start.Controllers
             _marketContentFilter = marketContentFilter;
         }
 
+        [CommerceTracking(TrackingType.Home)]
         public ViewResult Index(StartPage currentPage)
         {
             var viewModel = new StartPageViewModel()

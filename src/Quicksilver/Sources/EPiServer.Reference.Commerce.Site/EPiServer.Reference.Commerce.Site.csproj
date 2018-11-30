@@ -154,8 +154,14 @@
     <Reference Include="EPiServer.Shell.UI, Version=11.7.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EPiServer.CMS.UI.Core.11.7.0\lib\net461\EPiServer.Shell.UI.dll</HintPath>
     </Reference>
+    <Reference Include="EPiServer.Tracking.Cms, Version=1.6.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.Tracking.Cms.1.6.0\lib\net461\EPiServer.Tracking.Cms.dll</HintPath>
+    </Reference>
     <Reference Include="EPiServer.Tracking.Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EPiServer.Tracking.Core.1.6.0\lib\net461\EPiServer.Tracking.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Tracking.PageView, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPiServer.Tracking.PageView.1.1.0\lib\EPiServer.Tracking.PageView.dll</HintPath>
     </Reference>
     <Reference Include="EPiServer.UI, Version=11.7.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EPiServer.CMS.UI.Core.11.7.0\lib\net461\EPiServer.UI.dll</HintPath>
