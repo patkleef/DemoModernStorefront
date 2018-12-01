@@ -3,7 +3,7 @@
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text" data-bind="text: $data.title" style="font-size: 30px"></h2>
     <div class="mdl-layout-spacer"></div>
-    <button class="mdl-button mdl-js-button mdl-button--raised" data-bind="click: $root.clickAddToWishlist.bind($data)">
+    <button class="mdl-button mdl-button-wishlist mdl-js-button mdl-button--raised" data-bind="click: $root.clickAddToWishlist.bind($data)">
         <i class="material-icons" data-bind="text: $component.inWishList() ? 'favorite':'favorite_border'"></i>
     </button>
   </div>

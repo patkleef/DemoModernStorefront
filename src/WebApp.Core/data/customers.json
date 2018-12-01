@@ -1,22 +1,22 @@
 [
   {
-    "primaryKeyId": "79199f0b-8cab-4c5f-9b26-007825d5c32d",
+    "primaryKeyId": "17c95479-d217-4bd4-b4c0-f95b497d13b7",
     "addresses": [
       {
-        "addressId": "057d9315-c69c-4e5d-b7a8-c60dde1c74d2",
-        "modified": "2018-11-06T22:28:00.603+01:00",
-        "name": "Default address",
-        "firstName": "Goldie",
-        "lastName": "Hawkins",
-        "countryName": "Sweden",
-        "countryCode": "SWE",
-        "city": "Stockholm",
-        "postalCode": null,
-        "line1": "Regeringsgatan 1312",
+        "addressId": "647cc071-b857-455e-9e2a-b33ac6405185",
+        "modified": "2018-11-29T20:05:38.18+01:00",
+        "name": "Default",
+        "firstName": "Patrick",
+        "lastName": "van Kleef",
+        "countryName": "Netherlands",
+        "countryCode": "NLD",
+        "city": "Assendelft",
+        "postalCode": "1566CC",
+        "line1": "Kralingen",
         "line2": null,
         "regionName": null,
         "regionCode": null,
-        "email": null,
+        "email": "patrick.van.kleef@gmail.com",
         "shippingDefault": true,
         "billingDefault": true,
         "daytimePhoneNumber": null,
@@ -24,9 +24,9 @@
         "organization": null
       }
     ],
-    "firstName": "Goldie",
-    "lastName": "Hawkins",
-    "email": "goldie.hawkins@example.com",
-    "registrationSource": "Imported customer"
+    "firstName": "Patrick",
+    "lastName": "van Kleef",
+    "email": "patrick.van.kleef@gmail.com",
+    "registrationSource": "Registration page"
   }
 ]
