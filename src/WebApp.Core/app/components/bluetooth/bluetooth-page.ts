@@ -1,6 +1,6 @@
-/// <amd-dependency path="text!./nfc-page.html" />
+/// <amd-dependency path="text!./bluetooth-page.html" />
 import * as ko from "knockout";
-import ViewModelBase from "./ViewModelBase";
+import ViewModelBase from "../ViewModelBase";
 
 export class BlueToothViewModel extends ViewModelBase {
   bluetoothStatus = ko.observable();
