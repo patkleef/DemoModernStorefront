@@ -17,20 +17,25 @@
             <i class="material-icons menu-tab-icon mdl-badge mdl-badge--overlap" 
                 data-bind="attr: { 'data-badge': $root.wishlistitems().length }">favorite</i> Wishlist
         </a>
-        <a href="#placeholder-panel2" 
+        <a href="#placeholder-panel1" 
             class="mdl-tabs__tab is" 
             data-bind="click: $component.clickNavigate.bind($component, 'nfc-page'), css: { 'is-active': $component.currentComponent() == 'nfc-page' }">
             <i class="material-icons menu-tab-icon">nfc</i> NFC
         </a>
-        <a href="#placeholder-panel2" 
+        <a href="#placeholder-panel1" 
             class="mdl-tabs__tab is" 
             data-bind="click: $component.clickNavigate.bind($component, 'payment-request-page'), css: { 'is-active': $component.currentComponent() == 'payment-request-page' }">
             <i class="material-icons menu-tab-icon">payment</i> Payment Request API
         </a>
-        <a href="#placeholder-panel3" 
+        <a href="#placeholder-panel1" 
             class="mdl-tabs__tab is" 
             data-bind="click: $component.clickNavigate.bind($component, 'bluetooth-page'), css: { 'is-active': $component.currentComponent() == 'bluetooth-page' }">
             <i class="material-icons menu-tab-icon">bluetooth</i> Bluetooth
+        </a>
+        <a href="#placeholder-panel1" 
+            class="mdl-tabs__tab is" 
+            data-bind="click: $component.clickNavigate.bind($component, 'ar-page'), css: { 'is-active': $component.currentComponent() == 'ar-page' }">
+            <i class="material-icons menu-tab-icon">developer_mode</i> AR
         </a>
     </div>
     <div class="mdl-tabs__panel is-active" id="placeholder-panel1">

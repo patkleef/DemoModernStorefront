@@ -91,7 +91,7 @@ gulp.task("jsfiles", ["compile:ts", "copy:js"]);
 gulp.task("copy:lib", function() {
   return gulp
     .src([
-      "lib/*.js",
+      "lib/*.*",
       "node_modules/dialog-polyfill/dialog-polyfill.js",
       "node_modules/knockout/build/output/knockout-latest.js",
       "node_modules/knockout-postbox/src/knockout-postbox.js",
