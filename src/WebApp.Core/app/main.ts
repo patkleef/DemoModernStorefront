@@ -69,7 +69,7 @@ export class MainViewModel extends ViewModelBase {
     this.repository.trackEvent(
       this.currentCustomer(),
       EventTypes.addToWishlist,
-      product.code
+      "Added product " + product.code + " to the wishlist"
     );
   };
 
@@ -87,7 +87,7 @@ export class MainViewModel extends ViewModelBase {
       .then(data => {
         this.serviceApiAccessToken(data.access_token);
 
-        const pagePromise = this.repository.getPageContent(295);
+        const pagePromise = this.repository.getPageContent(config.storePageId);
 
         Promise.all([pagePromise]).then(values => {
           this.currentStorePage(values[0]);
@@ -102,7 +102,11 @@ export class MainViewModel extends ViewModelBase {
 
     this.currentComponent.subscribe((value: string) => {
       if (this.currentCustomer() !== null) {
-        this.repository.trackEvent(this.currentCustomer(), "page-view", value);
+        this.repository.trackEvent(
+          this.currentCustomer(),
+          "page-view",
+          "Visited page " + value
+        );
       }
     });
 
@@ -120,42 +124,25 @@ export class MainViewModel extends ViewModelBase {
   };
 
   productScanned = async (code: string) => {
-    /*const userInfo = firebaseConnection.getLoggedInUserInfo();
-    firebaseConnection.app
-      .database()
-      .ref("active-users/" + userInfo.displayName)
-      .set({
-        userInfo: userInfo,
-        lastActive: new Date().getTime()
-      });*/
-
     var product = await this.repository.getProduct(code);
     if (product) {
-      /* firebaseConnection.app
-        .database()
-        .ref("events/")
-        .push({
-          userInfo: userInfo,
-          product: product,
-          message: "Product scanned. Code: " + code,
-          timestamp: new Date().getTime()
-        });*/
+      this.repository.trackEvent(
+        this.currentCustomer(),
+        EventTypes.productScanned,
+        "Scanned product '" + product.title + "'"
+      );
 
       this.currentProduct(product);
       this.currentComponent("product-detail-page");
-      if (!this.couponRetrieved()) {
+      if (config.showCouponCode && !this.couponRetrieved()) {
         ko.postbox.publish("ShowDialogTopic");
         this.couponRetrieved(true);
 
-        /*firebaseConnection.app
-          .database()
-          .ref("events/")
-          .push(<Models.UserEvent>{
-            userInfo: userInfo,
-            product: product,
-            message: "Coupon code retrieved",
-            timestamp: new Date().getTime()
-          });*/
+        this.repository.trackEvent(
+          this.currentCustomer(),
+          EventTypes.couponRetrieved,
+          "Retrieved coupon code"
+        );
       }
     }
   };

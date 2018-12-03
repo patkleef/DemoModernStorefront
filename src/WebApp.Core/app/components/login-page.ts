@@ -17,19 +17,17 @@ export class LoginPageViewModel {
     response.then(data => {
       this.currentCustomer(data);
 
-      this.repository.trackEvent(data, EventTypes.userLogin);
+      this.repository.trackEvent(
+        data,
+        EventTypes.userLogin,
+        "Visitor logged in"
+      );
 
       this.currentComponent("start-page");
     });
   };
 
-  loginWithGoogleClicked = () => {
-    /*if (this.loggedInUser()) {
-      this.currentComponent("start-page");
-    } else {
-      // firebaseConnection.loginWithGoogle();
-    }*/
-  };
+  loginWithGoogleClicked = () => {};
 
   signupClicked = () => {
     this.currentComponent("signup-page");

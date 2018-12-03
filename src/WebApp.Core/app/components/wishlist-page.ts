@@ -20,7 +20,7 @@ export class WishlistViewModel {
     this.repository.trackEvent(
       this.currentCustomer(),
       EventTypes.removeFromWishlist,
-      obj.product.code
+      "Removed product " + obj.product.code + " from the wishlist"
     );
   };
 }

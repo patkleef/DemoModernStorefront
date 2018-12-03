@@ -1,6 +1,7 @@
 import * as ko from "knockout";
 import { config } from "./../config";
 import { IRepository } from "./IRepository";
+import { EventTypes } from "../models/EventTypes";
 
 export class Repository implements IRepository {
   private baseUrl: string = "http://modernstorefront-quicksilver.localtest.me/";
@@ -9,6 +10,8 @@ export class Repository implements IRepository {
   private baseServiceApiUrl: string = this.baseUrl + "episerverapi/";
   private baseTrackingApiUrl: string =
     "https://track-emea01.profilestore.episerver.net/api/v1.0/";
+  private baseProfileApiUrl: string =
+    "https://profilesapi-emea01.profilestore.episerver.net/api/v1.0/";
 
   private serviceApiAccessToken = ko
     .observable<string>()
@@ -203,20 +206,28 @@ export class Repository implements IRepository {
   public async trackEvent(
     contact: Models.Contact,
     eventType: string,
-    value?: string
+    value?: string,
+    data?: any
   ): Promise<any> {
+    const trackId =
+      eventType === EventTypes.storeVisit
+        ? EventTypes.storeVisit.toString() +
+          "|" +
+          this.getCurrentDateFormatted()
+        : this.guid();
+
     const request = {
       user: {
         name: contact.firstName + " " + contact.lastName,
         email: contact.email
       },
-      payload: {},
+      payload: data,
       remoteAddress: "127.0.0.1",
       clientId: contact.primaryKeyId,
       deviceId: config.trackingDeviceId,
       eventType: eventType,
       value: value !== undefined ? value : eventType,
-      trackId: this.guid(),
+      trackId: trackId, //event uniqueness
       scope: config.trackingScope,
       eventTime: new Date().toISOString()
     };
@@ -231,6 +242,35 @@ export class Repository implements IRepository {
       body: JSON.stringify(request)
     });
     return response;
+  }
+
+  public async getNumberOfVisitsThisMonth(
+    contact: Models.Contact,
+    store: Models.Store
+  ): Promise<any> {
+    const query =
+      "$filter=User.Email eq " +
+      contact.email +
+      " and EventTime ge " +
+      config.startCountingVisitsDate +
+      " and EventType eq " +
+      EventTypes.storeVisit +
+      " and Payload.code eq " +
+      store.code +
+      "&$orderBy=EventTime DESC";
+    const response = await fetch(
+      this.baseProfileApiUrl + "TrackEvents?" + encodeURI(query),
+      {
+        method: "GET",
+
+        headers: {
+          "Content-Type": "application/json",
+          "Accept-Language": "en",
+          Authorization: "epi-single " + config.profileStoreKey
+        }
+      }
+    );
+    return response.json();
   }
 
   public guid() {
@@ -253,5 +293,12 @@ export class Repository implements IRepository {
       s4() +
       s4()
     );
+  }
+
+  public getCurrentDateFormatted() {
+    const d = new Date();
+    Date.now;
+
+    return d.getFullYear() + "-" + d.getMonth() + "-" + d.getDay();
   }
 }

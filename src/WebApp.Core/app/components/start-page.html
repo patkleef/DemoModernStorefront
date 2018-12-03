@@ -23,13 +23,13 @@
 
 <!--ko ifnot: $component.showIntroductionTour()-->
 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card card-product-image">
-    <div class="mdl-card__title" data-bind="style: { backgroundImage: 'url(http://modernstorefront-quicksilver.localtest.me/' + $root.currentStorePage().mainImage.value + ')', backgroundSize: '150%', height: '290px' }">
+    <div class="mdl-card__title" data-bind="style: { backgroundImage: 'url(' + $root.currentStorePage().mainImage.value + ')', backgroundSize: '150%', height: '290px' }">
         <!--ko if: $root.currentStorePage()-->
             <h3 style="color: white;">Welcome in our <span data-bind="text: $root.currentStorePage().storeName.value"></span> store</h3>
         <!--/ko-->
     </div> 
     <div class="mdl-card__menu"> 
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-bind="click: $component.scanProduct">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-bind="click: function(data, event) { $root.productScanned('P-44477844', data, event) }">
             <i class="material-icons">nfc</i>
         </button>
     </div>
@@ -42,6 +42,7 @@
       <p data-bind="text: $root.currentStorePage().header.value"></p>
 
       <div data-bind="html: $root.currentStorePage().mainBody.value"></div>
+      <div>Because is store visit number <strong data-bind="text: $component.numberOfStoreVisits()"></strong>, we have some exclusive deals for you!</div>
   </div>
 </div>
 

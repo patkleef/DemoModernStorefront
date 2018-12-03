@@ -2,6 +2,7 @@
 import * as $ from "jquery";
 import * as ko from "knockout";
 import { repositoryFactory } from "../repositories/repositoryFactory";
+import { EventTypes } from "../models/EventTypes";
 
 export class StartPageViewModel {
   repository = repositoryFactory.get();
@@ -23,6 +24,7 @@ export class StartPageViewModel {
   currentCustomer = ko
     .observable<Models.Contact>()
     .subscribeTo("currentCustomer", true);
+  numberOfStoreVisits = ko.observable<string>();
 
   constructor() {
     $(".single-item").slick({
@@ -30,6 +32,19 @@ export class StartPageViewModel {
     });
 
     const response = this.repository.getProducts();
+
+    this.repository.trackEvent(
+      this.currentCustomer(),
+      EventTypes.storeVisit,
+      "Visited store " + this.currentStore().name,
+      this.currentStore()
+    );
+
+    this.repository
+      .getNumberOfVisitsThisMonth(this.currentCustomer(), this.currentStore())
+      .then(data => {
+        this.numberOfStoreVisits(data.total);
+      });
 
     response.then(products => {
       products.forEach((product: Models.Product) => {
@@ -40,9 +55,5 @@ export class StartPageViewModel {
 
   skipIntroductionTour = () => {
     this.showIntroductionTour(false);
-  };
-
-  scanProduct = () => {
-    alert("Product scanned");
   };
 }

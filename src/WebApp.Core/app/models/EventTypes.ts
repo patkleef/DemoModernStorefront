@@ -3,5 +3,8 @@ export const EventTypes = {
   userLogin: "user-login",
   addToWishlist: "add-to-wishlist",
   removeFromWishlist: "remove-from-wishlist",
-  orderPlaced: "order-placed"
+  orderPlaced: "order-placed",
+  storeVisit: "store-visit",
+  productScanned: "product-scanned",
+  couponRetrieved: "coupon-retrieved"
 };

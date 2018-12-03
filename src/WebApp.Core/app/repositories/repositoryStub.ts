@@ -75,7 +75,8 @@ export class RepositoryStub implements IRepository {
   public async trackEvent(
     contact: Models.Contact,
     eventType: string,
-    value?: string
+    value?: string,
+    data?: any
   ): Promise<any> {
     console.log(
       "Track event " +
@@ -100,5 +101,14 @@ export class RepositoryStub implements IRepository {
   private async shippingOptions(): Promise<any[]> {
     var response = await window.fetch(`/data/shipping-options.json`);
     return response.json();
+  }
+
+  public async getNumberOfVisitsThisMonth(
+    contact: Models.Contact,
+    store: Models.Store
+  ): Promise<any> {
+    return new Promise(function(resolve, reject) {
+      resolve(4);
+    });
   }
 }
