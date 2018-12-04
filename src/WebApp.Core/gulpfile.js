@@ -81,10 +81,11 @@ gulp.task("compile:ts", function() {
 gulp.task("copy:js", function() {
   return gulp
     .src(["app/**/*.js"])
-    .pipe(wait(2000))
     .pipe(sourcemaps.write({ sourceRoot: "/app" }))
     .pipe(gulp.dest("wwwroot"));
 });
+
+gulp.task("jsfiles", ["compile:ts", "copy:js"]);
 
 gulp.task("copy:lib", function() {
   return gulp
@@ -165,8 +166,8 @@ gulp.task("clean", done => {
 gulp.task("watch", function() {
   var html = gulp.watch(["app/*.html", "app/**/*.html"], ["copy:html"]);
   var sass = gulp.watch(["app/css/**/*.scss"], ["copy:sass"]);
-  var ts = gulp.watch(["app/**/*.ts"], ["compile:ts"]);
-  var js = gulp.watch(["app/**/*.js"], ["copy:js"]);
+  var ts = gulp.watch(["app/**/*.ts"], ["jsfiles"]);
+  //var js = gulp.watch(["app/**/*.js"], ["copy:js"]);
   var img = gulp.watch(["app/media/*.*"], ["copy:media"]);
   //var browserify = gulp.watch(["app/sw.js"], ["browserify"]);
 
@@ -199,7 +200,7 @@ gulp.task("watch", function() {
   html.once("update", log);
   sass.once("update", log);
   ts.once("update", log);
-  js.once("update", log);
+  //js.once("update", log);
   img.once("update", log);
   /*browserify.once("update", log);*/
 });

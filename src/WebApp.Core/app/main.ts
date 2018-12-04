@@ -76,7 +76,7 @@ export class MainViewModel extends ViewModelBase {
   constructor() {
     super();
 
-    this.currentComponent("nfc-page");
+    this.currentComponent("start-page");
 
     this.initialize();
   }
@@ -95,6 +95,8 @@ export class MainViewModel extends ViewModelBase {
           this.completedInitialization();
         });
       });
+
+    this.readNfc();
   };
 
   completedInitialization = () => {
@@ -122,6 +124,32 @@ export class MainViewModel extends ViewModelBase {
       this.currentStore(store);
     }
   };
+
+  readNfc() {
+    if ("nfc" in navigator) {
+      (navigator as any).nfc
+        .watch(
+          message => {
+            console.log("NFC message received", message);
+            var items = message.records || message.data;
+            items.forEach(record => {
+              if (record.recordType == "text") {
+                console.log("Record type text: " + record.data);
+                this.productScanned(record.data);
+              } else {
+                console.log("Record type unknown: " + record.data);
+              }
+            });
+            $("#message-list li")[0].scrollIntoView();
+          },
+          { mode: "any" }
+        )
+        .then(() => console.log("Added a watch."))
+        .catch(err => console.log("Adding watch failed: " + err.name));
+    } else {
+      console.log("NFC API not supported.");
+    }
+  }
 
   productScanned = async (code: string) => {
     var product = await this.repository.getProduct(code);
