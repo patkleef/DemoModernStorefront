@@ -3,6 +3,7 @@ export const config = {
   serviceApiPassword: "Episerver#15",
   trackApiKey: "",
   useRepositoryStub: false,
+  useTrackingStub: false,
   store: "stockholmstore",
   storePageId: 295,
   customerId: "17c95479-d217-4bd4-b4c0-f95b497d13b7",

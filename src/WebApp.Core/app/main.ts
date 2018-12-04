@@ -4,9 +4,11 @@ import ViewModelBase from "./components/ViewModelBase";
 import { EventTypes } from "./models/EventTypes";
 import { repositoryFactory } from "./repositories/repositoryFactory";
 import { config } from "./config";
+import { trackingFactory } from "./repositories/trackingFactory";
 
 export class MainViewModel extends ViewModelBase {
   repository = repositoryFactory.get();
+  tracking = trackingFactory.get();
   lastScannedId = ko.observable().extend({ throttle: 100 });
   loading = ko.observable(true);
   items = ko.observableArray<any>([]);
@@ -66,7 +68,7 @@ export class MainViewModel extends ViewModelBase {
     }
     var store = this.currentStore();
     this.wishlistitems.push({ product: product, store: store });
-    this.repository.trackEvent(
+    this.tracking.trackEvent(
       this.currentCustomer(),
       EventTypes.addToWishlist,
       "Added product " + product.code + " to the wishlist"
@@ -104,7 +106,7 @@ export class MainViewModel extends ViewModelBase {
 
     this.currentComponent.subscribe((value: string) => {
       if (this.currentCustomer() !== null) {
-        this.repository.trackEvent(
+        this.tracking.trackEvent(
           this.currentCustomer(),
           "page-view",
           "Visited page " + value
@@ -154,7 +156,7 @@ export class MainViewModel extends ViewModelBase {
   productScanned = async (code: string) => {
     var product = await this.repository.getProduct(code);
     if (product) {
-      this.repository.trackEvent(
+      this.tracking.trackEvent(
         this.currentCustomer(),
         EventTypes.productScanned,
         "Scanned product '" + product.title + "'"
@@ -166,7 +168,7 @@ export class MainViewModel extends ViewModelBase {
         ko.postbox.publish("ShowDialogTopic");
         this.couponRetrieved(true);
 
-        this.repository.trackEvent(
+        this.tracking.trackEvent(
           this.currentCustomer(),
           EventTypes.couponRetrieved,
           "Retrieved coupon code"

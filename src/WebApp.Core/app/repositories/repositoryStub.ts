@@ -72,22 +72,6 @@ export class RepositoryStub implements IRepository {
     return (await this.pages())[0];
   }
 
-  public async trackEvent(
-    contact: Models.Contact,
-    eventType: string,
-    value?: string,
-    data?: any
-  ): Promise<any> {
-    console.log(
-      "Track event " +
-        eventType +
-        " - " +
-        value +
-        " for customer " +
-        contact.email
-    );
-  }
-
   private async customers(): Promise<Models.Contact[]> {
     var response = await window.fetch(`/data/customers.json`);
     return response.json();
@@ -101,14 +85,5 @@ export class RepositoryStub implements IRepository {
   private async shippingOptions(): Promise<any[]> {
     var response = await window.fetch(`/data/shipping-options.json`);
     return response.json();
-  }
-
-  public async getNumberOfVisitsThisMonth(
-    contact: Models.Contact,
-    store: Models.Store
-  ): Promise<any> {
-    return new Promise(function(resolve, reject) {
-      resolve(4);
-    });
   }
 }

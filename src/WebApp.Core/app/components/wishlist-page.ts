@@ -2,6 +2,7 @@
 import * as ko from "knockout";
 import { EventTypes } from "../models/EventTypes";
 import { repositoryFactory } from "../repositories/repositoryFactory";
+import { trackingFactory } from "../repositories/trackingFactory";
 
 export class WishlistViewModel {
   items = ko.observableArray<any>([]);
@@ -12,12 +13,13 @@ export class WishlistViewModel {
     .observable<Models.Contact>()
     .syncWith("currentCustomer", true, false);
   repository = repositoryFactory.get();
+  tracking = trackingFactory.get();
 
   constructor() {}
 
   removeFromWishlist = (obj: Models.WishlistItem) => {
     this.wishlistitems.remove(obj);
-    this.repository.trackEvent(
+    this.tracking.trackEvent(
       this.currentCustomer(),
       EventTypes.removeFromWishlist,
       "Removed product " + obj.product.code + " from the wishlist"
