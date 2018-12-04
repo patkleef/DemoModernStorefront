@@ -29,7 +29,8 @@ gulp.task("browserSync", () => {
     port: 9000,
     server: "wwwroot/",
     open: false,
-    reloadThrottle: 20000
+    reloadThrottle: 20000,
+    https: true
   });
 
   //Watch for the below file changes and reload browser
@@ -90,7 +91,7 @@ gulp.task("jsfiles", ["compile:ts", "copy:js"]);
 gulp.task("copy:lib", function() {
   return gulp
     .src([
-      "lib/*.js",
+      "lib/*.*",
       "node_modules/dialog-polyfill/dialog-polyfill.js",
       "node_modules/knockout/build/output/knockout-latest.js",
       "node_modules/knockout-postbox/src/knockout-postbox.js",
@@ -210,6 +211,7 @@ gulp.task("default", [
   "copy:html",
   "copy:sass",
   "copy:media",
+  "compile:ts",
   "copy:js",
   "copy:lib",
   "copy:others",
@@ -222,6 +224,7 @@ gulp.task("build", [
   "copy:html",
   "copy:sass",
   "copy:media",
+  "compile:ts",
   "copy:js",
   "copy:lib",
   "copy:others",
