@@ -3,11 +3,13 @@ import * as ko from "knockout";
 import ViewModelBase from "./ViewModelBase";
 import { EventTypes } from "../models/EventTypes";
 import { repositoryFactory } from "../repositories/repositoryFactory";
+import { trackingFactory } from "../repositories/trackingFactory";
 
 declare var window: any;
 
 export class StockSizesViewModel extends ViewModelBase {
   repository = repositoryFactory.get();
+  tracking = trackingFactory.get();
   paymentRequest: PaymentRequest;
   shippingOptions: PaymentShippingOption[];
   totalPrice: number;
@@ -244,7 +246,7 @@ export class StockSizesViewModel extends ViewModelBase {
       );
       this.orders.unshift(order);
     }
-    this.repository.trackEvent(this.currentCustomer(), EventTypes.orderPlaced);
+    this.tracking.trackEvent(this.currentCustomer(), EventTypes.orderPlaced);
 
     this.currentComponent("myorders-page");
   };

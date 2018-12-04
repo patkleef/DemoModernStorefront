@@ -13,14 +13,4 @@ export interface IRepository {
   getProducts(): Promise<Models.Product[]>;
   getProduct(code: string): Promise<Models.Product>;
   getPageContent(page: number): Promise<any>;
-  trackEvent(
-    contact: Models.Contact,
-    eventType: string,
-    value?: string,
-    data?: any
-  ): Promise<any>;
-  getNumberOfVisitsThisMonth(
-    contact: Models.Contact,
-    store: Models.Store
-  ): Promise<any>;
 }

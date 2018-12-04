@@ -3,9 +3,11 @@ import * as $ from "jquery";
 import * as ko from "knockout";
 import { repositoryFactory } from "../repositories/repositoryFactory";
 import { EventTypes } from "../models/EventTypes";
+import { trackingFactory } from "../repositories/trackingFactory";
 
 export class StartPageViewModel {
   repository = repositoryFactory.get();
+  tracking = trackingFactory.get();
 
   showIntroductionTour = ko
     .observable<boolean>(true)
@@ -33,14 +35,14 @@ export class StartPageViewModel {
 
     const response = this.repository.getProducts();
 
-    this.repository.trackEvent(
+    this.tracking.trackEvent(
       this.currentCustomer(),
       EventTypes.storeVisit,
       "Visited store " + this.currentStore().name,
       this.currentStore()
     );
 
-    this.repository
+    this.tracking
       .getNumberOfVisitsThisMonth(this.currentCustomer(), this.currentStore())
       .then(data => {
         this.numberOfStoreVisits(data.total);
