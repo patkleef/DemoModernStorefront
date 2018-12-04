@@ -142,7 +142,6 @@ export class MainViewModel extends ViewModelBase {
                 console.log("Record type unknown: " + record.data);
               }
             });
-            $("#message-list li")[0].scrollIntoView();
           },
           { mode: "any" }
         )

@@ -1,27 +1,16 @@
 import * as ko from "knockout";
 import { config } from "./../config";
 import { IRepository } from "./IRepository";
-import { EventTypes } from "../models/EventTypes";
 
 export class Repository implements IRepository {
   private baseUrl: string = "http://modernstorefront-quicksilver.localtest.me/";
   private baseContentDeliveryApiUrl: string =
     this.baseUrl + "api/episerver/v2.0/content/";
   private baseServiceApiUrl: string = this.baseUrl + "episerverapi/";
-  private baseTrackingApiUrl: string =
-    "https://track-emea01.profilestore.episerver.net/api/v1.0/";
 
   private serviceApiAccessToken = ko
     .observable<string>()
     .subscribeTo("serviceApiAccessToken", true);
-
-  public getData(url: string): Promise<JSON> {
-    return window
-      .fetch(`https://physicalstoreintegrationapi.azurewebsites.net${url}`)
-      .then(response => {
-        return response.json();
-      });
-  }
 
   public async products(): Promise<Models.Product[]> {
     var response = await window.fetch(`/data/products.json`);
