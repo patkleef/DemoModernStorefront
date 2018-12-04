@@ -29,8 +29,7 @@ gulp.task("browserSync", () => {
     port: 9000,
     server: "wwwroot/",
     open: false,
-    reloadThrottle: 20000,
-    https: true
+    reloadThrottle: 20000
   });
 
   //Watch for the below file changes and reload browser
