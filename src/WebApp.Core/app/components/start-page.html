@@ -6,7 +6,7 @@
             <h3>Introduction tour</h3>
         </div>
         <div style="width: 70%;margin:0 auto;">
-            <div class="slider single-item" data-bind="foreach: $component.currentStorePage().introductionTour.expandedValue">                
+            <div class="slider single-item" data-bind="foreach: $component.currentStorePage().introductionTour.expandedValue, afterRender: $component.renderComplete()">                
                 <div style="width: 200px;">
                     <strong data-bind="text: $data.title.value"></strong>
                     <p data-bind="html: $data.mainBody.value"></p>

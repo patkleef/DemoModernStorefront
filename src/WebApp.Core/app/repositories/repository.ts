@@ -24,19 +24,107 @@ export class Repository implements IRepository {
     });
   }
 
-  public createOrder(
+  public createClickAndCollectOrder(
     store: Models.Store,
     product: Models.Product,
-    size: string,
-    type: Models.OrderType
+    size: string
   ): Models.Order {
     return {
-      orderNumber: Math.ceil(Math.random() * 1000),
+      orderNumber: Math.ceil(Math.random() * 1000).toString(),
       size: size,
       store: store,
       product: product,
-      type: type
+      type: Models.OrderType.ClickAndCollect
     };
+  }
+
+  public async createOrder(
+    store: Models.Store,
+    product: Models.Product,
+    size: string,
+    customer: Models.Contact,
+    paymentResponse: PaymentResponse
+  ): Promise<Models.Order> {
+    const orderNumber = "POApp" + new Date().getTime();
+    const fullName = customer.firstName + " " + customer.lastName;
+    const order = {
+      orderNumber: orderNumber,
+      billingCurrency: "USD",
+      customerId: customer.primaryKeyId,
+      customerName: customer.firstName + " " + customer.lastName,
+      marketId: "US",
+      name: "StoreApp",
+      orderAddresses: [
+        {
+          name: "DefaultAddress",
+          firstName: customer.firstName,
+          lastName: customer.lastName,
+          line1: paymentResponse.shippingAddress.addressLine.join(),
+          city: paymentResponse.shippingAddress.city,
+          countryName: paymentResponse.shippingAddress.country,
+          postalCode: paymentResponse.shippingAddress.postalCode,
+          regionCode: paymentResponse.shippingAddress.region,
+          daytimePhoneNumber: paymentResponse.shippingAddress.phone,
+          email: customer.email
+        }
+      ],
+      orderForms: [
+        {
+          shipments: [
+            {
+              shippingMethodId: paymentResponse.shippingOption,
+              shippingAddressId: "DefaultAddress",
+              warehouseCode: store.code,
+              lineItems: [
+                {
+                  code: product.code,
+                  displayName: product.title,
+                  placedPrice: product.price,
+                  quantity: 1
+                }
+              ]
+            }
+          ],
+          payments: [
+            {
+              amount: product.price,
+              billingAddressId: "DefaultAddress",
+              customerName: fullName,
+              paymentMethodId: "4a671211-9441-432c-aab0-bde96a51da9a",
+              paymentMethodName: "GenericCreditCard",
+              status: "Pending",
+              implementationClass:
+                "Mediachase.Commerce.Orders.CreditCardPayment,Mediachase.Commerce",
+              transactionType: "Authorization"
+            }
+          ],
+          name: fullName,
+          billingAddressId: "DefaultAddress",
+          properties: []
+        }
+      ],
+      status: "InProgress"
+    };
+
+    const response = await fetch(this.baseServiceApiUrl + "commerce/orders", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "bearer " + this.serviceApiAccessToken()
+      },
+      body: JSON.stringify(order)
+    });
+
+    return response.json().then(() => {
+      return {
+        orderNumber: orderNumber,
+        size: size,
+        store: store,
+        product: product,
+        type: Models.OrderType.Standard
+      };
+    });
   }
 
   /* SERVICE API */

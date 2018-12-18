@@ -1,6 +1,7 @@
 /// <amd-dependency path="text!./payment-request-page.html" />
-import ViewModelBase from "./ViewModelBase";
-import { repositoryFactory } from "../repositories/repositoryFactory";
+import ViewModelBase from "../ViewModelBase";
+import { repositoryFactory } from "../../repositories/repositoryFactory";
+import { googlePay } from "./methods";
 
 export class PaymentRequestPageViewModel extends ViewModelBase {
   repository = repositoryFactory.get();
@@ -18,7 +19,6 @@ export class PaymentRequestPageViewModel extends ViewModelBase {
   };
 
   initPayment = async () => {
-    const googlePayPaymentMethod = this.getGooglePayMethod();
     this.totalPrice = await this.getTotal();
     const paymentMethods: PaymentMethodData[] = [
       {
@@ -34,8 +34,8 @@ export class PaymentRequestPageViewModel extends ViewModelBase {
             "unionpay"
           ]
         }
-      }
-      //googlePayPaymentMethod
+      },
+      googlePay
     ];
 
     var paymentOptions = {
@@ -53,7 +53,7 @@ export class PaymentRequestPageViewModel extends ViewModelBase {
       paymentOptions
     );
 
-    const canMakePayment = await this.paymentRequest.canMakePayment();
+    const canMakePayment = await (this.paymentRequest as any).canMakePayment();
     if (!canMakePayment) {
       alert("No supported payment methods, customer can't do payment");
     }
@@ -183,30 +183,5 @@ export class PaymentRequestPageViewModel extends ViewModelBase {
       label: "Total",
       amount: { currency: "USD", value: this.totalPrice + shippingCosts }
     };
-  };
-
-  getGooglePayMethod = () => {
-    const googlePayPaymentMethod = {
-      supportedMethods: ["https://google.com/pay"],
-      data: {
-        environment: "TEST",
-        apiVersion: 1,
-        allowedPaymentMethods: ["CARD", "TOKENIZED_CARD"],
-        paymentMethodTokenizationParameters: {
-          tokenizationType: "PAYMENT_GATEWAY",
-          // Check with your payment gateway on the parameters to pass.
-          parameters: {}
-        },
-        cardRequirements: {
-          allowedCardNetworks: ["AMEX", "DISCOVER", "MASTERCARD", "VISA"],
-          billingAddressRequired: true,
-          billingAddressFormat: "MIN"
-        },
-        phoneNumberRequired: true,
-        emailRequired: true,
-        shippingAddressRequired: true
-      }
-    };
-    return googlePayPaymentMethod;
   };
 }

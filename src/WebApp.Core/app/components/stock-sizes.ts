@@ -58,11 +58,15 @@ export class StockSizesViewModel extends ViewModelBase {
   };
 
   clickOrder = (store: StoreStockViewModel) => {
-    this.createOrder(store, Models.OrderType.ClickAndCollect);
+    const order = this.repository.createClickAndCollectOrder(
+      { code: store.storeCode, name: store.storeName },
+      this.product(),
+      this.selectedSize().size
+    );
+    this.orderPlaced(order);
   };
 
-  clickPayNow = async (store: StoreStockViewModel) => {
-    const googlePayPaymentMethod = this.getGooglePayMethod();
+  clickPayNow = async () => {
     this.totalPrice =
       this.product().salePrice !== undefined
         ? this.product().salePrice
@@ -83,7 +87,6 @@ export class StockSizesViewModel extends ViewModelBase {
           ]
         }
       }
-      //googlePayPaymentMethod
     ];
 
     const paymentMethodDetails = await this.getPaymentMethodDetails();
@@ -95,14 +98,14 @@ export class StockSizesViewModel extends ViewModelBase {
       requestPayerName: true,
       shippingType: "delivery"
     };
-    debugger;
+
     this.paymentRequest = new PaymentRequest(
       paymentMethods,
       paymentMethodDetails,
       paymentOptions
     );
 
-    const canMakePayment = await this.paymentRequest.canMakePayment();
+    const canMakePayment = await (this.paymentRequest as any).canMakePayment();
     if (!canMakePayment) {
       alert("No supported payment methods, customer can't do payment");
     }
@@ -116,10 +119,17 @@ export class StockSizesViewModel extends ViewModelBase {
       this.shippingOptionChange
     );
 
-    this.paymentRequest.show().then((response: any) => {
-      // [process payment]
-      // send to a PSP etc.
-      this.createOrder(store, Models.OrderType.Standard);
+    this.paymentRequest.show().then(async (response: any) => {
+      console.log(response);
+
+      const order = await this.repository.createOrder(
+        this.currentStore(),
+        this.product(),
+        this.selectedSize().size,
+        this.currentCustomer(),
+        response
+      );
+      this.orderPlaced(order);
 
       response.complete("success");
     });
@@ -203,50 +213,14 @@ export class StockSizesViewModel extends ViewModelBase {
     };
   };
 
-  getGooglePayMethod = () => {
-    const googlePayPaymentMethod = {
-      supportedMethods: ["https://google.com/pay"],
-      data: {
-        environment: "TEST",
-        apiVersion: 1,
-        allowedPaymentMethods: ["CARD", "TOKENIZED_CARD"],
-        paymentMethodTokenizationParameters: {
-          tokenizationType: "PAYMENT_GATEWAY",
-          // Check with your payment gateway on the parameters to pass.
-          parameters: {}
-        },
-        cardRequirements: {
-          allowedCardNetworks: ["AMEX", "DISCOVER", "MASTERCARD", "VISA"],
-          billingAddressRequired: true,
-          billingAddressFormat: "MIN"
-        },
-        phoneNumberRequired: true,
-        emailRequired: true,
-        shippingAddressRequired: true
-      }
-    };
-    return googlePayPaymentMethod;
-  };
+  orderPlaced = (order: Models.Order) => {
+    this.orders.unshift(order);
 
-  createOrder = (store: StoreStockViewModel, orderType: Models.OrderType) => {
-    if (store instanceof StoreStockViewModel) {
-      const order = this.repository.createOrder(
-        { code: store.storeCode, name: store.storeName },
-        this.product(),
-        this.selectedSize().size,
-        orderType
-      );
-      this.orders.unshift(order);
-    } else {
-      const order = this.repository.createOrder(
-        this.currentStore(),
-        this.product(),
-        this.selectedSize().size,
-        orderType
-      );
-      this.orders.unshift(order);
-    }
-    this.tracking.trackEvent(this.currentCustomer(), EventTypes.orderPlaced);
+    this.tracking.trackEvent(
+      this.currentCustomer(),
+      EventTypes.orderPlaced,
+      "Placed order"
+    );
 
     this.currentComponent("myorders-page");
   };

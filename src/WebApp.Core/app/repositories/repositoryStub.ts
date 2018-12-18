@@ -25,18 +25,33 @@ export class RepositoryStub implements IRepository {
     });
   }
 
-  public createOrder(
+  public createClickAndCollectOrder(
     store: Models.Store,
     product: Models.Product,
-    size: string,
-    type: Models.OrderType
+    size: string
   ): Models.Order {
     return {
-      orderNumber: Math.ceil(Math.random() * 1000),
+      orderNumber: Math.ceil(Math.random() * 1000).toString(),
       size: size,
       store: store,
       product: product,
-      type: type
+      type: Models.OrderType.ClickAndCollect
+    };
+  }
+
+  public async createOrder(
+    store: Models.Store,
+    product: Models.Product,
+    size: string,
+    customer: Models.Contact,
+    paymentResponse: PaymentResponse
+  ): Promise<Models.Order> {
+    return {
+      orderNumber: Math.ceil(Math.random() * 1000).toString(),
+      size: size,
+      store: store,
+      product: product,
+      type: Models.OrderType.Standard
     };
   }
 

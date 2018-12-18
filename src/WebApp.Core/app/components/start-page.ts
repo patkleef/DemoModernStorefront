@@ -29,10 +29,6 @@ export class StartPageViewModel {
   numberOfStoreVisits = ko.observable<string>();
 
   constructor() {
-    $(".single-item").slick({
-      dots: true
-    });
-
     const response = this.repository.getProducts();
 
     this.tracking.trackEvent(
@@ -57,5 +53,12 @@ export class StartPageViewModel {
 
   skipIntroductionTour = () => {
     this.showIntroductionTour(false);
+  };
+
+  renderComplete = () => {
+    debugger;
+    $(".single-item").slick({
+      dots: true
+    });
   };
 }

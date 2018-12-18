@@ -14,7 +14,7 @@ import { NfcViewModel } from "./components/nfc-page";
 import { BlueToothViewModel } from "./components/bluetooth/bluetooth-page";
 import { ArViewModel } from "./components/ar/ar-page";
 import * as $ from "jquery";
-import { PaymentRequestPageViewModel } from "./components/payment-request-page";
+import { PaymentRequestPageViewModel } from "./components/payment-request/payment-request-page";
 
 // register knockout components
 ko.components.register("product-coupon-dialog", {
@@ -63,7 +63,9 @@ ko.components.register("nfc-page", {
 });
 ko.components.register("payment-request-page", {
   viewModel: PaymentRequestPageViewModel,
-  template: { require: "text!components/payment-request-page.html" }
+  template: {
+    require: "text!components/payment-request/payment-request-page.html"
+  }
 });
 ko.components.register("bluetooth-page", {
   viewModel: BlueToothViewModel,

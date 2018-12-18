@@ -34,7 +34,7 @@
   }
 
   export interface Order {
-    orderNumber: number;
+    orderNumber: string;
     size: string;
     store: Models.Store;
     product: Models.Product;
