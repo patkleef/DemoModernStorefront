@@ -25,11 +25,12 @@ export class RepositoryStub implements IRepository {
     });
   }
 
-  public createClickAndCollectOrder(
+  public async createClickAndCollectOrder(
     store: Models.Store,
     product: Models.Product,
-    size: string
-  ): Models.Order {
+    size: string,
+    customer: Models.Contact
+  ): Promise<Models.Order> {
     return {
       orderNumber: Math.ceil(Math.random() * 1000).toString(),
       size: size,

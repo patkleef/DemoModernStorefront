@@ -24,18 +24,80 @@ export class Repository implements IRepository {
     });
   }
 
-  public createClickAndCollectOrder(
+  public async createClickAndCollectOrder(
     store: Models.Store,
     product: Models.Product,
-    size: string
-  ): Models.Order {
-    return {
-      orderNumber: Math.ceil(Math.random() * 1000).toString(),
-      size: size,
-      store: store,
-      product: product,
-      type: Models.OrderType.ClickAndCollect
+    size: string,
+    customer: Models.Contact
+  ): Promise<Models.Order> {
+    const fullName = customer.firstName + " " + customer.lastName;
+    const address = customer.addresses[0];
+    const order = {
+      orderNumber: this.generateOrderNumber(),
+      billingCurrency: "USD",
+      customerId: customer.primaryKeyId,
+      customerName: customer.firstName + " " + customer.lastName,
+      marketId: "US",
+      name: "StoreApp",
+      orderAddresses: [address],
+      orderForms: [
+        {
+          shipments: [
+            {
+              shippingMethodId: "5a621eec-3dda-49f9-a75c-1017363ea1ed",
+              shippingMethodName: "ClickAndCollect",
+              shippingAddressId: address.name,
+              warehouseCode: store.code,
+              lineItems: [
+                {
+                  code: product.code,
+                  displayName: product.title,
+                  placedPrice: product.price,
+                  quantity: 1
+                }
+              ]
+            }
+          ],
+          payments: [
+            {
+              amount: product.price,
+              billingAddressId: address.name,
+              customerName: fullName,
+              // paymentMethodId: "4a671211-9441-432c-aab0-bde96a51da9a",
+              paymentMethodName: "CashOnDelivery",
+              status: "Pending",
+              implementationClass:
+                "Mediachase.Commerce.Orders.OtherPayment,Mediachase.Commerce",
+              transactionType: "Authorization"
+            }
+          ],
+          name: fullName,
+          billingAddressId: address.name,
+          properties: []
+        }
+      ],
+      status: "InProgress"
     };
+
+    const response = await fetch(this.baseServiceApiUrl + "commerce/orders", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "bearer " + this.serviceApiAccessToken()
+      },
+      body: JSON.stringify(order)
+    });
+
+    return response.json().then(() => {
+      return {
+        orderNumber: order.orderNumber,
+        size: size,
+        store: store,
+        product: product,
+        type: Models.OrderType.ClickAndCollect
+      };
+    });
   }
 
   public async createOrder(
@@ -45,10 +107,9 @@ export class Repository implements IRepository {
     customer: Models.Contact,
     paymentResponse: PaymentResponse
   ): Promise<Models.Order> {
-    const orderNumber = "POApp" + new Date().getTime();
     const fullName = customer.firstName + " " + customer.lastName;
     const order = {
-      orderNumber: orderNumber,
+      orderNumber: this.generateOrderNumber(),
       billingCurrency: "USD",
       customerId: customer.primaryKeyId,
       customerName: customer.firstName + " " + customer.lastName,
@@ -118,7 +179,7 @@ export class Repository implements IRepository {
 
     return response.json().then(() => {
       return {
-        orderNumber: orderNumber,
+        orderNumber: order.orderNumber,
         size: size,
         store: store,
         product: product,
@@ -261,6 +322,10 @@ export class Repository implements IRepository {
       code: warehouse.code,
       name: warehouse.name
     };
+  }
+
+  private generateOrderNumber(): string {
+    return "POApp" + new Date().getTime();
   }
 
   /* CONTENT DELIVERY API */

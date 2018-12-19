@@ -4,8 +4,9 @@ export interface IRepository {
   createClickAndCollectOrder(
     store: Models.Store,
     product: Models.Product,
-    size: string
-  ): Models.Order;
+    size: string,
+    customer: Models.Contact
+  ): Promise<Models.Order>;
   createOrder(
     store: Models.Store,
     product: Models.Product,

@@ -16,7 +16,7 @@
         <!-- ko if: $component.isInStock() -->
         <div>&nbsp;</div>
         <button class="mdl-button mdl-js-button mdl-button--raised" 
-            data-bind="visible: $component.isInStock(), click: $component.clickOrder.bind($component)">
+            data-bind="visible: $component.isInStock(), click: $component.clickOrder.bind($component, $component.currentStore().code, $component.currentStore().name)">
             <i class="material-icons">shopping_basket</i>
                 Click and collect
         </button>
@@ -46,7 +46,7 @@
                 <!-- ko if: $data.showInfo -->
                 <li class="mdl-list__item">
                     <button class="mdl-button mdl-js-button mdl-button--raised"
-                        data-bind="click: $component.clickOrder.bind($component, $data)">
+                        data-bind="click: $component.clickOrder.bind($component, $data.storeCode, $data.storeName)">
                         <i class="material-icons">shopping_basket</i>
                         Click and collect
                     </button>

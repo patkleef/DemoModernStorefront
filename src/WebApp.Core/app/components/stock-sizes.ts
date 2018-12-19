@@ -57,11 +57,12 @@ export class StockSizesViewModel extends ViewModelBase {
     this.selectedSize(new SelectedSizeViewModel(size));
   };
 
-  clickOrder = (store: StoreStockViewModel) => {
-    const order = this.repository.createClickAndCollectOrder(
-      { code: store.storeCode, name: store.storeName },
+  clickOrder = async (storeCode: string, storeName: string) => {
+    const order = await this.repository.createClickAndCollectOrder(
+      { code: storeCode, name: storeName },
       this.product(),
-      this.selectedSize().size
+      this.selectedSize().size,
+      this.currentCustomer()
     );
     this.orderPlaced(order);
   };
