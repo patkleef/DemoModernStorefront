@@ -1,0 +1,128 @@
+{
+    "items": [
+        {
+            "TrackId": "db9aa57c-d248-2003-7beb-6d5b9545395d",
+            "DeviceId": "123",
+            "EventType": "page-view",
+            "EventTime": "2018-12-21T12:27:15.083Z",
+            "Value": "Visited page start-page",
+            "Scope": "quicksilver-web",
+            "CountryCode": "Localhost",
+            "PageUri": null,
+            "PageTitle": null,
+            "RemoteAddress": "127.0.0.1",
+            "Payload": null,
+            "User": {
+                "Name": "Patrick van Kleef",
+                "Email": "patrick.van.kleef@gmail.com"
+            }
+        },
+        {
+            "TrackId": "77642f63-4344-af4d-c032-98f04d8805b0",
+            "DeviceId": "123",
+            "EventType": "user-login",
+            "EventTime": "2018-12-21T12:27:15.083Z",
+            "Value": "Visitor logged in",
+            "Scope": "quicksilver-web",
+            "CountryCode": "Localhost",
+            "PageUri": null,
+            "PageTitle": null,
+            "RemoteAddress": "127.0.0.1",
+            "Payload": null,
+            "User": {
+                "Name": "Patrick van Kleef",
+                "Email": "patrick.van.kleef@gmail.com"
+            }
+        },
+        {
+            "TrackId": "a93c470c-7b67-19ea-ed4b-cc5b5fc44881",
+            "DeviceId": "123",
+            "EventType": "page-view",
+            "EventTime": "2018-12-21T12:20:40.613Z",
+            "Value": "Visited page start-page",
+            "Scope": "quicksilver-web",
+            "CountryCode": "Localhost",
+            "PageUri": null,
+            "PageTitle": null,
+            "RemoteAddress": "127.0.0.1",
+            "Payload": null,
+            "User": {
+                "Name": "Patrick van Kleef",
+                "Email": "patrick.van.kleef@gmail.com"
+            }
+        },
+        {
+            "TrackId": "911c683e-eaa8-995c-eac4-c68fc06b0259",
+            "DeviceId": "123",
+            "EventType": "page-view",
+            "EventTime": "2018-12-21T12:14:42.562Z",
+            "Value": "Visited page product-detail-page",
+            "Scope": "quicksilver-web",
+            "CountryCode": "Localhost",
+            "PageUri": null,
+            "PageTitle": null,
+            "RemoteAddress": "127.0.0.1",
+            "Payload": null,
+            "User": {
+                "Name": "Patrick van Kleef",
+                "Email": "patrick.van.kleef@gmail.com"
+            }
+        },
+        {
+            "TrackId": "store-visit|2018-11-5",
+            "DeviceId": "123",
+            "EventType": "store-visit",
+            "EventTime": "2018-12-21T12:14:31.012Z",
+            "Value": "Visited store Stockholm store",
+            "Scope": "quicksilver-web",
+            "CountryCode": "Localhost",
+            "PageUri": null,
+            "PageTitle": null,
+            "RemoteAddress": "127.0.0.1",
+            "Payload": {
+                "code": "stockholmstore",
+                "name": "Stockholm store"
+            },
+            "User": {
+                "Name": "Patrick van Kleef",
+                "Email": "patrick.van.kleef@gmail.com"
+            }
+        },
+        {
+            "TrackId": "f4a239d7-6a44-2bb4-26c8-8ae451e8e61c",
+            "DeviceId": "123",
+            "EventType": "page-view",
+            "EventTime": "2018-12-21T12:14:31.004Z",
+            "Value": "Visited page start-page",
+            "Scope": "quicksilver-web",
+            "CountryCode": "Localhost",
+            "PageUri": null,
+            "PageTitle": null,
+            "RemoteAddress": "127.0.0.1",
+            "Payload": null,
+            "User": {
+                "Name": "Patrick van Kleef",
+                "Email": "patrick.van.kleef@gmail.com"
+            }
+        },
+        {
+            "TrackId": "a791d15e-b288-ac97-9e7d-73e40774e543",
+            "DeviceId": "123",
+            "EventType": "user-login",
+            "EventTime": "2018-12-21T12:14:31.003Z",
+            "Value": "Visitor logged in",
+            "Scope": "quicksilver-web",
+            "CountryCode": "Localhost",
+            "PageUri": null,
+            "PageTitle": null,
+            "RemoteAddress": "127.0.0.1",
+            "Payload": null,
+            "User": {
+                "Name": "Patrick van Kleef",
+                "Email": "patrick.van.kleef@gmail.com"
+            }
+        }
+    ],
+    "total": 7,
+    "count": 7
+}

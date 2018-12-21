@@ -1,0 +1,26 @@
+{
+    "items": [
+        {
+            "TrackId": "store-visit|2018-11-5",
+            "DeviceId": "123",
+            "EventType": "store-visit",
+            "EventTime": "2018-12-21T12:14:31.012Z",
+            "Value": "Visited store Stockholm store",
+            "Scope": "quicksilver-web",
+            "CountryCode": "Localhost",
+            "PageUri": null,
+            "PageTitle": null,
+            "RemoteAddress": "127.0.0.1",
+            "Payload": {
+                "code": "stockholmstore",
+                "name": "Stockholm store"
+            },
+            "User": {
+                "Name": "Patrick van Kleef",
+                "Email": "patrick.van.kleef@gmail.com"
+            }
+        }
+    ],
+    "total": 1,
+    "count": 1
+}

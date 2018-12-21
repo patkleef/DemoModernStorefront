@@ -1,12 +1,11 @@
 /// <amd-dependency path="text!./store-events.html" />
-import * as $ from "jquery";
 import * as ko from "knockout";
-import { Repository } from "../repository";
+import { repositoryFactory } from "../repositories/repositoryFactory";
 
 export class StoreEventsViewModel {
   eventsArray = ko.observableArray<any>([]);
   user: KnockoutObservable<Models.TrackEvent>;
-  repository = new Repository();
+  repository = repositoryFactory.get();
 
   currentUserEmailAddress = ko
     .observable<Models.Product>()

@@ -1,6 +1,7 @@
-import { config } from "./config";
+import { config } from "../config";
+import { IRepository } from "./IRepository";
 
-export class Repository {
+export class Repository implements IRepository {
   private baseTrackingApiUrl: string =
     "https://profilesapi-emea01.profilestore.episerver.net/api/v1.0/";
 
@@ -28,7 +29,7 @@ export class Repository {
   }
 
   public async getActiveUsers(): Promise<any> {
-    const inStoreEvent = "page-view";
+    const inStoreEvent = "store-visit";
     const query =
       "$filter=EventTime ge " +
       config.currentDateTime +

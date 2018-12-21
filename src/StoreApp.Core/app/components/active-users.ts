@@ -1,12 +1,12 @@
 /// <amd-dependency path="text!./active-users.html" />
 import * as $ from "jquery";
 import * as ko from "knockout";
-import { Repository } from "../repository";
+import { repositoryFactory } from "../repositories/repositoryFactory";
 
 export class ActiveUsersViewModel {
   activeUsersArray = ko.observableArray<any>([]);
   user: KnockoutObservable<firebase.User>;
-  repository = new Repository();
+  repository = repositoryFactory.get();
 
   clickLogin = () => {};
 
