@@ -30,6 +30,10 @@ namespace EPiServer.Reference.Commerce.Site.Features.OrderHistory.Controllers
         [HttpGet]
         public ActionResult Index(OrderHistoryPage currentPage)
         {
+            var storeAppPurchaseOrders = _orderRepository.Load<IPurchaseOrder>(_customerContext.CurrentContactId, "StoreApp")
+                                             .OrderByDescending(x => x.Created)
+                                             .ToList();
+
             var purchaseOrders = _orderRepository.Load<IPurchaseOrder>(_customerContext.CurrentContactId)
                                              .OrderByDescending(x => x.Created)
                                              .ToList();
@@ -40,7 +44,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.OrderHistory.Controllers
                 Orders = new List<OrderViewModel>()
             };
 
-            foreach (var purchaseOrder in purchaseOrders)
+            foreach (var purchaseOrder in purchaseOrders.Union(storeAppPurchaseOrders))
             {
                 // Assume there is only one form per purchase.
                 var form = purchaseOrder.GetFirstForm();

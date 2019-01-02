@@ -42,12 +42,10 @@
   }
 
   export interface ActiveUser {
-    userInfo: firebase.UserInfo;
     lastActive: number;
   }
 
   export interface UserEvent {
-    userInfo: firebase.UserInfo;
     product: Models.Product;
     message: string;
     timestamp: number;
