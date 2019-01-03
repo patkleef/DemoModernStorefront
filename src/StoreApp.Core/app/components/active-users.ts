@@ -13,9 +13,16 @@ export class ActiveUsersViewModel {
   clickTest = () => {};
 
   constructor() {
-    const events = this.repository.getActiveUsers();
+    this.checkForNewEvents();
 
-    events.then((events: any) => {
+    this.user = null;
+  }
+
+  checkForNewEvents = () => {
+    const eventsPromise = this.repository.getActiveUsers();
+    this.activeUsersArray.removeAll();
+
+    eventsPromise.then((events: any) => {
       events.items.forEach((event: Models.TrackEvent) => {
         if (
           this.activeUsersArray().find(x => x.Email === event.User.Email) ===
@@ -24,8 +31,8 @@ export class ActiveUsersViewModel {
           this.activeUsersArray.push(event.User);
         }
       });
+    }).then(() => {
+      setTimeout(this.checkForNewEvents, 10000);
     });
-
-    this.user = null;
   }
 }

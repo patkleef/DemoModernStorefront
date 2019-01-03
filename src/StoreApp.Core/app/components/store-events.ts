@@ -16,14 +16,20 @@ export class StoreEventsViewModel {
   clickTest = () => {};
 
   constructor() {
-    const events = this.repository.getTrackEvents();
+    this.checkForNewEvents();
 
-    events.then((events: any) => {
+    this.user = null;
+  }
+
+  checkForNewEvents = () => {
+    const eventsPromise = this.repository.getTrackEvents();
+    this.eventsArray.removeAll();
+    eventsPromise.then((events: any) => {
       events.items.forEach((event: Models.TrackEvent) => {
         this.eventsArray.push(event);
       });
+    }).then(() => {
+      setTimeout(this.checkForNewEvents, 10000);
     });
-
-    this.user = null;
   }
 }
