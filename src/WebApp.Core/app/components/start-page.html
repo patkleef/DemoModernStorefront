@@ -6,18 +6,13 @@
             <h3>Introduction tour</h3>
         </div>
         <div style="width: 70%;margin:0 auto;">
-            <div class="slider single-item" data-bind="foreach: $component.currentStorePage().introductionTour.expandedValue, afterRender: $component.renderComplete()">                
-                <div style="width: 200px;">
-                    <strong data-bind="text: $data.title.value"></strong>
-                    <p data-bind="html: $data.mainBody.value"></p>
-                    <img data-bind="attr: { src:  $data.mainImage.value }"/>
-                </div>
+            <div class="slider single-item" data-bind="slick: $component.currentStorePage().introductionTour.expandedValue, slickOptions:{ dots: true }">                
+                
             </div>
         </div>
         <div class="mdl-card__actions mdl-card--border">
             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-bind="click: $component.skipIntroductionTour">Skip introduction tour</a>
         </div> 
-        
     </div>
 <!--/ko-->
 
