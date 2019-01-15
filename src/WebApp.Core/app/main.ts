@@ -5,6 +5,7 @@ import { EventTypes } from "./models/EventTypes";
 import { repositoryFactory } from "./repositories/repositoryFactory";
 import { config } from "./config";
 import { trackingFactory } from "./repositories/trackingFactory";
+import { RepositoryStub } from "./repositories/repositoryStub";
 
 export class MainViewModel extends ViewModelBase {
   repository = repositoryFactory.get();
@@ -84,21 +85,22 @@ export class MainViewModel extends ViewModelBase {
   }
 
   initialize = async () => {
-    const serviceTokenPromise = this.repository
-      .getServiceApiToken()
-      .then(data => {
-        this.serviceApiAccessToken(data.access_token);
-
-        const pagePromise = this.repository.getPageContent(config.storePageId);
-
-        Promise.all([pagePromise]).then(values => {
-          this.currentStorePage(values[0]);
-
-          this.completedInitialization();
-        });
-      });
-
     this.readNfc();
+    try {
+      const data = await this.repository.getServiceApiToken();
+      this.serviceApiAccessToken(data.access_token);
+    } catch (e) {
+      this.serviceApiAccessToken("OFFLINE");
+    }
+    let store;
+    try {
+      const values = await this.repository.getPageContent(config.storePageId);
+      store = values[0];
+    } catch (e) {
+      store = new RepositoryStub().getPageContent(config.storePageId);
+    }
+    this.currentStorePage(store);
+    this.completedInitialization();
   };
 
   completedInitialization = () => {
