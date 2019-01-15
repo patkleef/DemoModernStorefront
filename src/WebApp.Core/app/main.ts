@@ -94,8 +94,7 @@ export class MainViewModel extends ViewModelBase {
     }
     let store;
     try {
-      const values = await this.repository.getPageContent(config.storePageId);
-      store = values[0];
+      store = await this.repository.getPageContent(config.storePageId);
     } catch (e) {
       store = new RepositoryStub().getPageContent(config.storePageId);
     }
