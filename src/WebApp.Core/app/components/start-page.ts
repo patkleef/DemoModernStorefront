@@ -6,22 +6,22 @@ import { EventTypes } from "../models/EventTypes";
 import { trackingFactory } from "../repositories/trackingFactory";
 
 ko.bindingHandlers.slick = {
-  init: function (element, valueAccessor, allBindingsAccessor) {
+  init: function(element, valueAccessor, allBindingsAccessor) {
     $(element).empty();
     var items = ko.unwrap(valueAccessor());
     if (items) {
-      items.forEach(function (item) {
-        const div = $('<div>');
-        const strong = $('<strong>');
+      items.forEach(function(item) {
+        const div = $("<div>");
+        const strong = $("<strong>");
         const p = $("<p>");
         p.html(item.mainBody.value);
         strong.html(item.title.value);
-        const image = $('<img>');
-        image.attr('src', item.mainImage.value);
+        const image = $("<img>");
+        image.attr("src", item.mainImage.value);
         div.append(strong);
         div.append(p);
         div.append(image);
-        $(element).append(div)
+        $(element).append(div);
       });
     }
 
@@ -29,12 +29,12 @@ ko.bindingHandlers.slick = {
 
     $(element).slick(options);
 
-    ko.utils.domNodeDisposal.addDisposeCallback(element, function () {
-      $(element).slick('unslick');
+    ko.utils.domNodeDisposal.addDisposeCallback(element, function() {
+      $(element).slick("unslick");
     });
   },
 
-  update: function (element, valueAccessor) {
+  update: function(element, valueAccessor) {
     var images = ko.unwrap(valueAccessor());
   }
 };
@@ -65,18 +65,21 @@ export class StartPageViewModel {
   constructor() {
     const response = this.repository.getProducts();
 
-    this.tracking.trackEvent(
-      this.currentCustomer(),
-      EventTypes.storeVisit,
-      "Visited store " + this.currentStore().name,
-      this.currentStore()
-    );
+    const store = this.currentStore();
+    if (store) {
+      this.tracking.trackEvent(
+        this.currentCustomer(),
+        EventTypes.storeVisit,
+        "Visited store " + store.name,
+        store
+      );
 
-    this.tracking
-      .getNumberOfVisitsThisMonth(this.currentCustomer(), this.currentStore())
-      .then(data => {
-        this.numberOfStoreVisits(data.total);
-      });
+      this.tracking
+        .getNumberOfVisitsThisMonth(this.currentCustomer(), store)
+        .then(data => {
+          this.numberOfStoreVisits(data.total);
+        });
+    }
 
     response.then(products => {
       products.forEach((product: Models.Product) => {
