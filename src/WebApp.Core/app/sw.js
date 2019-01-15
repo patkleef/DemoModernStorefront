@@ -7,37 +7,60 @@ if (workbox) {
   workbox.precaching.precacheAndRoute([]);
   workbox.routing.registerRoute(
     "/",
-    workbox.strategies.cacheFirst({
+    workbox.strategies.networkFirst({
       cacheName: "homepage-cache"
     })
   );
   workbox.routing.registerRoute(
     new RegExp(".*.js"),
-    workbox.strategies.cacheFirst({
-      cacheName: "js-cache"
+    workbox.strategies.networkFirst({
+      cacheName: "js-cache",
+      networkTimeoutSeconds: 3
     })
   );
   workbox.routing.registerRoute(
     new RegExp(".*.html"),
-    workbox.strategies.cacheFirst({
+    workbox.strategies.networkFirst({
       cacheName: "html-cache"
     })
   );
   workbox.routing.registerRoute(
     new RegExp(".*.json"),
-    workbox.strategies.cacheFirst({
+    workbox.strategies.networkFirst({
       cacheName: "json-cache"
     })
   );
   workbox.routing.registerRoute(
     new RegExp(".*.css"),
-    workbox.strategies.cacheFirst({
+    workbox.strategies.networkFirst({
       cacheName: "css-cache"
     })
   );
   workbox.routing.registerRoute(
+    new RegExp("/episerverapi/"),
+    workbox.strategies.networkFirst({
+      cacheName: "serviceapi-cache",
+      plugins: [
+        new workbox.cacheableResponse.Plugin({
+          statuses: [0, 200]
+        })
+      ]
+    })
+  );
+  workbox.routing.registerRoute(
+    new RegExp("/api/episerver/"),
+    workbox.strategies.networkFirst({
+      cacheName: "contentapi-cache",
+      plugins: [
+        new workbox.cacheableResponse.Plugin({
+          statuses: [0, 200]
+        })
+      ]
+    })
+  );
+  workbox.routing.registerRoute(
     /.*\.(?:png|jpg|jpeg|svg|gif)/g,
-    workbox.strategies.cacheFirst({
+    workbox.strategies.staleWhileRevalidate({
       cacheName: "my-image-cache"
     })
   );
@@ -64,6 +87,7 @@ if (workbox) {
       ]
     })
   );
+  // Enable offline profile store tracking
   workbox.routing.registerRoute(
     /^https:\/\/track-emea01\.profilestore\.episerver\.net\/api\/v1.0/,
     workbox.strategies.networkOnly({

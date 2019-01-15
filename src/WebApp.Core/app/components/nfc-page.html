@@ -2,11 +2,14 @@
     <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">Scan NFC</h2>
     </div>
-    <div class="mdl-card__supporting-text">    
-        <p>
-            Nfc status:
-            <!-- ko text: $component.nfcAccessStatus--><!--/ko-->
-        </p>
+    <div class="mdl-card__supporting-text">
+        <span class="mdl-chip" style="
+            background-color: #4caf50bd;
+            font-weight: bolder;
+            ">
+            <span class="mdl-chip__text">NFC status: <!-- ko text: $component.nfcAccessStatus--><!--/ko-->!</span>
+        </span>
+        
         <ul
             id="message-list"
             class="mdl-list"
