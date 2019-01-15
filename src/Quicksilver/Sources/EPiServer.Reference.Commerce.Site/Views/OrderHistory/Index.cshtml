@@ -19,7 +19,7 @@
                 <div class="row section-box">
                     <div class="col-xs-12 col-sm-6">
                         <h3>@Html.Translate("/OrderHistory/Labels/OrderID") @order.PurchaseOrder.OrderNumber</h3>
-                        <p>This order was created with the <i>@(order.PurchaseOrder.Name.Equals("StoreApp") ? "Shop assistant app" : "Website")</i></p>
+                        <p>This order was created with the <strong style="font-size: 18px;">@(order.PurchaseOrder.Name.Equals("StoreApp") ? "Shop assistant app" : "Website")</strong></p>
                         <p>@Html.Translate("/OrderHistory/Labels/OrderDate") @order.PurchaseOrder.Created.ToLongDateString()<br>@Html.Translate("/OrderHistory/Labels/Status") <strong>@order.PurchaseOrder.OrderStatus</strong></p>
                         @Html.Translate("/OrderHistory/Labels/Payment")
                         @if (orderForm.Payments.Any())

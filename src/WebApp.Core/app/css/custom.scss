@@ -346,6 +346,9 @@ img.article-image {
 .slick-dots li button::before {     font-size: 12px; color:#536dfe; opacity: 0.5;  }
 .slick-dots li.slick-active button:before { color:#536dfe; opacity: 1; }
 
+.mdl-tabs__tab {
+  padding: 0 18px;
+}
 .mdl-tabs__tab-bar {
   justify-content: left;
   border-bottom: 0;

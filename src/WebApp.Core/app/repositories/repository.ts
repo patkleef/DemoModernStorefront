@@ -3,7 +3,7 @@ import { config } from "./../config";
 import { IRepository } from "./IRepository";
 
 export class Repository implements IRepository {
-  private baseUrl: string = "http://modernstorefront-quicksilver.localtest.me/";
+  private baseUrl: string = "http://localhost:9090/";
   private baseContentDeliveryApiUrl: string =
     this.baseUrl + "api/episerver/v2.0/content/";
   private baseServiceApiUrl: string = this.baseUrl + "episerverapi/";

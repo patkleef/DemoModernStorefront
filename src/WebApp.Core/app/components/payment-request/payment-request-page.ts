@@ -38,7 +38,7 @@ export class PaymentRequestPageViewModel extends ViewModelBase {
       googlePay
     ];
 
-    var paymentOptions = {
+    const paymentOptions = {
       requestShipping: true,
       requestPayerEmail: true,
       requestPayerPhone: true,
@@ -81,7 +81,7 @@ export class PaymentRequestPageViewModel extends ViewModelBase {
     setTimeout(() => {
       this.paymentRequest
         .abort()
-        .then(() => {})
+        .then(() => { })
         .catch(err => {
           console.log("abort() Error: ", err);
         });
