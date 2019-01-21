@@ -1,38 +1,69 @@
 <!-- Simple Textfield -->
 
 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-    <div class="mdl-card__title">
-        <form action="#" class="login-form">
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="username">
-                <label class="mdl-textfield__label" for="username">Phone number / email</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="password" id="password">
-                <label class="mdl-textfield__label" for="password">Password</label>
-            </div>
-            <div style="padding: 20px 0">
-                <button data-bind="click: $component.loginClicked" class="mdl-button mdl-js-button mdl-button--raised mdl-button-primary">Login</button>
-            </div>
-            <div style="padding: 20px 0">
-                <!--ko if: $component.loggedInUser -->
-                    <p>
-                        Hi <strong><!--ko text: $component.loggedInUser().displayName --><!--/ko--></strong>! 
-                    </p>
-                <!--/ko-->
-                <button data-bind="click: $component.loginWithGoogleClicked, visible: false" class="mdl-button mdl-js-button mdl-button--raised">Login with Google</button>
-            </div>
-        </form>
-    </div>
+  <div class="mdl-card__title">
+    <form action="#" class="login-form">
+      <div class="mdl-textfield mdl-js-textfield">
+        <input
+          class="mdl-textfield__input"
+          type="text"
+          id="username"
+          value="patrick.van.kleef@gmail.com"
+        />
+        <label class="mdl-textfield__label" for="username"></label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input
+          class="mdl-textfield__input"
+          type="password"
+          id="password"
+          value="episerver"
+        />
+        <label class="mdl-textfield__label" for="password"></label>
+      </div>
+      <div style="padding: 20px 0">
+        <button
+          data-bind="click: $component.loginClicked"
+          class="mdl-button mdl-js-button mdl-button--raised mdl-button-primary"
+        >
+          Login
+        </button>
+      </div>
+      <div style="padding: 20px 0">
+        <!--ko if: $component.loggedInUser -->
+        <p>
+          Hi
+          <strong
+            ><!--ko text: $component.loggedInUser().displayName --><!--/ko--></strong
+          >!
+        </p>
+        <!--/ko-->
+        <button
+          data-bind="click: $component.loginWithGoogleClicked, visible: false"
+          class="mdl-button mdl-js-button mdl-button--raised"
+        >
+          Login with Google
+        </button>
+      </div>
+    </form>
+  </div>
 
-    <div class="mdl-card__actions mdl-card--border">
-        <a data-bind="click: $component.signupClicked" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">
-            Sign up
-            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
-        </a>
-    </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a
+      data-bind="click: $component.signupClicked"
+      class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+      data-upgraded=",MaterialButton,MaterialRipple"
+    >
+      Sign up
+      <span class="mdl-button__ripple-container"
+        ><span class="mdl-ripple"></span
+      ></span>
+    </a>
+  </div>
 
-    <style>
-        .login-form .mdl-textfield { display: block;}
-    </style>
+  <style>
+    .login-form .mdl-textfield {
+      display: block;
+    }
+  </style>
 </div>

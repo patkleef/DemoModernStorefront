@@ -13,6 +13,7 @@ export class StoreMapViewModel {
 
   constructor() {
     setTimeout(() => {
+        this.showFirstProduct(true);
       /*firebaseActiveUsers.eventsArray.subscribe((newEvent) => {
                 if(newEvent&& newEvent[0] && newEvent[0].product){
                     var event = newEvent[0];
@@ -47,6 +48,6 @@ export class StoreMapViewModel {
             const oldValue = this.showFirstProduct();
                 
             });*/
-    }, 2000);
+    }, 4000);
   }
 }
