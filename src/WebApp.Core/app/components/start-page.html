@@ -1,59 +1,102 @@
 <!-- Simple Textfield -->
 
- <!--ko if: $component.showIntroductionTour() && $component.currentStorePage()-->
-    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-        <div class="mdl-card__title">
-            <h3>Introduction tour</h3>
-        </div>
-        <div style="width: 70%;margin:0 auto;">
-            <div class="slider single-item" data-bind="slick: $component.currentStorePage().introductionTour.expandedValue, slickOptions:{ dots: true }">                
-                
-            </div>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-bind="click: $component.skipIntroductionTour">Skip introduction tour</a>
-        </div> 
-    </div>
+<!--ko if: $component.showIntroductionTour() && $component.currentStorePage()-->
+<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+  <div class="mdl-card__title"><h3>Introduction tour</h3></div>
+  <div style="width: 70%;margin:0 auto;">
+    <div
+      class="slider single-item"
+      data-bind="slick: $component.currentStorePage().introductionTour.expandedValue, slickOptions:{ dots: true }"
+    ></div>
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a
+      class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+      data-bind="click: $component.skipIntroductionTour"
+      >Skip introduction tour</a
+    >
+  </div>
+</div>
 <!--/ko-->
 
 <!--ko ifnot: $component.showIntroductionTour()-->
-<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card card-product-image">
-    <div class="mdl-card__title" data-bind="style: { backgroundImage: 'url(' + $root.currentStorePage().mainImage.value + ')', backgroundSize: '150%', height: '290px' }">
-        <!--ko if: $root.currentStorePage()-->
-            <h3 style="color: white;">Welcome in our <span data-bind="text: $root.currentStorePage().storeName.value"></span> store</h3>
-        <!--/ko-->
-    </div> 
-    <div class="mdl-card__menu"> 
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-bind="click: function(data, event) { $root.productScanned('P-44477844', data, event) }">
-            <i class="material-icons">nfc</i>
-        </button>
-    </div>
+<div
+  class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card card-product-image"
+>
+  <div
+    class="mdl-card__title"
+    data-bind="style: { backgroundImage: 'url(' + $root.currentStorePage().mainImage.value + ')', backgroundSize: '150%', height: '290px' }"
+  >
+    <!--ko if: $root.currentStorePage()-->
+    <h3 style="color: white; font-weight: bold;">
+      Welcome in our
+      <span data-bind="text: $root.currentStorePage().storeName.value"></span>
+      store
+    </h3>
+    <!--/ko-->
+  </div>
+  <div class="mdl-card__menu">
+    <button
+      class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+      data-bind="click: function(data, event) { $root.productScanned('P-44477844', data, event) }"
+    >
+      <i class="material-icons">nfc</i>
+    </button>
+  </div>
 </div>
 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-    <div class="mdl-card__title">
-        <h3 data-bind="text: 'Hi ' + $root.currentCustomer().firstName + ' ' + $root.currentCustomer().lastName "></h3>
-    </div>
-    <div class="mdl-card__supporting-text">
-      <p data-bind="text: $root.currentStorePage().header.value"></p>
+  <div class="mdl-card__title">
+    <h3
+      data-bind="text: 'Hi ' + $root.currentCustomer().firstName + ' ' + $root.currentCustomer().lastName "
+    ></h3>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <p data-bind="text: $root.currentStorePage().header.value"></p>
 
-      <div data-bind="html: $root.currentStorePage().mainBody.value"></div>
-      <div>Because is store visit number <strong data-bind="text: $component.numberOfStoreVisits()"></strong>, we have some exclusive deals for you!</div>
+    <div data-bind="html: $root.currentStorePage().mainBody.value"></div>
+    <div>
+      Because is store visit number
+      <strong data-bind="text: $component.numberOfStoreVisits()"></strong>, we
+      have some exclusive deals for you!
+    </div>
   </div>
 </div>
 
 <div data-bind="foreach: $component.products">
-    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card card-product-image">
-    <div class="mdl-card__title" data-bind="attr: { style: 'background-image: url(' + $data.image + ')' }">
-        <h2 class="mdl-card__title-text" data-bind="text: $data.title"></h2>
+  <div
+    class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card card-product-image"
+  >
+    <div
+      class="mdl-card__title"
+      data-bind="attr: { style: 'background-image: url(' + $data.image + ')' }"
+    >
+      <h2 class="mdl-card__title-text" data-bind="text: $data.title"></h2>
     </div>
-    <div class="mdl-card__supporting-text">    
-        <p><span data-bind="html: $data.description"></span></p>
-        <p><span class="normal-price-label" data-bind="text: $data.price + ',-'"></span> <span class="sales-price-label" data-bind="text: $data.salePrice + ',-'"></span></p>
+    <div class="mdl-card__supporting-text">
+      <p><span data-bind="html: $data.description"></span></p>
+      <p>
+        <span
+          class="normal-price-label"
+          data-bind="text: $data.price + ',-'"
+        ></span>
+        <span
+          class="sales-price-label"
+          data-bind="text: $data.salePrice + ',-'"
+        ></span>
+      </p>
     </div>
     <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button-primary" data-bind="click: $root.clickAddToWishlist.bind($data)">Add to wishlist</a>    
-        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button-primary"  data-bind="click: $root.loadProduct.bind($data)">Read more</a>
-    </div>   
+      <a
+        class="mdl-button mdl-js-button mdl-button--raised mdl-button-primary"
+        data-bind="click: $root.clickAddToWishlist.bind($data)"
+        >Add to wishlist</a
+      >
+      <a
+        class="mdl-button mdl-js-button mdl-button--raised mdl-button-primary"
+        data-bind="click: $root.loadProduct.bind($data)"
+        >Read more</a
+      >
     </div>
+  </div>
 </div>
 <!--/ko-->
