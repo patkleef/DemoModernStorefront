@@ -44,7 +44,7 @@ namespace EPiServer.Reference.Commerce.Site.Features.OrderHistory.Controllers
                 Orders = new List<OrderViewModel>()
             };
 
-            foreach (var purchaseOrder in purchaseOrders.Union(storeAppPurchaseOrders))
+            foreach (var purchaseOrder in purchaseOrders.Union(storeAppPurchaseOrders).OrderByDescending(x => x.Created))
             {
                 // Assume there is only one form per purchase.
                 var form = purchaseOrder.GetFirstForm();
