@@ -16,17 +16,23 @@ export class TrackingRepository implements ITrackingRepository {
     value?: string,
     data?: any
   ): Promise<any> {
+    if (!contact) {
+      return;
+    }
     const trackId =
       eventType === EventTypes.storeVisit
         ? EventTypes.storeVisit.toString() +
           "|" +
           this.getCurrentDateFormatted()
         : this.guid();
-
     const request = {
       user: {
         name: contact.firstName + " " + contact.lastName,
-        email: contact.email
+        email: contact.email,
+        infor: {
+          picture:
+            "https://getadigital.com/globalassets/geta-employees/patrick-kleef_emvp.001.jpeg?width=320"
+        }
       },
       payload: data,
       remoteAddress: "127.0.0.1",
@@ -106,6 +112,6 @@ export class TrackingRepository implements ITrackingRepository {
     const d = new Date();
     Date.now;
 
-    return d.getFullYear() + "-" + d.getMonth() + "-" + d.getDay();
+    return d.getFullYear() + "-" + d.getMonth() + 1 + "-" + d.getDate();
   }
 }

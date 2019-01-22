@@ -22,17 +22,19 @@ export class ActiveUsersViewModel {
     const eventsPromise = this.repository.getActiveUsers();
     this.activeUsersArray.removeAll();
 
-    eventsPromise.then((events: any) => {
-      events.items.forEach((event: Models.TrackEvent) => {
-        if (
-          this.activeUsersArray().find(x => x.Email === event.User.Email) ===
-          undefined
-        ) {
-          this.activeUsersArray.push(event.User);
-        }
+    eventsPromise
+      .then((events: any) => {
+        events.items.forEach((event: Models.TrackEvent) => {
+          if (
+            this.activeUsersArray().find(x => x.Email === event.User.Email) ===
+            undefined
+          ) {
+            this.activeUsersArray.push(event.User);
+          }
+        });
+      })
+      .then(() => {
+        setTimeout(this.checkForNewEvents, 10000);
       });
-    }).then(() => {
-      setTimeout(this.checkForNewEvents, 10000);
-    });
-  }
+  };
 }
