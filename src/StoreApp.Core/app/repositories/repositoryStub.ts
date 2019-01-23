@@ -11,4 +11,9 @@ export class RepositoryStub implements IRepository {
     var response = await window.fetch(`/data/active-users.json`);
     return response.json();
   }
+
+  public async getProductScannedEvents(): Promise<any> {
+    var response = await window.fetch(`/data/events.json`);
+    return response.json();
+  }
 }

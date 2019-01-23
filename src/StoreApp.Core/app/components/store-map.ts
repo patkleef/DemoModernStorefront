@@ -1,53 +1,34 @@
 /// <amd-dependency path="text!./store-map.html" />
 import * as $ from "jquery";
 import * as ko from "knockout";
+import { repositoryFactory } from "../repositories/repositoryFactory";
 
 export class StoreMapViewModel {
   showFirstProduct = ko.observable(false);
   showSecondProduct = ko.observable(false);
   showThirdProduct = ko.observable(false);
+  repository = repositoryFactory.get();
 
   clickLogin = () => {};
 
   clickTest = () => {};
 
   constructor() {
-    setTimeout(() => {
-        this.showFirstProduct(true);
-      /*firebaseActiveUsers.eventsArray.subscribe((newEvent) => {
-                if(newEvent&& newEvent[0] && newEvent[0].product){
-                    var event = newEvent[0];
-                    
-                    switch(event.product.code){
-                        case "35872466":
-                        this.showFirstProduct(true);
-                        setTimeout(()=>{
-                            this.showFirstProduct(false);
-                        }, 3000);
-                        break;
-                        case "31672432":
-                        this.showSecondProduct(true);
-                        setTimeout(()=>{
-                            this.showSecondProduct(false);
-                        }, 3000);
-                        break;
-                        case "45672008":
-                        this.showThirdProduct(true);
-                        setTimeout(()=>{
-                            this.showThirdProduct(false);
-                        }, 3000);
-                        break;
-                        default:
-                        this.showFirstProduct(true);
-                        setTimeout(()=>{
-                            this.showFirstProduct(false);
-                        }, 3000);
-                    }
-
-                }
-            const oldValue = this.showFirstProduct();
-                
-            });*/
-    }, 4000);
+    this.checkForNewEvents();
   }
+
+  checkForNewEvents = () => {
+    const eventsPromise = this.repository.getProductScannedEvents();
+
+    eventsPromise
+      .then((events: any) => {
+        events.items.forEach((event: Models.TrackEvent) => {
+          this.showFirstProduct(true);
+          setTimeout(() => {
+            this.showFirstProduct(false);
+          }, 3000);
+        });
+      })
+      .then(() => setTimeout(this.checkForNewEvents, 10000));
+  };
 }
