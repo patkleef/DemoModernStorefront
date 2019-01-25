@@ -5,6 +5,8 @@ import { repositoryFactory } from "../repositories/repositoryFactory";
 
 export class StoreMapViewModel {
   showFirstProduct = ko.observable(false);
+  firstProductCustomer = ko.observable("");
+  firstProductName = ko.observable("");
   showSecondProduct = ko.observable(false);
   showThirdProduct = ko.observable(false);
   repository = repositoryFactory.get();
@@ -14,7 +16,10 @@ export class StoreMapViewModel {
   clickTest = () => {};
 
   constructor() {
-    this.checkForNewEvents();
+    // this.checkForNewEvents();
+    this.showFirstProduct(true);
+    this.firstProductCustomer("Patrick");
+    this.firstProductName("'Canvas Twin Gore Slip-On'");
   }
 
   checkForNewEvents = () => {

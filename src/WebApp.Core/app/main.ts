@@ -79,8 +79,6 @@ export class MainViewModel extends ViewModelBase {
   constructor() {
     super();
 
-    this.currentComponent("start-page");
-
     this.initialize();
   }
 
@@ -159,7 +157,8 @@ export class MainViewModel extends ViewModelBase {
       this.tracking.trackEvent(
         this.currentCustomer(),
         EventTypes.productScanned,
-        "Scanned product '" + product.title + "'"
+        "Scanned product '" + product.title + "'",
+        { code: code }
       );
 
       this.currentProduct(product);
