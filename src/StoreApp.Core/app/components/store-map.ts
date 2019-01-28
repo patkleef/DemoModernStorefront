@@ -16,8 +16,7 @@ export class StoreMapViewModel {
   clickTest = () => {};
 
   constructor() {
-    // this.checkForNewEvents();
-    this.showFirstProduct(true);
+    this.checkForNewEvents();
     this.firstProductCustomer("Patrick");
     this.firstProductName("'Canvas Twin Gore Slip-On'");
   }
