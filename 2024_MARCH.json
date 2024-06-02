@@ -1,0 +1,1913 @@
+{
+  "timelineObjects": [{
+    "activitySegment": {
+      "startLocation": {
+        "latitudeE7": 221959806,
+        "longitudeE7": -1009545080,
+        "sourceInfo": {
+          "deviceTag": 142037270
+        }
+      },
+      "endLocation": {
+        "latitudeE7": 221931144,
+        "longitudeE7": -1009539955,
+        "sourceInfo": {
+          "deviceTag": 142037270
+        }
+      },
+      "duration": {
+        "startTimestamp": "2024-03-02T02:41:30Z",
+        "endTimestamp": "2024-03-02T03:35:48Z"
+      },
+      "distance": 2592,
+      "activityType": "WALKING",
+      "confidence": "MEDIUM",
+      "activities": [{
+        "activityType": "WALKING",
+        "probability": 60.15881299972534
+      }, {
+        "activityType": "IN_PASSENGER_VEHICLE",
+        "probability": 8.540581911802292
+      }, {
+        "activityType": "MOTORCYCLING",
+        "probability": 2.6511067524552345
+      }, {
+        "activityType": "CYCLING",
+        "probability": 0.3670545993372798
+      }, {
+        "activityType": "IN_BUS",
+        "probability": 0.2634417498484254
+      }, {
+        "activityType": "RUNNING",
+        "probability": 0.09165445226244628
+      }, {
+        "activityType": "FLYING",
+        "probability": 0.03670782025437802
+      }, {
+        "activityType": "IN_FERRY",
+        "probability": 0.030163177871145308
+      }, {
+        "activityType": "SKIING",
+        "probability": 0.009895013499772176
+      }, {
+        "activityType": "IN_SUBWAY",
+        "probability": 0.008703920320840552
+      }, {
+        "activityType": "IN_TRAIN",
+        "probability": 0.005596428673015907
+      }, {
+        "activityType": "SAILING",
+        "probability": 0.005235194839769974
+      }, {
+        "activityType": "IN_TRAM",
+        "probability": 9.60762827162398E-4
+      }],
+      "waypointPath": {
+        "waypoints": [{
+          "latE7": 221935501,
+          "lngE7": -1009540863
+        }, {
+          "latE7": 221911907,
+          "lngE7": -1009556884
+        }, {
+          "latE7": 221907901,
+          "lngE7": -1009553680
+        }],
+        "source": "INFERRED",
+        "roadSegment": [{
+          "placeId": "ChIJAQUP67ahKoQRCuuELL47dfM",
+          "duration": "63s"
+        }, {
+          "placeId": "ChIJL90H6bahKoQRzJjsrGv7iFE",
+          "duration": "43s"
+        }, {
+          "placeId": "ChIJSf3x6LahKoQR6vtWIOI6rRk",
+          "duration": "70s"
+        }, {
+          "placeId": "ChIJ4TTA5bahKoQRvD1wXaIXuag",
+          "duration": "157s"
+        }, {
+          "placeId": "ChIJL_hN47ahKoQRui3FIoxuZio",
+          "duration": "134s"
+        }, {
+          "placeId": "ChIJdb4bAbehKoQRP3AGXd22ry4",
+          "duration": "422s"
+        }, {
+          "placeId": "ChIJwVUKprehKoQRuJTqrVoM-ao",
+          "duration": "145s"
+        }, {
+          "placeId": "ChIJy6QPpLehKoQR0nkCR2VqXT0",
+          "duration": "67s"
+        }, {
+          "placeId": "ChIJNRmsobehKoQROkaVvb1aRk4",
+          "duration": "145s"
+        }, {
+          "placeId": "ChIJ36fkn7ehKoQR0l7awYlbN6E",
+          "duration": "55s"
+        }, {
+          "placeId": "ChIJmbY9nrehKoQR9tIkgjhXu18",
+          "duration": "414s"
+        }, {
+          "placeId": "ChIJmbY9nrehKoQR99IkgjhXu18",
+          "duration": "406s"
+        }, {
+          "placeId": "ChIJ36fkn7ehKoQR017awYlbN6E",
+          "duration": "59s"
+        }, {
+          "placeId": "ChIJNRmsobehKoQRO0aVvb1aRk4",
+          "duration": "141s"
+        }, {
+          "placeId": "ChIJy6QPpLehKoQR03kCR2VqXT0",
+          "duration": "63s"
+        }, {
+          "placeId": "ChIJwVUKprehKoQRuZTqrVoM-ao",
+          "duration": "141s"
+        }, {
+          "placeId": "ChIJdb4bAbehKoQRPnAGXd22ry4",
+          "duration": "406s"
+        }, {
+          "placeId": "ChIJL_hN47ahKoQRuy3FIoxuZio",
+          "duration": "130s"
+        }, {
+          "placeId": "ChIJ4TTA5bahKoQRvT1wXaIXuag",
+          "duration": "157s"
+        }, {
+          "placeId": "ChIJSf3x6LahKoQR6_tWIOI6rRk",
+          "duration": "31s"
+        }],
+        "distanceMeters": 1032.325804190767,
+        "travelMode": "WALK",
+        "confidence": 0.9953281522296974
+      },
+      "simplifiedRawPath": {
+        "points": [{
+          "latE7": 221907024,
+          "lngE7": -1009554749,
+          "accuracyMeters": 19,
+          "timestamp": "2024-03-02T03:27:03.643Z"
+        }]
+      }
+    }
+  }, {
+    "placeVisit": {
+      "location": {
+        "latitudeE7": 221915061,
+        "longitudeE7": -1009539336,
+        "placeId": "ChIJMzn6UoKhKoQRauogvJM6QgY",
+        "address": "Cto. Villas 21, Fraccionamiento Villas de Mezquite, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Fraccionamiento Villas de Mezquite",
+        "semanticType": "TYPE_UNKNOWN",
+        "sourceInfo": {
+          "deviceTag": 142037270
+        },
+        "locationConfidence": 19.653378,
+        "calibratedProbability": 19.653378
+      },
+      "duration": {
+        "startTimestamp": "2024-03-02T03:35:48Z",
+        "endTimestamp": "2024-03-02T04:06:33Z"
+      },
+      "placeConfidence": "LOW_CONFIDENCE",
+      "visitConfidence": 80,
+      "otherCandidateLocations": [{
+        "latitudeE7": 221951510,
+        "longitudeE7": -1009542165,
+        "placeId": "ChIJ11MJ8dehKoQR3SPmM7U6Sx0",
+        "address": "Calle San Gustavo #1 Fracc, Valle de Santa Lucía, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Salón Encantados",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 10.99353,
+        "calibratedProbability": 10.99353
+      }, {
+        "latitudeE7": 221934257,
+        "longitudeE7": -1009537212,
+        "placeId": "ChIJ57k6wrahKoQRgsa7AGVnyp8",
+        "address": "Cto. San Mateo 240, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 7.0093536,
+        "calibratedProbability": 7.0093536
+      }, {
+        "latitudeE7": 221934591,
+        "longitudeE7": -1009537887,
+        "placeId": "ChIJYYf_wbahKoQR6IdKG6QeYkk",
+        "address": "Cto. San Mateo 238, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 6.9073157,
+        "calibratedProbability": 6.9073157
+      }, {
+        "latitudeE7": 221937841,
+        "longitudeE7": -1009532133,
+        "placeId": "ChIJm7JbPb-hKoQRVj9OV62S0hk",
+        "address": "C. San Pablo 224, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Gorditas Mich",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 4.4242883,
+        "calibratedProbability": 4.4242883
+      }, {
+        "latitudeE7": 221933806,
+        "longitudeE7": -1009537216,
+        "placeId": "ChIJjbxIwrahKoQRZknebj4jwqY",
+        "address": "Cto. San Mateo 242, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 4.410489,
+        "calibratedProbability": 4.410489
+      }, {
+        "latitudeE7": 221933048,
+        "longitudeE7": -1009550609,
+        "placeId": "ChIJjyf67PqhKoQRdA6Lh5zm36E",
+        "address": "78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Abarrotes",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 3.7924137,
+        "calibratedProbability": 3.7924137
+      }, {
+        "latitudeE7": 221934010,
+        "longitudeE7": -1009535485,
+        "placeId": "ChIJPSPrw7ahKoQRzKH07GW1Vgw",
+        "address": "Cto. San Mateo 239, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 3.7609723,
+        "calibratedProbability": 3.7609723
+      }, {
+        "latitudeE7": 221948843,
+        "longitudeE7": -1009540640,
+        "placeId": "ChIJi1Q7mbahKoQRMU7JMTSbDoU",
+        "address": "Circuito San Marcos, C. Sta. Lucía 101, Fraccionamiento, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Módulo Fijo de Atención Integral para las Mujeres del Municipio de Soledad de Graciano Sánchez",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 3.3608277,
+        "calibratedProbability": 3.3608277
+      }, {
+        "latitudeE7": 221924645,
+        "longitudeE7": -1009541395,
+        "placeId": "ChIJaTqO4bahKoQRd2KTEzGe2KA",
+        "address": "C. San Pío 108, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 1.680092,
+        "calibratedProbability": 1.680092
+      }],
+      "editConfirmationStatus": "NOT_CONFIRMED",
+      "locationConfidence": 20,
+      "placeVisitType": "SINGLE_PLACE",
+      "placeVisitImportance": "MAIN"
+    }
+  }, {
+    "activitySegment": {
+      "startLocation": {
+        "latitudeE7": 221933633,
+        "longitudeE7": -1009544088,
+        "sourceInfo": {
+          "deviceTag": 142037270
+        }
+      },
+      "endLocation": {
+        "latitudeE7": 221969178,
+        "longitudeE7": -1009545201,
+        "sourceInfo": {
+          "deviceTag": 142037270
+        }
+      },
+      "duration": {
+        "startTimestamp": "2024-03-02T04:06:33Z",
+        "endTimestamp": "2024-03-02T04:14:01Z"
+      },
+      "distance": 396,
+      "activityType": "WALKING",
+      "confidence": "HIGH",
+      "activities": [{
+        "activityType": "WALKING",
+        "probability": 77.96690464019775
+      }, {
+        "activityType": "IN_PASSENGER_VEHICLE",
+        "probability": 14.316107332706451
+      }, {
+        "activityType": "MOTORCYCLING",
+        "probability": 5.97761869430542
+      }, {
+        "activityType": "CYCLING",
+        "probability": 0.8494561538100243
+      }, {
+        "activityType": "RUNNING",
+        "probability": 0.26171463541686535
+      }, {
+        "activityType": "IN_BUS",
+        "probability": 0.20569360349327326
+      }, {
+        "activityType": "FLYING",
+        "probability": 0.01967324933502823
+      }, {
+        "activityType": "SKIING",
+        "probability": 0.009140342444879934
+      }, {
+        "activityType": "IN_FERRY",
+        "probability": 0.008209374209400266
+      }, {
+        "activityType": "SAILING",
+        "probability": 0.0027972959287581034
+      }, {
+        "activityType": "IN_SUBWAY",
+        "probability": 0.0026236637495458126
+      }, {
+        "activityType": "IN_TRAIN",
+        "probability": 0.0018717868442763574
+      }, {
+        "activityType": "IN_TRAM",
+        "probability": 5.870446329936385E-4
+      }],
+      "waypointPath": {
+        "waypoints": [{
+          "latE7": 221932659,
+          "lngE7": -1009543991
+        }, {
+          "latE7": 221933345,
+          "lngE7": -1009542083
+        }, {
+          "latE7": 221969051,
+          "lngE7": -1009544982
+        }],
+        "source": "INFERRED",
+        "roadSegment": [{
+          "placeId": "ChIJP5hT7rahKoQRe3igxogCcPE",
+          "duration": "18s"
+        }, {
+          "placeId": "ChIJsY7M7rahKoQRmmreLKQvk2A",
+          "duration": "14s"
+        }, {
+          "placeId": "ChIJF4J767ahKoQRLQKCad5rRmY",
+          "duration": "68s"
+        }, {
+          "placeId": "ChIJNVY1kbahKoQRqqkiDVUPy50",
+          "duration": "74s"
+        }, {
+          "placeId": "ChIJU1ccmrahKoQR7nl3PTjfYfg",
+          "duration": "2s"
+        }, {
+          "placeId": "ChIJN3WHmbahKoQR-cn4caOWw7g",
+          "duration": "21s"
+        }, {
+          "placeId": "ChIJIbv_m7ahKoQR4_1ncSNi5CU",
+          "duration": "31s"
+        }, {
+          "placeId": "ChIJ_ZgTILShKoQR0Ib6rwHbJnY",
+          "duration": "19s"
+        }, {
+          "placeId": "ChIJjxt2JLShKoQRFJpG0SrN4sU",
+          "duration": "100s"
+        }, {
+          "placeId": "ChIJWS5HRrShKoQRkd1a8cXyD7o",
+          "duration": "46s"
+        }, {
+          "placeId": "ChIJXZfrRbShKoQRWdvMuSdi9FU",
+          "duration": "10s"
+        }, {
+          "placeId": "ChIJZbPzR7ShKoQR99T_cOkkGAo",
+          "duration": "39s"
+        }],
+        "distanceMeters": 432.01775007062014,
+        "travelMode": "WALK",
+        "confidence": 1.0
+      }
+    }
+  }, {
+    "placeVisit": {
+      "location": {
+        "latitudeE7": 221970410,
+        "longitudeE7": -1009547102,
+        "placeId": "ChIJd0LaSLShKoQRExZX0EUUO70",
+        "address": "Av San Marcos, Av Sta Lucia S/N, Fraccionamiento Valle, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Valle Santa Lucía 3a. Etapa",
+        "semanticType": "TYPE_UNKNOWN",
+        "sourceInfo": {
+          "deviceTag": 142037270
+        },
+        "locationConfidence": 78.314575,
+        "calibratedProbability": 78.314575
+      },
+      "duration": {
+        "startTimestamp": "2024-03-02T04:14:01Z",
+        "endTimestamp": "2024-03-11T00:18:02Z"
+      },
+      "placeConfidence": "MEDIUM_CONFIDENCE",
+      "visitConfidence": 92,
+      "otherCandidateLocations": [{
+        "latitudeE7": 221968674,
+        "longitudeE7": -1009540671,
+        "placeId": "ChIJ56L0QLShKoQRv6TdHAIyuMY",
+        "address": "C. San Emilio 11, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "locationConfidence": 4.0835586,
+        "calibratedProbability": 4.0835586
+      }, {
+        "latitudeE7": 221951510,
+        "longitudeE7": -1009542165,
+        "placeId": "ChIJ11MJ8dehKoQR3SPmM7U6Sx0",
+        "address": "Calle San Gustavo #1 Fracc, Valle de Santa Lucía, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Salón Encantados",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 2.0933874,
+        "calibratedProbability": 2.0933874
+      }, {
+        "latitudeE7": 221972435,
+        "longitudeE7": -1009543783,
+        "placeId": "ChIJOw2uRbShKoQRbxLI6zcWHC8",
+        "address": "Av. Ma. Cristina 51, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 1.3530467,
+        "calibratedProbability": 1.3530467
+      }, {
+        "latitudeE7": 221973003,
+        "longitudeE7": -1009540584,
+        "placeId": "ChIJP0UHQ7ShKoQRDC1oKGUItnY",
+        "address": "C. San Alejandro 17, Valle de Santa Lucia, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 1.1634884,
+        "calibratedProbability": 1.1634884
+      }, {
+        "latitudeE7": 221973611,
+        "longitudeE7": -1009540608,
+        "placeId": "ChIJDeItStChKoQRyUiQC_qEPtk",
+        "address": "C. San Alejandro 11, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 1.0468482,
+        "calibratedProbability": 1.0468482
+      }, {
+        "latitudeE7": 221965408,
+        "longitudeE7": -1009547715,
+        "placeId": "ChIJw8tXNrShKoQRNshqi6pf2zU",
+        "address": "C. San Gerardo 3, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.711374,
+        "calibratedProbability": 0.711374
+      }, {
+        "latitudeE7": 221968113,
+        "longitudeE7": -1009557400,
+        "placeId": "ChIJNchWtrWhKoQRZgh7ycdEtuo",
+        "address": "Cto. Sta. Teresa 303, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "ABARROTES SARITA",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.541678,
+        "calibratedProbability": 0.541678
+      }, {
+        "latitudeE7": 221948843,
+        "longitudeE7": -1009540640,
+        "placeId": "ChIJi1Q7mbahKoQRMU7JMTSbDoU",
+        "address": "Circuito San Marcos, C. Sta. Lucía 101, Fraccionamiento, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Módulo Fijo de Atención Integral para las Mujeres del Municipio de Soledad de Graciano Sánchez",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.48856196,
+        "calibratedProbability": 0.48856196
+      }, {
+        "latitudeE7": 221956543,
+        "longitudeE7": -1009535257,
+        "placeId": "ChIJw-jarDShKoQRoBiTGXqneSg",
+        "address": "Cto. San Marcos 171, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Cachorros Crew",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.3033563,
+        "calibratedProbability": 0.3033563
+      }],
+      "editConfirmationStatus": "NOT_CONFIRMED",
+      "locationConfidence": 78,
+      "placeVisitType": "SINGLE_PLACE",
+      "placeVisitImportance": "MAIN"
+    }
+  }, {
+    "activitySegment": {
+      "startLocation": {
+        "latitudeE7": 221970070,
+        "longitudeE7": -1009541379,
+        "sourceInfo": {
+          "deviceTag": 142037270
+        }
+      },
+      "endLocation": {
+        "latitudeE7": 221960869,
+        "longitudeE7": -1009544807,
+        "sourceInfo": {
+          "deviceTag": 142037270
+        }
+      },
+      "duration": {
+        "startTimestamp": "2024-03-11T00:18:02Z",
+        "endTimestamp": "2024-03-11T00:59:27Z"
+      },
+      "distance": 3712,
+      "activityType": "MOTORCYCLING",
+      "confidence": "LOW",
+      "activities": [{
+        "activityType": "MOTORCYCLING",
+        "probability": 53.82034778594971
+      }, {
+        "activityType": "IN_PASSENGER_VEHICLE",
+        "probability": 32.1051687002182
+      }, {
+        "activityType": "CYCLING",
+        "probability": 1.9475821405649185
+      }, {
+        "activityType": "WALKING",
+        "probability": 1.887275092303753
+      }, {
+        "activityType": "IN_FERRY",
+        "probability": 0.1120588043704629
+      }, {
+        "activityType": "SAILING",
+        "probability": 0.07224164437502623
+      }, {
+        "activityType": "RUNNING",
+        "probability": 0.018095431732945144
+      }, {
+        "activityType": "FLYING",
+        "probability": 0.012818297545891255
+      }, {
+        "activityType": "IN_BUS",
+        "probability": 0.011769379489123821
+      }, {
+        "activityType": "SKIING",
+        "probability": 0.009000799764180556
+      }, {
+        "activityType": "IN_TRAIN",
+        "probability": 0.002245604991912842
+      }, {
+        "activityType": "IN_SUBWAY",
+        "probability": 3.830101377388928E-4
+      }, {
+        "activityType": "IN_TRAM",
+        "probability": 1.5310226331166632E-5
+      }],
+      "waypointPath": {
+        "waypoints": [{
+          "latE7": 221970043,
+          "lngE7": -1009541397
+        }, {
+          "latE7": 221905517,
+          "lngE7": -1009551696
+        }, {
+          "latE7": 221825332,
+          "lngE7": -1009507675
+        }, {
+          "latE7": 221838054,
+          "lngE7": -1009538497
+        }, {
+          "latE7": 221885242,
+          "lngE7": -1009575347
+        }],
+        "source": "INFERRED",
+        "roadSegment": [{
+          "placeId": "ChIJwfTERrShKoQRKY8h0o_ebAo",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJZbPzR7ShKoQRGp9_BF9rdZ4",
+          "duration": "2s"
+        }, {
+          "placeId": "ChIJZbPzR7ShKoQR9tT_cOkkGAo",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJXZfrRbShKoQRWNvMuSdi9FU",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJWS5HRrShKoQRkN1a8cXyD7o",
+          "duration": "14s"
+        }, {
+          "placeId": "ChIJjxt2JLShKoQRFZpG0SrN4sU",
+          "duration": "42s"
+        }, {
+          "placeId": "ChIJ_ZgTILShKoQR0Yb6rwHbJnY",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJIbv_m7ahKoQR4v1ncSNi5CU",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJN3WHmbahKoQR-Mn4caOWw7g",
+          "duration": "10s"
+        }, {
+          "placeId": "ChIJU1ccmrahKoQR73l3PTjfYfg",
+          "duration": "0s"
+        }, {
+          "placeId": "ChIJNVY1kbahKoQRq6kiDVUPy50",
+          "duration": "36s"
+        }, {
+          "placeId": "ChIJF4J767ahKoQRLAKCad5rRmY",
+          "duration": "25s"
+        }, {
+          "placeId": "ChIJsY7M7rahKoQRm2reLKQvk2A",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJ4_8p77ahKoQRstocN1Oh-r4",
+          "duration": "0s"
+        }, {
+          "placeId": "ChIJeaV45bahKoQR-Bu8CjwAhxw",
+          "duration": "21s"
+        }, {
+          "placeId": "ChIJa6td-7ahKoQR5tsEXQok6-A",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJM21Q_LahKoQRiRl4U8WG6MI",
+          "duration": "2s"
+        }, {
+          "placeId": "ChIJIewc_rahKoQRbBzvvZTIe-Y",
+          "duration": "27s"
+        }, {
+          "placeId": "ChIJi9X1qbehKoQRXnL7OsbbvYU",
+          "duration": "32s"
+        }, {
+          "placeId": "ChIJzTf2pbehKoQR5d_1GKa7QSs",
+          "duration": "23s"
+        }, {
+          "placeId": "ChIJyxpVpLehKoQRjz3-nGQVe8E",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJy6QPpLehKoQR0nkCR2VqXT0",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJNRmsobehKoQROkaVvb1aRk4",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJ36fkn7ehKoQR0l7awYlbN6E",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJKx6wdbehKoQR0O_83DG2J88",
+          "duration": "10s"
+        }, {
+          "placeId": "ChIJH4pvcrehKoQRxhSarLCOEn0",
+          "duration": "25s"
+        }, {
+          "placeId": "ChIJH4pvcrehKoQRDO6PQYv2kW4",
+          "duration": "2s"
+        }, {
+          "placeId": "ChIJ31GPULehKoQRcOrrgT3qPdU",
+          "duration": "130s"
+        }, {
+          "placeId": "ChIJ31GPULehKoQRJ66hhxlE35w",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJf5TsULehKoQRtfCpYFEcnS4",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJM2hcEbqhKoQR6P9DEaPZw8o",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJM2hcEbqhKoQRtKseybWWBfY",
+          "duration": "44s"
+        }, {
+          "placeId": "ChIJM30yQbqhKoQR4rRCIm50rYA",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJQU-2RbqhKoQRkGc1Y1i2FZ0",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJddIBULqhKoQR7IaeRrprDow",
+          "duration": "10s"
+        }, {
+          "placeId": "ChIJecIYVrqhKoQRaJlWNU2hyU0",
+          "duration": "38s"
+        }, {
+          "placeId": "ChIJCzy1ALuhKoQRMJfVNngxLJE",
+          "duration": "19s"
+        }, {
+          "placeId": "ChIJCzy1ALuhKoQRnRTuJYaJm1s",
+          "duration": "19s"
+        }, {
+          "placeId": "ChIJE3kIo7uhKoQRUEXD1fK0WGE",
+          "duration": "14s"
+        }, {
+          "placeId": "ChIJnfP_l7uhKoQRwKVCmTIq9Gk",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJJTRckbuhKoQRwhu2JnBFUZM",
+          "duration": "42s"
+        }, {
+          "placeId": "ChIJQWEjjbuhKoQRoO5k9GqXyiI",
+          "duration": "19s"
+        }, {
+          "placeId": "ChIJ8RFF87uhKoQRPEicGT9cHIY",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJU--ujLuhKoQRsi8GcYMHUYo",
+          "duration": "14s"
+        }, {
+          "placeId": "ChIJx0kTjLuhKoQRFpNP9fG3B3k",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJLWbpjruhKoQRNRNuY8g4YBQ",
+          "duration": "70s"
+        }, {
+          "placeId": "ChIJtXWZeruhKoQR-pAoDnJlt6g",
+          "duration": "10s"
+        }, {
+          "placeId": "ChIJB-7BQruhKoQRwtP9QkMpfuc",
+          "duration": "47s"
+        }, {
+          "placeId": "ChIJ3_LIUbuhKoQRRs58nVMh-ug",
+          "duration": "27s"
+        }, {
+          "placeId": "ChIJ8eT_qbyhKoQRdC8FEqziVVo",
+          "duration": "51s"
+        }, {
+          "placeId": "ChIJWTVGpLyhKoQRPbAmOXBeMpE",
+          "duration": "66s"
+        }, {
+          "placeId": "ChIJb0gBhbyhKoQRXygSrT7lPxo",
+          "duration": "66s"
+        }, {
+          "placeId": "ChIJ26WXeryhKoQRxZFS0W5JSKg",
+          "duration": "57s"
+        }, {
+          "placeId": "ChIJMf5zcryhKoQRF2rk9hFNjlY",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJeaw4bLyhKoQRHLynBx7oj9k",
+          "duration": "40s"
+        }, {
+          "placeId": "ChIJyxU8aryhKoQRewDFzPWaWzo",
+          "duration": "47s"
+        }, {
+          "placeId": "ChIJJ-qVFbyhKoQRI3CHDYmUOPE",
+          "duration": "89s"
+        }, {
+          "placeId": "ChIJWwuwELyhKoQRe-BkOD8bD0o",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJ1frcEbyhKoQRB85135uL8jo",
+          "duration": "14s"
+        }, {
+          "placeId": "ChIJ3xkWC7yhKoQRg4V3TckZ1qw",
+          "duration": "19s"
+        }, {
+          "placeId": "ChIJJdRViruhKoQRp_NOjnlMoTQ",
+          "duration": "32s"
+        }, {
+          "placeId": "ChIJxxCEi7uhKoQRpUXHHBOAqYM",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJw666jLuhKoQR8Z8CCk_9VEQ",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJeYST87uhKoQRKT2t_79tN_Q",
+          "duration": "21s"
+        }, {
+          "placeId": "ChIJYU7q_ruhKoQRfhmdvNBAy0Q",
+          "duration": "57s"
+        }, {
+          "placeId": "ChIJp__KUrmhKoQRaI0Q9G_eT5U",
+          "duration": "14s"
+        }, {
+          "placeId": "ChIJv2sBs76hKoQRUnLs5xdj4GM",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJuw3xtL6hKoQRyV8Cwk0hd2g",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJZUiZSrmhKoQR20skoP-rzrU",
+          "duration": "23s"
+        }, {
+          "placeId": "ChIJgesxOLmhKoQRaGUIP5BPOw4",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJJbjgPrmhKoQRcmUIP5BPOw4",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJiyaIFbmhKoQRAspCDGRjH7g",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJGbW5FbmhKoQR6zHQ_Xtza4A",
+          "duration": "2s"
+        }, {
+          "placeId": "ChIJZ_u1FbmhKoQRV7NcBO2dYQE",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJV5ToE7mhKoQRxNp7bnFEsxg",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJyaV1ErmhKoQRsfpsGmNBNXs",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJ0fBvCbmhKoQRRCA_gcN6pCE",
+          "duration": "38s"
+        }, {
+          "placeId": "ChIJw20YpLmhKoQRTKNEb1YbKO0",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJie_bsbmhKoQRrwYxXYSvZYk",
+          "duration": "27s"
+        }, {
+          "placeId": "ChIJr2w4SbihKoQR5ijNJqy1ufY",
+          "duration": "34s"
+        }, {
+          "placeId": "ChIJkbayOLihKoQRPRFukDIimQ4",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJpQQDP7ihKoQRFcvGQ4Ep5-0",
+          "duration": "2s"
+        }, {
+          "placeId": "ChIJ1QFsFrihKoQRhg0_dyU410E",
+          "duration": "21s"
+        }, {
+          "placeId": "ChIJN8iEGrihKoQR3djMIwMnuKM",
+          "duration": "10s"
+        }, {
+          "placeId": "ChIJAfSdBrihKoQRR5jFuNRtaPY",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJxZU8_MehKoQRjt7oXr7IcCY",
+          "duration": "23s"
+        }, {
+          "placeId": "ChIJZ1_y4cehKoQRGbmlS5GOdTY",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJ23JQdcihKoQRPCR-SCHW7xY",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJI5B_38ehKoQRdT-yubFi_iQ",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJuaeg38ehKoQRCEOCm8ssbgY",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJD8DP38ehKoQRHlFSr5rpsds",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJ7523_MehKoQRiOPiMT740_A",
+          "duration": "51s"
+        }, {
+          "placeId": "ChIJUXZiBrihKoQRSGvYcouljck",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJBREPELihKoQR8WkCJDq72DM",
+          "duration": "14s"
+        }, {
+          "placeId": "ChIJi1jVFbihKoQRjMKuKsHO98I",
+          "duration": "14s"
+        }, {
+          "placeId": "ChIJi1jVFbihKoQRIFCaYBYP2eo",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJKxdlP7ihKoQR4YL2AmVtIeo",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJwVFFR7ihKoQR-HvIcPw0u5k",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJE-R9N7ihKoQREIXGM-WSk2o",
+          "duration": "21s"
+        }, {
+          "placeId": "ChIJx9B1LLihKoQR82bt8eR7Vn0",
+          "duration": "62s"
+        }, {
+          "placeId": "ChIJL4K9drehKoQRs4w5J0W3_uQ",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJKx6wdbehKoQR0e_83DG2J88",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJ36fkn7ehKoQR017awYlbN6E",
+          "duration": "4s"
+        }, {
+          "placeId": "ChIJNRmsobehKoQRO0aVvb1aRk4",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJy6QPpLehKoQR03kCR2VqXT0",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJwVUKprehKoQRuZTqrVoM-ao",
+          "duration": "34s"
+        }, {
+          "placeId": "ChIJdb4bAbehKoQRPnAGXd22ry4",
+          "duration": "83s"
+        }, {
+          "placeId": "ChIJL_hN47ahKoQRuy3FIoxuZio",
+          "duration": "21s"
+        }, {
+          "placeId": "ChIJ4TTA5bahKoQRvT1wXaIXuag",
+          "duration": "19s"
+        }, {
+          "placeId": "ChIJSf3x6LahKoQR6_tWIOI6rRk",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJL90H6bahKoQRzZjsrGv7iFE",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJAQUP67ahKoQRC-uELL47dfM",
+          "duration": "25s"
+        }, {
+          "placeId": "ChIJI3yXlrahKoQRvIG5BWVyrL4",
+          "duration": "25s"
+        }, {
+          "placeId": "ChIJieBgl7ahKoQRbv2zkW-75vM",
+          "duration": "2s"
+        }, {
+          "placeId": "ChIJ8_a2mbahKoQRYWU_D-yU0lg",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJhx4MmbahKoQROJUcTIZyrrU",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJIbv_m7ahKoQR4_1ncSNi5CU",
+          "duration": "10s"
+        }, {
+          "placeId": "ChIJ_ZgTILShKoQR0Ib6rwHbJnY",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJjxt2JLShKoQRFJpG0SrN4sU",
+          "duration": "36s"
+        }],
+        "distanceMeters": 6271.432863260013,
+        "travelMode": "TWO_WHEELER",
+        "confidence": 0.9999320215263537
+      },
+      "simplifiedRawPath": {
+        "points": [{
+          "latE7": 221827068,
+          "lngE7": -1009507370,
+          "accuracyMeters": 21,
+          "timestamp": "2024-03-11T00:31:45.588Z"
+        }, {
+          "latE7": 221885719,
+          "lngE7": -1009577332,
+          "accuracyMeters": 12,
+          "timestamp": "2024-03-11T00:47:10.146Z"
+        }]
+      },
+      "parkingEvent": {
+        "location": {
+          "latitudeE7": 221960869,
+          "longitudeE7": -1009544807,
+          "accuracyMetres": 160,
+          "sourceInfo": {
+            "deviceTag": 142037270
+          }
+        },
+        "method": "END_OF_ACTIVITY_SEGMENT",
+        "locationSource": "NOT_FROM_RAW_LOCATION",
+        "timestamp": "2024-03-11T00:59:27Z"
+      }
+    }
+  }, {
+    "placeVisit": {
+      "location": {
+        "latitudeE7": 221970410,
+        "longitudeE7": -1009547102,
+        "placeId": "ChIJd0LaSLShKoQRExZX0EUUO70",
+        "address": "Av San Marcos, Av Sta Lucia S/N, Fraccionamiento Valle, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Valle Santa Lucía 3a. Etapa",
+        "semanticType": "TYPE_UNKNOWN",
+        "sourceInfo": {
+          "deviceTag": 142037270
+        },
+        "locationConfidence": 75.56649,
+        "calibratedProbability": 75.56649
+      },
+      "duration": {
+        "startTimestamp": "2024-03-11T00:59:27Z",
+        "endTimestamp": "2024-03-11T03:26:30Z"
+      },
+      "placeConfidence": "MEDIUM_CONFIDENCE",
+      "visitConfidence": 89,
+      "otherCandidateLocations": [{
+        "latitudeE7": 221968674,
+        "longitudeE7": -1009540671,
+        "placeId": "ChIJ56L0QLShKoQRv6TdHAIyuMY",
+        "address": "C. San Emilio 11, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "locationConfidence": 3.1801362,
+        "calibratedProbability": 3.1801362
+      }, {
+        "latitudeE7": 221951510,
+        "longitudeE7": -1009542165,
+        "placeId": "ChIJ11MJ8dehKoQR3SPmM7U6Sx0",
+        "address": "Calle San Gustavo #1 Fracc, Valle de Santa Lucía, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Salón Encantados",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 2.7157102,
+        "calibratedProbability": 2.7157102
+      }, {
+        "latitudeE7": 221972435,
+        "longitudeE7": -1009543783,
+        "placeId": "ChIJOw2uRbShKoQRbxLI6zcWHC8",
+        "address": "Av. Ma. Cristina 51, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 1.2945831,
+        "calibratedProbability": 1.2945831
+      }, {
+        "latitudeE7": 221973611,
+        "longitudeE7": -1009540608,
+        "placeId": "ChIJDeItStChKoQRyUiQC_qEPtk",
+        "address": "C. San Alejandro 11, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 1.178504,
+        "calibratedProbability": 1.178504
+      }, {
+        "latitudeE7": 221973003,
+        "longitudeE7": -1009540584,
+        "placeId": "ChIJP0UHQ7ShKoQRDC1oKGUItnY",
+        "address": "C. San Alejandro 17, Valle de Santa Lucia, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.9246227,
+        "calibratedProbability": 0.9246227
+      }, {
+        "latitudeE7": 221965408,
+        "longitudeE7": -1009547715,
+        "placeId": "ChIJw8tXNrShKoQRNshqi6pf2zU",
+        "address": "C. San Gerardo 3, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.6547617,
+        "calibratedProbability": 0.6547617
+      }, {
+        "latitudeE7": 221948843,
+        "longitudeE7": -1009540640,
+        "placeId": "ChIJi1Q7mbahKoQRMU7JMTSbDoU",
+        "address": "Circuito San Marcos, C. Sta. Lucía 101, Fraccionamiento, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Módulo Fijo de Atención Integral para las Mujeres del Municipio de Soledad de Graciano Sánchez",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.54382354,
+        "calibratedProbability": 0.54382354
+      }, {
+        "latitudeE7": 221968113,
+        "longitudeE7": -1009557400,
+        "placeId": "ChIJNchWtrWhKoQRZgh7ycdEtuo",
+        "address": "Cto. Sta. Teresa 303, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "ABARROTES SARITA",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.47530377,
+        "calibratedProbability": 0.47530377
+      }, {
+        "latitudeE7": 221956543,
+        "longitudeE7": -1009535257,
+        "placeId": "ChIJw-jarDShKoQRoBiTGXqneSg",
+        "address": "Cto. San Marcos 171, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Cachorros Crew",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.28027833,
+        "calibratedProbability": 0.28027833
+      }],
+      "editConfirmationStatus": "NOT_CONFIRMED",
+      "locationConfidence": 76,
+      "placeVisitType": "SINGLE_PLACE",
+      "placeVisitImportance": "MAIN"
+    }
+  }, {
+    "activitySegment": {
+      "startLocation": {
+        "latitudeE7": 221969835,
+        "longitudeE7": -1009541103,
+        "sourceInfo": {
+          "deviceTag": 142037270
+        }
+      },
+      "endLocation": {
+        "latitudeE7": 221970284,
+        "longitudeE7": -1009541472,
+        "sourceInfo": {
+          "deviceTag": 142037270
+        }
+      },
+      "duration": {
+        "startTimestamp": "2024-03-11T03:26:30Z",
+        "endTimestamp": "2024-03-11T03:46:57Z"
+      },
+      "distance": 1054,
+      "activityType": "WALKING",
+      "confidence": "HIGH",
+      "activities": [{
+        "activityType": "WALKING",
+        "probability": 86.14198565483093
+      }, {
+        "activityType": "IN_PASSENGER_VEHICLE",
+        "probability": 6.409002840518951
+      }, {
+        "activityType": "MOTORCYCLING",
+        "probability": 1.7280412837862968
+      }, {
+        "activityType": "CYCLING",
+        "probability": 0.5888728890568018
+      }, {
+        "activityType": "RUNNING",
+        "probability": 0.5225454922765493
+      }, {
+        "activityType": "IN_BUS",
+        "probability": 0.07522908854298294
+      }, {
+        "activityType": "FLYING",
+        "probability": 0.020130001939833164
+      }, {
+        "activityType": "SKIING",
+        "probability": 0.0157571179443039
+      }, {
+        "activityType": "IN_FERRY",
+        "probability": 0.009505503840046003
+      }, {
+        "activityType": "SAILING",
+        "probability": 0.00342382445523981
+      }, {
+        "activityType": "IN_TRAIN",
+        "probability": 0.0017619491700315848
+      }, {
+        "activityType": "IN_SUBWAY",
+        "probability": 0.001477927708037896
+      }, {
+        "activityType": "IN_TRAM",
+        "probability": 9.795502364795539E-5
+      }],
+      "waypointPath": {
+        "waypoints": [{
+          "latE7": 221970081,
+          "lngE7": -1009540939
+        }, {
+          "latE7": 221930599,
+          "lngE7": -1009543762
+        }, {
+          "latE7": 221925048,
+          "lngE7": -1009548034
+        }, {
+          "latE7": 221970043,
+          "lngE7": -1009541473
+        }],
+        "source": "INFERRED",
+        "roadSegment": [{
+          "placeId": "ChIJwfTERrShKoQRKY8h0o_ebAo",
+          "duration": "38s"
+        }, {
+          "placeId": "ChIJZbPzR7ShKoQRGp9_BF9rdZ4",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJZbPzR7ShKoQR9tT_cOkkGAo",
+          "duration": "35s"
+        }, {
+          "placeId": "ChIJXZfrRbShKoQRWNvMuSdi9FU",
+          "duration": "9s"
+        }, {
+          "placeId": "ChIJWS5HRrShKoQRkN1a8cXyD7o",
+          "duration": "42s"
+        }, {
+          "placeId": "ChIJjxt2JLShKoQRFZpG0SrN4sU",
+          "duration": "90s"
+        }, {
+          "placeId": "ChIJ_ZgTILShKoQR0Yb6rwHbJnY",
+          "duration": "18s"
+        }, {
+          "placeId": "ChIJIbv_m7ahKoQR4v1ncSNi5CU",
+          "duration": "28s"
+        }, {
+          "placeId": "ChIJN3WHmbahKoQR-Mn4caOWw7g",
+          "duration": "19s"
+        }, {
+          "placeId": "ChIJU1ccmrahKoQR73l3PTjfYfg",
+          "duration": "2s"
+        }, {
+          "placeId": "ChIJNVY1kbahKoQRq6kiDVUPy50",
+          "duration": "67s"
+        }, {
+          "placeId": "ChIJF4J767ahKoQRLAKCad5rRmY",
+          "duration": "60s"
+        }, {
+          "placeId": "ChIJsY7M7rahKoQRm2reLKQvk2A",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJ4_8p77ahKoQRstocN1Oh-r4",
+          "duration": "3s"
+        }, {
+          "placeId": "ChIJeaV45bahKoQR-Bu8CjwAhxw",
+          "duration": "47s"
+        }, {
+          "placeId": "ChIJMQhU-LahKoQRvOzQzHMcHB0",
+          "duration": "111s"
+        }, {
+          "placeId": "ChIJobpoUbahKoQRlTy2lSBI8AM",
+          "duration": "37s"
+        }, {
+          "placeId": "ChIJW-OGVbahKoQRS9QZwJVw9FQ",
+          "duration": "89s"
+        }, {
+          "placeId": "ChIJM21Q_LahKoQRiBl4U8WG6MI",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJa6td-7ahKoQR59sEXQok6-A",
+          "duration": "37s"
+        }, {
+          "placeId": "ChIJeaV45bahKoQR-Ru8CjwAhxw",
+          "duration": "46s"
+        }, {
+          "placeId": "ChIJ4_8p77ahKoQRs9ocN1Oh-r4",
+          "duration": "3s"
+        }, {
+          "placeId": "ChIJsY7M7rahKoQRmmreLKQvk2A",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJF4J767ahKoQRLQKCad5rRmY",
+          "duration": "59s"
+        }, {
+          "placeId": "ChIJNVY1kbahKoQRqqkiDVUPy50",
+          "duration": "63s"
+        }, {
+          "placeId": "ChIJU1ccmrahKoQR7nl3PTjfYfg",
+          "duration": "2s"
+        }, {
+          "placeId": "ChIJN3WHmbahKoQR-cn4caOWw7g",
+          "duration": "18s"
+        }, {
+          "placeId": "ChIJIbv_m7ahKoQR4_1ncSNi5CU",
+          "duration": "27s"
+        }, {
+          "placeId": "ChIJ_ZgTILShKoQR0Ib6rwHbJnY",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJjxt2JLShKoQRFJpG0SrN4sU",
+          "duration": "86s"
+        }, {
+          "placeId": "ChIJWS5HRrShKoQRkd1a8cXyD7o",
+          "duration": "39s"
+        }, {
+          "placeId": "ChIJXZfrRbShKoQRWdvMuSdi9FU",
+          "duration": "9s"
+        }, {
+          "placeId": "ChIJZbPzR7ShKoQR99T_cOkkGAo",
+          "duration": "34s"
+        }, {
+          "placeId": "ChIJZbPzR7ShKoQRG59_BF9rdZ4",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJwfTERrShKoQRKI8h0o_ebAo",
+          "duration": "33s"
+        }],
+        "distanceMeters": 1345.6574271683064,
+        "travelMode": "WALK",
+        "confidence": 1.0
+      },
+      "simplifiedRawPath": {
+        "points": [{
+          "latE7": 221925049,
+          "lngE7": -1009550323,
+          "accuracyMeters": 20,
+          "timestamp": "2024-03-11T03:35:27.175Z"
+        }]
+      }
+    }
+  }, {
+    "placeVisit": {
+      "location": {
+        "latitudeE7": 221970410,
+        "longitudeE7": -1009547102,
+        "placeId": "ChIJd0LaSLShKoQRExZX0EUUO70",
+        "address": "Av San Marcos, Av Sta Lucia S/N, Fraccionamiento Valle, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Valle Santa Lucía 3a. Etapa",
+        "locationConfidence": 100.0,
+        "calibratedProbability": 100.0
+      },
+      "duration": {
+        "startTimestamp": "2024-03-11T03:46:57Z",
+        "endTimestamp": "2024-03-13T22:13:15Z"
+      },
+      "placeConfidence": "USER_CONFIRMED",
+      "visitConfidence": 100,
+      "otherCandidateLocations": [{
+        "latitudeE7": 221968674,
+        "longitudeE7": -1009540671,
+        "placeId": "ChIJ56L0QLShKoQRv6TdHAIyuMY",
+        "address": "C. San Emilio 11, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "locationConfidence": 1.5993152,
+        "calibratedProbability": 1.5993152
+      }, {
+        "latitudeE7": 221972435,
+        "longitudeE7": -1009543783,
+        "placeId": "ChIJOw2uRbShKoQRbxLI6zcWHC8",
+        "address": "Av. Ma. Cristina 51, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.65882355,
+        "calibratedProbability": 0.65882355
+      }, {
+        "latitudeE7": 221973003,
+        "longitudeE7": -1009540584,
+        "placeId": "ChIJP0UHQ7ShKoQRDC1oKGUItnY",
+        "address": "C. San Alejandro 17, Valle de Santa Lucia, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.5555246,
+        "calibratedProbability": 0.5555246
+      }, {
+        "latitudeE7": 221973611,
+        "longitudeE7": -1009540608,
+        "placeId": "ChIJDeItStChKoQRyUiQC_qEPtk",
+        "address": "C. San Alejandro 11, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.42844224,
+        "calibratedProbability": 0.42844224
+      }, {
+        "latitudeE7": 221951510,
+        "longitudeE7": -1009542165,
+        "placeId": "ChIJ11MJ8dehKoQR3SPmM7U6Sx0",
+        "address": "Calle San Gustavo #1 Fracc, Valle de Santa Lucía, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Salón Encantados",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.39639872,
+        "calibratedProbability": 0.39639872
+      }, {
+        "latitudeE7": 221965408,
+        "longitudeE7": -1009547715,
+        "placeId": "ChIJw8tXNrShKoQRNshqi6pf2zU",
+        "address": "C. San Gerardo 3, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.33613917,
+        "calibratedProbability": 0.33613917
+      }, {
+        "latitudeE7": 221968113,
+        "longitudeE7": -1009557400,
+        "placeId": "ChIJNchWtrWhKoQRZgh7ycdEtuo",
+        "address": "Cto. Sta. Teresa 303, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "ABARROTES SARITA",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.23834713,
+        "calibratedProbability": 0.23834713
+      }, {
+        "latitudeE7": 221948843,
+        "longitudeE7": -1009540640,
+        "placeId": "ChIJi1Q7mbahKoQRMU7JMTSbDoU",
+        "address": "Circuito San Marcos, C. Sta. Lucía 101, Fraccionamiento, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Módulo Fijo de Atención Integral para las Mujeres del Municipio de Soledad de Graciano Sánchez",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.14445548,
+        "calibratedProbability": 0.14445548
+      }, {
+        "latitudeE7": 221966114,
+        "longitudeE7": -1009546513,
+        "placeId": "ChIJIX0qfcOhKoQRxAHyt-uNxIo",
+        "address": "Av Sta Lucia, 78433 San Luis Potosí, S.L.P., México",
+        "name": "BETTERWARE SOLEDAD",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.13016789,
+        "calibratedProbability": 0.13016789
+      }],
+      "editConfirmationStatus": "CONFIRMED",
+      "locationConfidence": 100,
+      "placeVisitType": "SINGLE_PLACE",
+      "locationAssertionType": "WITHIN_OR_AT",
+      "lastEditedTimestamp": "2024-03-13T10:11:22.306Z",
+      "placeVisitImportance": "MAIN",
+      "editActionMetadata": {
+        "placeVisitSegment": {
+          "location": {
+            "placeId": "ChIJd0LaSLShKoQRExZX0EUUO70",
+            "address": "Av San Marcos, Av Sta Lucia S/N, Fraccionamiento Valle, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+            "name": "Valle Santa Lucía 3a. Etapa",
+            "locationConfidence": 61.72888
+          }
+        },
+        "editHistory": {
+          "editEvent": [{
+            "editOperation": ["CONFIRM"],
+            "uiConfiguration": {
+              "uiPlaceVisitConfiguration": "YES_NO_OTHER_PLACE_VISIT"
+            }
+          }]
+        },
+        "originalCandidates": {
+          "placeVisitSegment": {
+            "placeVisitCandidate": [{
+              "location": {
+                "placeId": "ChIJd0LaSLShKoQRExZX0EUUO70",
+                "address": "Av San Marcos, Av Sta Lucia S/N, Fraccionamiento Valle, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+                "name": "Valle Santa Lucía 3a. Etapa",
+                "locationConfidence": 61.72888
+              }
+            }, {
+              "location": {
+                "placeId": "ChIJ11MJ8dehKoQR3SPmM7U6Sx0",
+                "address": "Calle San Gustavo #1 Fracc, Valle de Santa Lucía, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+                "name": "Salón Encantados",
+                "locationConfidence": 7.273022
+              }
+            }]
+          }
+        }
+      }
+    }
+  }, {
+    "placeVisit": {
+      "location": {
+        "latitudeE7": 221822683,
+        "longitudeE7": -1009504797,
+        "placeId": "ChIJ7WEHFryhKoQRV3rnslHswjU",
+        "address": "Lat. Carr. San Luis - Matehuala, Soledad de Graciano Sanchez, 78430 San Luis Potosí, S.L.P., México",
+        "name": "Plaza Citadina",
+        "semanticType": "TYPE_UNKNOWN",
+        "sourceInfo": {
+          "deviceTag": 770785668
+        },
+        "locationConfidence": 48.07432,
+        "calibratedProbability": 48.07432
+      },
+      "duration": {
+        "startTimestamp": "2024-03-13T22:13:15Z",
+        "endTimestamp": "2024-03-13T22:46:29Z"
+      },
+      "placeConfidence": "MEDIUM_CONFIDENCE",
+      "childVisits": [{
+        "location": {
+          "latitudeE7": 221824960,
+          "longitudeE7": -1009505550,
+          "placeId": "ChIJ__gIabyhKoQRNZhBpCOxpjw",
+          "address": "Lat. Carr. San Luis - Matehuala, Urbana San Felipe, 78430 San Luis Potosí, S.L.P., México",
+          "name": "Soriana Híper Plaza Citadina",
+          "semanticType": "TYPE_UNKNOWN",
+          "locationConfidence": 23.656038,
+          "calibratedProbability": 23.656038
+        },
+        "duration": {
+          "startTimestamp": "2024-03-13T22:41:26Z",
+          "endTimestamp": "2024-03-13T22:46:29Z"
+        },
+        "placeConfidence": "LOW_CONFIDENCE",
+        "visitConfidence": 40,
+        "otherCandidateLocations": [{
+          "latitudeE7": 221818060,
+          "longitudeE7": -1009502700,
+          "placeId": "ChIJn1ryXbyhKoQRBNHOZBT8YWc",
+          "address": "local 22,38,39 y SA5-6, Soledad de Graciano Sanchez, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+          "name": "Innovasport Plaza Citadina",
+          "semanticType": "TYPE_UNKNOWN",
+          "locationConfidence": 12.961012,
+          "calibratedProbability": 12.961012
+        }, {
+          "latitudeE7": 221815692,
+          "longitudeE7": -1009506519,
+          "placeId": "ChIJt4sDHbyhKoQReyxgzfVzEoU",
+          "address": "Carr. a Matehuala 3600, Soledad de Graciano Sanchez, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+          "name": "Coppel Citadina",
+          "semanticType": "TYPE_UNKNOWN",
+          "locationConfidence": 11.187074,
+          "calibratedProbability": 11.187074
+        }, {
+          "latitudeE7": 221817920,
+          "longitudeE7": -1009503430,
+          "placeId": "ChIJvfS5WryhKoQR8bnVU_iojKo",
+          "address": "Lat. Carr. San Luis - Matehuala 3600-Local 37, Centro, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+          "name": "The Italian Coffee Company",
+          "semanticType": "TYPE_UNKNOWN",
+          "locationConfidence": 9.242743,
+          "calibratedProbability": 9.242743
+        }, {
+          "latitudeE7": 221818662,
+          "longitudeE7": -1009517728,
+          "placeId": "ChIJSfOiPbyhKoQRj-aX-QEmNTE",
+          "address": "Plaza Citadina, Lat. Carr. San Luis - Matehuala No. 3600, Centro Historico, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+          "name": "Pizza Hut Citadina",
+          "semanticType": "TYPE_UNKNOWN",
+          "locationConfidence": 8.970072,
+          "calibratedProbability": 8.970072
+        }, {
+          "latitudeE7": 221819025,
+          "longitudeE7": -1009519432,
+          "placeId": "ChIJnXgkPbyhKoQRTFtjBYKSFAY",
+          "address": "Carretera a Matehuala esquina con, C. Blas Escontria 3600, San Andres, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+          "name": "KFC",
+          "semanticType": "TYPE_UNKNOWN",
+          "locationConfidence": 6.384897,
+          "calibratedProbability": 6.384897
+        }, {
+          "latitudeE7": 221815164,
+          "longitudeE7": -1009495747,
+          "placeId": "ChIJ6Qds-LyhKoQRuKeNliPGmvg",
+          "address": "Del Pozo 229, San Andres, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+          "name": "Cinepolis Citadina",
+          "semanticType": "TYPE_UNKNOWN",
+          "locationConfidence": 5.0906463,
+          "calibratedProbability": 5.0906463
+        }, {
+          "latitudeE7": 221824849,
+          "longitudeE7": -1009506718,
+          "placeId": "ChIJRZ1AY5OhKoQRd313PiBLqpk",
+          "address": "Carretera San Luis-Matehuala 3600 Loc L-8 Al L-14, Centro, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+          "name": "PARISINA CITADINA SAN LUIS",
+          "semanticType": "TYPE_UNKNOWN",
+          "locationConfidence": 4.7853847,
+          "calibratedProbability": 4.7853847
+        }, {
+          "latitudeE7": 221821810,
+          "longitudeE7": -1009506316,
+          "placeId": "ChIJFySSXLyhKoQR3rHCmm9KF9Q",
+          "address": "Lat. Carr. San Luis - Matehuala 3600, Soledad de Graciano Sanchez, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+          "name": "Circus Park",
+          "semanticType": "TYPE_UNKNOWN",
+          "locationConfidence": 3.4435446,
+          "calibratedProbability": 3.4435446
+        }, {
+          "latitudeE7": 221815239,
+          "longitudeE7": -1009498611,
+          "placeId": "ChIJlb1QfSGZKoQROCET3i7l8J0",
+          "address": "Lat. Carr. San Luis - Matehuala 3600, Soledad de Graciano Sanchez, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+          "name": "Comicx",
+          "semanticType": "TYPE_UNKNOWN",
+          "locationConfidence": 2.7622283,
+          "calibratedProbability": 2.7622283
+        }],
+        "editConfirmationStatus": "NOT_CONFIRMED",
+        "locationConfidence": 24,
+        "placeVisitType": "SINGLE_PLACE"
+      }],
+      "visitConfidence": 40,
+      "otherCandidateLocations": [{
+        "latitudeE7": 221970410,
+        "longitudeE7": -1009547102,
+        "placeId": "ChIJd0LaSLShKoQRExZX0EUUO70",
+        "address": "Av San Marcos, Av Sta Lucia S/N, Fraccionamiento Valle, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Valle Santa Lucía 3a. Etapa",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 41.83195,
+        "calibratedProbability": 41.83195
+      }, {
+        "latitudeE7": 221766864,
+        "longitudeE7": -1009519797,
+        "placeId": "ChIJQVygDpahKoQRBGV5RGQlXFM",
+        "address": "De la Brisa 3129, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 4.1393127,
+        "calibratedProbability": 4.1393127
+      }, {
+        "latitudeE7": 221834600,
+        "longitudeE7": -1009520864,
+        "placeId": "ChIJpQxAB7yhKoQRZxXH78HSDj8",
+        "address": "Carretera Federal 57 Km. 4 TRAMO Soledad de Graciano Sánchez Lateral Carretera San Luis - Matehuala entre BLAS ESCONTRIA Y MIGUEL HIDALGO COL. LA RAZA, Urbana San Felipe, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Chedraui Soledad",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 1.0602025,
+        "calibratedProbability": 1.0602025
+      }, {
+        "latitudeE7": 221968674,
+        "longitudeE7": -1009540671,
+        "placeId": "ChIJ56L0QLShKoQRv6TdHAIyuMY",
+        "address": "C. San Emilio 11, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "locationConfidence": 0.76753896,
+        "calibratedProbability": 0.76753896
+      }, {
+        "latitudeE7": 221973003,
+        "longitudeE7": -1009540584,
+        "placeId": "ChIJP0UHQ7ShKoQRDC1oKGUItnY",
+        "address": "C. San Alejandro 17, Valle de Santa Lucia, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.5072621,
+        "calibratedProbability": 0.5072621
+      }, {
+        "latitudeE7": 221972435,
+        "longitudeE7": -1009543783,
+        "placeId": "ChIJOw2uRbShKoQRbxLI6zcWHC8",
+        "address": "Av. Ma. Cristina 51, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.46002293,
+        "calibratedProbability": 0.46002293
+      }, {
+        "latitudeE7": 221951510,
+        "longitudeE7": -1009542165,
+        "placeId": "ChIJ11MJ8dehKoQR3SPmM7U6Sx0",
+        "address": "Calle San Gustavo #1 Fracc, Valle de Santa Lucía, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Salón Encantados",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.4130518,
+        "calibratedProbability": 0.4130518
+      }, {
+        "latitudeE7": 221835342,
+        "longitudeE7": -1009508161,
+        "placeId": "ChIJG1UEWaOhKoQRNiFDrUYEsG8",
+        "address": "Escontria S/n, Soledad de Graciano Sanchez, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Escuela Secundaria Graciano Sánchez Romo",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.38081542,
+        "calibratedProbability": 0.38081542
+      }, {
+        "latitudeE7": 221973611,
+        "longitudeE7": -1009540608,
+        "placeId": "ChIJDeItStChKoQRyUiQC_qEPtk",
+        "address": "C. San Alejandro 11, 78433 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.36169508,
+        "calibratedProbability": 0.36169508
+      }],
+      "editConfirmationStatus": "NOT_CONFIRMED",
+      "locationConfidence": 48,
+      "placeVisitType": "SINGLE_PLACE",
+      "placeVisitImportance": "MAIN"
+    }
+  }, {
+    "activitySegment": {
+      "startLocation": {
+        "latitudeE7": 221818595,
+        "longitudeE7": -1009516976,
+        "sourceInfo": {
+          "deviceTag": 770785668
+        }
+      },
+      "endLocation": {
+        "latitudeE7": 221781552,
+        "longitudeE7": -1009511523,
+        "sourceInfo": {
+          "deviceTag": 770785668
+        }
+      },
+      "duration": {
+        "startTimestamp": "2024-03-13T22:46:29Z",
+        "endTimestamp": "2024-03-13T23:06:06Z"
+      },
+      "distance": 473,
+      "activityType": "WALKING",
+      "confidence": "HIGH",
+      "activities": [{
+        "activityType": "WALKING",
+        "probability": 79.66546416282654
+      }, {
+        "activityType": "IN_PASSENGER_VEHICLE",
+        "probability": 16.02535843849182
+      }, {
+        "activityType": "MOTORCYCLING",
+        "probability": 0.9018800221383572
+      }, {
+        "activityType": "CYCLING",
+        "probability": 0.5655544809997082
+      }, {
+        "activityType": "RUNNING",
+        "probability": 0.3691308433189988
+      }, {
+        "activityType": "IN_BUS",
+        "probability": 0.24859984405338764
+      }, {
+        "activityType": "FLYING",
+        "probability": 0.05153418751433492
+      }, {
+        "activityType": "IN_FERRY",
+        "probability": 0.026515164063312113
+      }, {
+        "activityType": "IN_TRAIN",
+        "probability": 0.007312359230127186
+      }, {
+        "activityType": "SKIING",
+        "probability": 0.005424508708529174
+      }, {
+        "activityType": "IN_TRAM",
+        "probability": 0.003799565092776902
+      }, {
+        "activityType": "IN_SUBWAY",
+        "probability": 0.0028614478651434183
+      }, {
+        "activityType": "SAILING",
+        "probability": 0.002522746035538148
+      }],
+      "waypointPath": {
+        "waypoints": [{
+          "latE7": 221816940,
+          "lngE7": -1009517974
+        }, {
+          "latE7": 221822452,
+          "lngE7": -1009508743
+        }, {
+          "latE7": 221822357,
+          "lngE7": -1009510040
+        }, {
+          "latE7": 221806087,
+          "lngE7": -1009528121
+        }, {
+          "latE7": 221780452,
+          "lngE7": -1009512252
+        }, {
+          "latE7": 221765937,
+          "lngE7": -1009510803
+        }, {
+          "latE7": 221766815,
+          "lngE7": -1009520874
+        }],
+        "source": "INFERRED",
+        "roadSegment": [{
+          "placeId": "ChIJIbBDOryhKoQRIzlTbcg2OiI",
+          "duration": "93s"
+        }, {
+          "placeId": "ChIJqUWSRryhKoQRsz5evSdPKrM",
+          "duration": "98s"
+        }, {
+          "placeId": "ChIJJ-qVFbyhKoQRI3CHDYmUOPE",
+          "duration": "108s"
+        }, {
+          "placeId": "ChIJH15zIryhKoQRzhGYDZYHXHI",
+          "duration": "66s"
+        }, {
+          "placeId": "ChIJT8ExIbyhKoQRakvNVBRZiz8",
+          "duration": "11s"
+        }, {
+          "placeId": "ChIJkd_XJryhKoQRnZSST3XiKeI",
+          "duration": "6s"
+        }, {
+          "placeId": "ChIJTX8XJ7yhKoQRR01LTLjE5TY",
+          "duration": "10s"
+        }, {
+          "placeId": "ChIJOfGZJ7yhKoQRt67AgOzEs0s",
+          "duration": "17s"
+        }, {
+          "placeId": "ChIJ0Yqmgr6hKoQRY-TfBaC6NPM",
+          "duration": "24s"
+        }, {
+          "placeId": "ChIJx7NCgr6hKoQR_FTICMKCd44",
+          "duration": "12s"
+        }, {
+          "placeId": "ChIJM5wOgb6hKoQRZHEO4bTFd_w",
+          "duration": "41s"
+        }, {
+          "placeId": "ChIJr9fjfb6hKoQRpq0xnWOHqDc",
+          "duration": "29s"
+        }, {
+          "placeId": "ChIJTRvGfr6hKoQRPDkWBlgWHtw",
+          "duration": "43s"
+        }, {
+          "placeId": "ChIJN9M62L2hKoQRnkppqtYvmsY",
+          "duration": "72s"
+        }, {
+          "placeId": "ChIJ8_TN3b2hKoQRskppqtYvmsY",
+          "duration": "41s"
+        }, {
+          "placeId": "ChIJ17Kx572hKoQRvEppqtYvmsY",
+          "duration": "29s"
+        }, {
+          "placeId": "ChIJg9q05b2hKoQRBoJqh7fU01w",
+          "duration": "46s"
+        }, {
+          "placeId": "ChIJX1Dy_L2hKoQRLoJqh7fU01w",
+          "duration": "50s"
+        }, {
+          "placeId": "ChIJfUoo_L2hKoQR579ydYLISjU",
+          "duration": "20s"
+        }, {
+          "placeId": "ChIJ6w31-b2hKoQR3b9ydYLISjU",
+          "duration": "56s"
+        }, {
+          "placeId": "ChIJf-wB9L2hKoQRgI0UG-NYRpI",
+          "duration": "23s"
+        }, {
+          "placeId": "ChIJs6JC9L2hKoQRKJ8IGUTh8VM",
+          "duration": "15s"
+        }, {
+          "placeId": "ChIJV-fBGJahKoQR56wrx2bfDR0",
+          "duration": "39s"
+        }, {
+          "placeId": "ChIJV-fBGJahKoQRhlPStI2R3dw",
+          "duration": "94s"
+        }, {
+          "placeId": "ChIJifdyFZahKoQRH-8QAKHDGMY",
+          "duration": "33s"
+        }, {
+          "placeId": "ChIJBVuiFJahKoQRisF-ST9exjE",
+          "duration": "35s"
+        }, {
+          "placeId": "ChIJucKGEpahKoQR_gqTygc26HE",
+          "duration": "31s"
+        }, {
+          "placeId": "ChIJBc61DZahKoQRlKMtXmCK3S4",
+          "duration": "8s"
+        }, {
+          "placeId": "ChIJK6E2CJahKoQREguTygc26HE",
+          "duration": "14s"
+        }],
+        "distanceMeters": 1311.527134452949,
+        "travelMode": "WALK",
+        "confidence": 0.9932537726863093
+      },
+      "simplifiedRawPath": {
+        "points": [{
+          "latE7": 221818199,
+          "lngE7": -1009509659,
+          "accuracyMeters": 54,
+          "timestamp": "2024-03-13T22:47:14.136Z"
+        }, {
+          "latE7": 221781559,
+          "lngE7": -1009511490,
+          "accuracyMeters": 35,
+          "timestamp": "2024-03-13T22:56:34.858Z"
+        }]
+      }
+    }
+  }, {
+    "placeVisit": {
+      "location": {
+        "latitudeE7": 221767449,
+        "longitudeE7": -1009520854,
+        "placeId": "ChIJN-ylDpahKoQRzdASUCjuwzQ",
+        "address": "De la Brisa 3127, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+        "locationConfidence": 100.0,
+        "calibratedProbability": 100.0
+      },
+      "duration": {
+        "startTimestamp": "2024-03-13T23:06:06Z",
+        "endTimestamp": "2024-03-15T16:15:26.534Z"
+      },
+      "placeConfidence": "USER_CONFIRMED",
+      "visitConfidence": 100,
+      "otherCandidateLocations": [{
+        "latitudeE7": 221767474,
+        "longitudeE7": -1009520897,
+        "placeId": "ChIJtXKyDpahKoQRYzLbOcKu82Q",
+        "address": "De la Brisa 3125, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 2.5300634,
+        "calibratedProbability": 2.5300634
+      }, {
+        "latitudeE7": 221767711,
+        "longitudeE7": -1009520668,
+        "placeId": "ChIJQx-QDpahKoQRxVXYP40yJJc",
+        "address": "De la Brisa 3131, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 1.0356829,
+        "calibratedProbability": 1.0356829
+      }, {
+        "latitudeE7": 221756175,
+        "longitudeE7": -1009526789,
+        "placeId": "ChIJayvIRbmhKoQRhRFlLazDeE4",
+        "address": "Viento 230, Residencial Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Bara Pavón",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.5209526,
+        "calibratedProbability": 0.5209526
+      }, {
+        "latitudeE7": 221767570,
+        "longitudeE7": -1009520960,
+        "placeId": "ChIJawVgtE6hKoQRSDGDRq9tqQs",
+        "address": "De la Brisa 3121, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.47315407,
+        "calibratedProbability": 0.47315407
+      }, {
+        "latitudeE7": 221767660,
+        "longitudeE7": -1009521209,
+        "placeId": "ChIJx4lLCZahKoQRurG7Jg7tmZI",
+        "address": "De la Brisa 3123, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.47002336,
+        "calibratedProbability": 0.47002336
+      }, {
+        "latitudeE7": 221762890,
+        "longitudeE7": -1009505354,
+        "placeId": "ChIJkbD7PJahKoQRxOe0CKrVtE0",
+        "address": "Plaza, De La Lava SN, Rancho Pavon, 78430 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Colegio de Bachilleres Plantel 17",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.3794298,
+        "calibratedProbability": 0.3794298
+      }, {
+        "latitudeE7": 221780595,
+        "longitudeE7": -1009516550,
+        "placeId": "ChIJP2ApwdShKoQRz09cOGASEZs",
+        "address": "Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Carnicería Doña Elena",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.25622925,
+        "calibratedProbability": 0.25622925
+      }, {
+        "latitudeE7": 221766559,
+        "longitudeE7": -1009498978,
+        "placeId": "ChIJtchLS5ahKoQRJbXLS_w5A9g",
+        "address": "Cl. Iturbide 550, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "DGSPM SGS",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.23110057,
+        "calibratedProbability": 0.23110057
+      }, {
+        "latitudeE7": 221762085,
+        "longitudeE7": -1009497109,
+        "placeId": "ChIJD9jOPQqhKoQR7zPmS5X7gqU",
+        "address": "Cl. Iturbide 550, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+        "name": "Dirección de Tránsito y Policía Vial",
+        "semanticType": "TYPE_UNKNOWN",
+        "locationConfidence": 0.17938201,
+        "calibratedProbability": 0.17938201
+      }],
+      "editConfirmationStatus": "CONFIRMED",
+      "locationConfidence": 100,
+      "placeVisitType": "SINGLE_PLACE",
+      "locationAssertionType": "WITHIN_OR_AT",
+      "lastEditedTimestamp": "2024-03-14T05:53:46.709Z",
+      "placeVisitImportance": "MAIN",
+      "editActionMetadata": {
+        "placeVisitSegment": {
+          "location": {
+            "placeId": "ChIJN-ylDpahKoQRzdASUCjuwzQ",
+            "address": "De la Brisa 3127, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+            "locationConfidence": 50.77022
+          }
+        },
+        "editHistory": {
+          "editEvent": [{
+            "editOperation": ["CONFIRM"],
+            "uiConfiguration": {
+              "uiPlaceVisitConfiguration": "YES_NO_OTHER_PLACE_VISIT"
+            }
+          }]
+        },
+        "originalCandidates": {
+          "placeVisitSegment": {
+            "placeVisitCandidate": [{
+              "location": {
+                "placeId": "ChIJN-ylDpahKoQRzdASUCjuwzQ",
+                "address": "De la Brisa 3127, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+                "locationConfidence": 50.77022
+              }
+            }, {
+              "location": {
+                "placeId": "ChIJtXKyDpahKoQRYzLbOcKu82Q",
+                "address": "De la Brisa 3125, Rancho Pavon, 78434 Soledad de Graciano Sánchez, S.L.P., México",
+                "locationConfidence": 16.903692
+              }
+            }]
+          }
+        }
+      }
+    }
+  }]
+}
